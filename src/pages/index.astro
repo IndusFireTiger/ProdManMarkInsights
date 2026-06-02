@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const dateFmt = (d: Date) =>
+  d.toLocaleDateString('en-AU', { month: 'short', year: 'numeric' });
+
+const perspectives = (await getCollection('perspectives'))
+  .filter((p) => !p.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const featured = perspectives.find((p) => p.data.featured) ?? perspectives[0];
+const recent = perspectives.filter((p) => p.id !== featured?.id).slice(0, 3);
+
+const work = (await getCollection('work'))
+  .filter((w) => !w.data.draft)
+  .sort((a, b) => a.data.order - b.data.order)
+  .slice(0, 4);
+---
+<BaseLayout>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Product strategy · Product marketing · Applied AI</p>
+      <h1>Great products are built on a point of view — not a backlog.</h1>
+      <p class="lede">
+        I'm a product leader who grew up as an engineer: fifteen years from
+        writing code to leading technical teams to owning products and their
+        go-to-market. I write about how products are imagined, validated and
+        taken to market — with a keen interest in education.
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--accent" href="/perspectives">Read the perspectives</a>
+        <a class="btn" href="/work">See selected work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PERSPECTIVE -->
+  {featured && (
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Featured perspective</h2>
+          <a href="/perspectives">All perspectives →</a>
+        </div>
+        <a class="reveal" href={`/perspectives/${featured.id}`} style="display:block; color:inherit;">
+          <p class="eyebrow">{featured.data.topics.join(' · ')}</p>
+          <h3 style="font-size:clamp(1.7rem,4vw,2.6rem); max-width:22ch;">{featured.data.title}</h3>
+          <p class="lede muted" style="max-width:60ch;">{featured.data.summary}</p>
+          <p class="muted" style="font-size:0.85rem;">
+            {dateFmt(featured.data.date)}{featured.data.readingTime ? ` · ${featured.data.readingTime}` : ''} · Read essay →
+          </p>
+        </a>
+      </div>
+    </section>
+  )}
+
+  <!-- SELECTED WORK -->
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Selected work</h2>
+        <a href="/work">All work →</a>
+      </div>
+      <div class="card-grid">
+        {work.map((w) => (
+          <a class="card reveal" href={`/work/${w.id}`}>
+            <span class="tag">{w.data.kind} · {w.data.focus.split('•')[0].trim()}</span>
+            <h3>{w.data.title}</h3>
+            <p>{w.data.summary}</p>
+            <span class="more">View case study →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENT WRITING -->
+  {recent.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>More writing</h2>
+          <a href="/perspectives">Archive →</a>
+        </div>
+        <ul class="post-list">
+          {recent.map((p) => (
+            <li>
+              <a href={`/perspectives/${p.id}`}>
+                <span class="post-title">{p.data.title}</span>
+                <span class="post-meta">{dateFmt(p.data.date)}</span>
+                <p class="post-summary">{p.data.summary}</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
+
+  <!-- ABOUT STRIP -->
+  <section class="about-strip">
+    <div class="container">
+      <p class="eyebrow">About</p>
+      <p class="lede">
+        Head of Product Marketing & Principal Product Manager in enterprise
+        Data&nbsp;Risk&nbsp;&amp;&nbsp;Compliance. I translate ambiguous,
+        subjective requirements into scoped, priced, shippable products — and
+        I'm exploring how applied AI reshapes both the product and its
+        go-to-market.
+      </p>
+      <p style="margin-top:1.5rem;"><a class="btn" href="/about">Read the full story →</a></p>
+    </div>
+  </section>
+</BaseLayout>

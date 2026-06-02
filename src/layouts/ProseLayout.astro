@@ -1,0 +1,40 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  eyebrow?: string;
+  meta?: string[];
+  backHref?: string;
+  backLabel?: string;
+}
+const {
+  title,
+  description,
+  eyebrow,
+  meta = [],
+  backHref = '/',
+  backLabel = 'Back',
+} = Astro.props;
+---
+<BaseLayout title={`${title} — ProdMan·Insights`} description={description}>
+  <article class="article">
+    <div class="container">
+      <a class="back-link" href={backHref}>← {backLabel}</a>
+      <header class="article__header">
+        {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+        <h1>{title}</h1>
+        {description && <p class="lede muted">{description}</p>}
+        {meta.length > 0 && (
+          <div class="article__meta">
+            {meta.map((m) => <span>{m}</span>)}
+          </div>
+        )}
+      </header>
+      <div class="article__body">
+        <slot />
+      </div>
+    </div>
+  </article>
+</BaseLayout>

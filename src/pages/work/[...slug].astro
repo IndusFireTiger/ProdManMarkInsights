@@ -1,0 +1,28 @@
+---
+import { getCollection, render } from 'astro:content';
+import ProseLayout from '../../layouts/ProseLayout.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('work');
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const meta = [entry.data.kind, entry.data.focus, entry.data.role].filter(
+  Boolean
+) as string[];
+---
+<ProseLayout
+  title={entry.data.title}
+  description={entry.data.summary}
+  eyebrow="Case study"
+  meta={meta}
+  backHref="/work"
+  backLabel="All work"
+>
+  <Content />
+</ProseLayout>

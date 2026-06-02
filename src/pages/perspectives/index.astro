@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const dateFmt = (d: Date) =>
+  d.toLocaleDateString('en-AU', { month: 'short', year: 'numeric' });
+
+const posts = (await getCollection('perspectives'))
+  .filter((p) => !p.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<BaseLayout
+  title="Perspectives — ProdMan·Insights"
+  description="Essays and frameworks on product strategy, product marketing and applied AI."
+>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Writing</p>
+      <h1 style="max-width:18ch;">Perspectives</h1>
+      <p class="lede muted" style="max-width:54ch;">
+        Frameworks, essays and field notes on how products are imagined,
+        validated, marketed — and where applied AI changes the craft.
+      </p>
+      <ul class="post-list" style="margin-top:3rem;">
+        {posts.map((p) => (
+          <li>
+            <a href={`/perspectives/${p.id}`}>
+              <span class="post-title">{p.data.title}{p.data.draft ? ' (draft)' : ''}</span>
+              <span class="post-meta">{dateFmt(p.data.date)}{p.data.readingTime ? ` · ${p.data.readingTime}` : ''}</span>
+              <p class="post-summary">{p.data.summary}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

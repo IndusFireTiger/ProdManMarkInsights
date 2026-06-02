@@ -1,0 +1,33 @@
+---
+import { getCollection, render } from 'astro:content';
+import ProseLayout from '../../layouts/ProseLayout.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('perspectives');
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const dateFmt = entry.data.date.toLocaleDateString('en-AU', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+const meta = [dateFmt, entry.data.readingTime, ...entry.data.topics].filter(
+  Boolean
+) as string[];
+---
+<ProseLayout
+  title={entry.data.title}
+  description={entry.data.summary}
+  eyebrow="Perspective"
+  meta={meta}
+  backHref="/perspectives"
+  backLabel="All perspectives"
+>
+  <Content />
+</ProseLayout>
