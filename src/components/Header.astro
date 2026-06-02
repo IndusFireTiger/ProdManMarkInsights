@@ -15,7 +15,7 @@ const links = [
       {links.map((l) => (
         <a href={l.href} aria-current={isActive(l.href) ? 'page' : undefined}>{l.label}</a>
       ))}
-      <a class="btn btn--accent" href="mailto:prodmaninsights@gmail.com">Contact</a>
+      <a class="btn btn--accent" href="/contact" aria-current={isActive('/contact') ? 'page' : undefined}>Contact</a>
     </nav>
   </div>
 </header>
