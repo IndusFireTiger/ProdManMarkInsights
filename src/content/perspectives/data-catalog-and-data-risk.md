@@ -1,19 +1,31 @@
 ---
-title: "You can't govern what you can't see: the data catalog as a risk-reduction system"
-summary: "Data risk lives in the gap between the data an organisation holds and the data it can actually account for. A data catalog closes that gap — turning scattered, unknown data into a governed inventory, and compliance from a periodic scramble into a standing capability."
+title: "A product lens on the invisible: making data risk operable, with the data catalog as the case study"
+summary: "A product strategist's job on a hard enterprise problem is to turn an invisible, perpetual scramble into a capability you can run and trust. Data risk and compliance is the worked example here — and the data catalog is the product move that makes it governable. The pattern generalises far beyond it."
 date: 2026-06-03
 readingTime: "9 min read"
-topics: ["Data Governance", "Risk & Compliance", "Data Catalog"]
+topics: ["Product Strategy", "Data Governance", "Risk & Compliance", "Data Catalog"]
 featured: false
 draft: false
 ---
 
-Spend any time in Data Risk & Compliance and you learn the uncomfortable truth
-early: most organisations don't have a data *problem*, they have a data
-*visibility* problem. The personal data, the financial records, the health
-information, the trade secrets — it's all there. What's missing is a reliable
-answer to three deceptively simple questions: *What data do we hold? Where is
-it? And who is responsible for it?*
+As a product strategist, I keep coming back to one kind of question: take a hard,
+abstract enterprise problem — the kind people throw services, spreadsheets and
+heroics at — and ask *what product would make this operable?* What turns a
+perpetual scramble into a capability you can buy, run, and trust?
+
+Data risk and compliance is the example I'll work through here, for two reasons.
+It's about as hard as enterprise problems get — sprawling, high-stakes, and
+relentlessly regulated. And the product answer is unusually clean. But treat the
+specifics as a *case study*: the underlying move — making an invisible problem
+visible and then operable — is the part that generalises.
+
+So start where every good product starts, with the problem. Spend any time in
+Data Risk & Compliance and you learn the uncomfortable truth early: most
+organisations don't have a data *problem*, they have a data *visibility* problem.
+The personal data, the financial records, the health information, the trade
+secrets — it's all there. What's missing is a reliable answer to three
+deceptively simple questions: *What data do we hold? Where is it? And who is
+responsible for it?*
 
 Every serious data risk traces back to a gap in those answers. You can't protect
 a dataset you've forgotten exists. You can't honour a deletion request for
@@ -140,8 +152,25 @@ buildable features — just pointed at risk instead of roadmap.
 > your data under deadline to continuously *knowing* it. Compliance stops being
 > a scramble and becomes a capability.
 
-The lesson is the same one I keep arriving at across very different problems:
-standardise and make visible the predictable, so the scarce human judgement goes
-where it actually matters — interpreting the law, weighing the trade-offs, and
-deciding what risk is worth taking. You can't govern what you can't see. The
-catalog is how you start seeing.
+## The product move, generalised
+
+Step back from the worked example and the product pattern is what remains. Faced
+with a hard, invisible enterprise problem, the strategist's move is the same one
+every time:
+
+1. **Name the invisibility** — find the thing nobody can see (here, *what data we
+   hold and where*) and make it the product's job to surface it.
+2. **Turn it into a system of record** — an authoritative inventory others can
+   build on, instead of tribal knowledge that rots.
+3. **Bind action to the record** — classification, policy, ownership and proof
+   attached to the data, so the product *does*, not just *describes*.
+4. **Harmonise the chaos** — collapse many overlapping demands into one
+   capability you build once and point everywhere.
+
+Data risk happens to be the case where this pays off most visibly, but I've
+applied the same lens to requirement harmonisation, to go-to-market, and to
+applied AI. Standardise and make visible the predictable, so the scarce human
+judgement goes where it actually matters — interpreting the law, weighing the
+trade-offs, deciding what risk is worth taking. You can't govern what you can't
+see; you can't *productise* it either. The catalog is simply how this particular
+problem starts seeing.
