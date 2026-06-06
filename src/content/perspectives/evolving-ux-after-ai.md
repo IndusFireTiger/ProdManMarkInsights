@@ -1,7 +1,7 @@
 ---
 title: "Designing for a machine that can finally understand you: evolving UI/UX"
 summary: "Almost every interface convention we know — menus, forms, buttons, navigation — exists to compensate for one limitation: the computer couldn't understand what you meant. AI removes that limitation, and that quietly invalidates a lot of design that was solving the old problem. But the answer isn't 'put a chat box on everything.' The real shift is from UI as the place you operate the software to UI as the place you steer, verify and trust a system that operates it for you. A look at what changes, what's a trap, and what endures."
-date: 2026-06-07
+date: 2025-10-13
 readingTime: "9 min read"
 topics: ["Product Strategy", "UX/UI", "Applied AI", "Design"]
 featured: false

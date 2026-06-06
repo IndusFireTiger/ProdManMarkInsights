@@ -1,7 +1,7 @@
 ---
 title: "Product-market fit decays: why a product must keep re-earning it — the data catalog's evolution as a case study"
 summary: "Product-market fit is not a trophy you win once; it erodes as the market moves and yesterday's value becomes table stakes. A product stays relevant only by constantly evolving against fresh needs and re-validating fit with the customers it serves. The data catalog is the case study — and its leading vendors are taking strikingly different evolutionary routes into different niches."
-date: 2026-06-03
+date: 2025-09-29
 readingTime: "9 min read"
 topics: ["Product Strategy", "Product-Market Fit", "Data Catalog", "Data Operations"]
 featured: false

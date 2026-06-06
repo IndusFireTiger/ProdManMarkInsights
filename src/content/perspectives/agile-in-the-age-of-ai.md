@@ -1,7 +1,7 @@
 ---
 title: "Agile in the age of AI: when the machine writes the code, what's left for the humans?"
 summary: "AI has collapsed the cost of producing software, and that breaks the old assumptions underneath Agile. But it doesn't retire Agile — it sharpens the question Agile was always really asking: with iteration nearly free, what is the scarce, human work that actually decides whether the product is worth building? A look at how AI is reshaping the SDLC and PDLC, with the pros, the cons, and what still belongs to people."
-date: 2026-06-05
+date: 2025-10-06
 readingTime: "10 min read"
 topics: ["Product Strategy", "Agile", "Applied AI", "Engineering"]
 featured: false
