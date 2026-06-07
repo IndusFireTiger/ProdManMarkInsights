@@ -3,6 +3,7 @@ title: "The GTM Factory: turning go-to-market into a repeatable system"
 summary: "Most go-to-market is bespoke, slow and personality-dependent. The GTM Factory treats launch like a production line — asset tiering, a virtual team embedded in engineering, and a cadence locked to the product itself."
 date: 2025-09-15
 readingTime: "7 min read"
+skill: "Go-to-Market & Product Marketing"
 topics: ["Product Marketing", "GTM", "Frameworks"]
 featured: true
 draft: false

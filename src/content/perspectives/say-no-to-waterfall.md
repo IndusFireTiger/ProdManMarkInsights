@@ -3,6 +3,7 @@ title: "Say NO! to Waterfall — change as a product, not a memo"
 summary: "Mandating agile from the top rarely sticks. I ran change the way I'd run a product launch: a campaign with a name, a value proposition and willing early adopters."
 date: 2025-09-01
 readingTime: "4 min read"
+skill: "Agile Leadership & Change"
 topics: ["Leadership", "Agile", "Change"]
 featured: false
 draft: true

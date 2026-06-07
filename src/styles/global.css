@@ -243,6 +243,44 @@ hr {
 .post-title { font-family: var(--serif); font-size: 1.45rem; line-height: 1.2; }
 .post-meta { font-size: 0.82rem; color: var(--muted); white-space: nowrap; }
 .post-summary { grid-column: 1 / -1; color: var(--muted); font-size: 0.98rem; margin: 0; }
+.post-skill {
+  grid-column: 1 / -1;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--accent-soft);
+  margin-bottom: 0.1rem;
+}
+.post-list li[hidden] { display: none; }
+
+/* skill filter bar (perspectives index) */
+.filter-bar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 2.25rem; }
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+.chip:hover { color: var(--accent); border-color: var(--accent-soft); }
+.chip__count { font-size: 0.72rem; color: var(--muted); }
+.chip[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--paper);
+}
+.chip[aria-pressed="true"] .chip__count { color: var(--accent-wash); }
 
 /* ---------- about strip ---------- */
 .about-strip { background: var(--accent-wash); border-block: 1px solid var(--line); }

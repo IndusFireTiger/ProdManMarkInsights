@@ -1,17 +1,31 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { SKILLS } from '../../content.config';
 
 const dateFmt = (d: Date) =>
   d.toLocaleDateString('en-AU', { month: 'short', year: 'numeric' });
 
+// Short chip labels for each skill highlight (filter bar + per-post tag).
+const SKILL_LABEL: Record<string, string> = {
+  'Product Strategy & Vision': 'Strategy',
+  'Go-to-Market & Product Marketing': 'Marketing',
+  'Applied AI in Product': 'Applied AI',
+  'Agile Leadership & Change': 'Leadership',
+  'EdTech & Education': 'EdTech',
+};
+
 const posts = (await getCollection('perspectives'))
   .filter((p) => !p.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+// Only surface filter chips for skills that have at least one published post,
+// kept in the canonical SKILLS order.
+const skillsInUse = SKILLS.filter((s) => posts.some((p) => p.data.skill === s));
 ---
 <BaseLayout
   title="Perspectives — ProdMan·Insights"
-  description="Essays and frameworks on product strategy, product marketing and applied AI."
+  description="Essays and frameworks on product strategy, product marketing and applied AI, filed by skill."
 >
   <section class="section">
     <div class="container">
@@ -19,19 +33,64 @@ const posts = (await getCollection('perspectives'))
       <h1 style="max-width:18ch;">Perspectives</h1>
       <p class="lede muted" style="max-width:54ch;">
         Frameworks, essays and field notes on how products are imagined,
-        validated, marketed — and where applied AI changes the craft.
+        validated, marketed — and where applied AI changes the craft. Filter
+        by the skill each piece speaks to.
       </p>
-      <ul class="post-list" style="margin-top:3rem;">
+
+      <div class="filter-bar" data-filter-bar aria-label="Filter perspectives by skill">
+        <button class="chip" type="button" data-filter="all" aria-pressed="true">
+          All<span class="chip__count">{posts.length}</span>
+        </button>
+        {skillsInUse.map((s) => (
+          <button class="chip" type="button" data-filter={s} aria-pressed="false">
+            {SKILL_LABEL[s] ?? s}
+            <span class="chip__count">{posts.filter((p) => p.data.skill === s).length}</span>
+          </button>
+        ))}
+      </div>
+
+      <ul class="post-list" style="margin-top:2rem;" data-post-list>
         {posts.map((p) => (
-          <li>
+          <li data-skill={p.data.skill}>
             <a href={`/perspectives/${p.id}`}>
-              <span class="post-title">{p.data.title}{p.data.draft ? ' (draft)' : ''}</span>
+              <span class="post-skill">{SKILL_LABEL[p.data.skill] ?? p.data.skill}</span>
+              <span class="post-title">{p.data.title}</span>
               <span class="post-meta">{dateFmt(p.data.date)}{p.data.readingTime ? ` · ${p.data.readingTime}` : ''}</span>
               <p class="post-summary">{p.data.summary}</p>
             </a>
           </li>
         ))}
       </ul>
+
+      <p class="muted filter-empty" data-filter-empty hidden style="margin-top:2rem;">
+        No perspectives under this skill yet.
+      </p>
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  const bar = document.querySelector('[data-filter-bar]');
+  const items = Array.from(
+    document.querySelectorAll<HTMLElement>('[data-post-list] [data-skill]')
+  );
+  const empty = document.querySelector<HTMLElement>('[data-filter-empty]');
+
+  bar?.addEventListener('click', (e) => {
+    const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('[data-filter]');
+    if (!btn) return;
+    const filter = btn.dataset.filter ?? 'all';
+
+    bar.querySelectorAll<HTMLButtonElement>('[data-filter]').forEach((c) =>
+      c.setAttribute('aria-pressed', String(c === btn))
+    );
+
+    let visible = 0;
+    for (const li of items) {
+      const show = filter === 'all' || li.dataset.skill === filter;
+      li.hidden = !show;
+      if (show) visible++;
+    }
+    if (empty) empty.hidden = visible !== 0;
+  });
+</script>

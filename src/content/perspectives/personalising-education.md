@@ -3,6 +3,7 @@ title: "Personalising education without losing the human touch"
 summary: "Adaptive learning promises a tutor for every child. The product challenge isn't the model — it's designing personalisation that supports a teacher and a parent rather than replacing them."
 date: 2025-09-08
 readingTime: "5 min read"
+skill: "EdTech & Education"
 topics: ["EdTech", "Applied AI", "Product"]
 featured: false
 draft: false

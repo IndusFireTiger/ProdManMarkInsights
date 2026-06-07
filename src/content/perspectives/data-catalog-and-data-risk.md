@@ -3,6 +3,7 @@ title: "A product lens on the invisible: making data risk operable, with the dat
 summary: "A product strategist's job on a hard enterprise problem is to turn an invisible, perpetual scramble into a capability you can run and trust. Data risk and compliance is the worked example here — and the data catalog is the product move that makes it governable. The pattern generalises far beyond it."
 date: 2025-09-22
 readingTime: "9 min read"
+skill: "Product Strategy & Vision"
 topics: ["Product Strategy", "Data Governance", "Risk & Compliance", "Data Catalog"]
 featured: false
 draft: false
