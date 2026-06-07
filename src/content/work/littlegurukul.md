@@ -1,5 +1,5 @@
 ---
-title: "MyGuru — interactive EdTech mobile app"
+title: "LittleGurukul — interactive EdTech mobile app"
 summary: "A mobile-first concept for culturally enriched learning through interactive stories, flashcards and AI-guided quizzes — built to show research, MVP definition and gamification design."
 focus: "EdTech • Mobile UX • MVP thinking"
 role: "Independent learning project"
@@ -15,7 +15,7 @@ draft: false
 ## Context
 
 Children today are digitally native, but they have little exposure to Indian
-mythology and values in formats that hold their attention. MyGuru is a concept
+mythology and values in formats that hold their attention. LittleGurukul is a concept
 app that teaches cultural learning through short interactive stories,
 flashcards and AI-guided quizzes.
 

@@ -5,6 +5,13 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# Case study renamed MyGuru -> LittleGurukul; keep the old URL working.
+[[redirects]]
+  from = "/work/myguru"
+  to = "/work/littlegurukul"
+  status = 301
+  force = true
+
 # SPA-style fallback is not needed for a static multi-page site,
 # but ensure trailing-slash behaviour is predictable.
 [[headers]]

@@ -51,5 +51,5 @@ comes down isn't support; it's dependence.
 > teacher and the parent more present, not less.
 
 That's the product I want to build in this space — and it's why the
-[MyGuru](/work/myguru) and [AI Companion](/work/ai-companion) explorations on
+[LittleGurukul](/work/littlegurukul) and [AI Companion](/work/ai-companion) explorations on
 this site lead with the parent and the story, not the algorithm.
