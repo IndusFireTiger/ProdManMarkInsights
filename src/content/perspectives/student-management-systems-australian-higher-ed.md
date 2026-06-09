@@ -1,7 +1,7 @@
 ---
 title: "The core that won't sit still: student management systems and architecture in Australian higher education"
 summary: "Every Australian university runs on a student management system most people never see — until it breaks. It is the hardest product in the sector to build, the riskiest to replace, and the one being quietly re-architected from a monolithic system of record into a composable student lifecycle. This is the landscape, the vendor bets, and the product lessons that travel beyond it."
-date: 2026-06-09
+date: 2025-10-20
 readingTime: "10 min read"
 skill: "Product Strategy & Vision"
 topics: ["EdTech", "Product Strategy", "Enterprise Architecture", "Higher Education", "Composable Systems"]

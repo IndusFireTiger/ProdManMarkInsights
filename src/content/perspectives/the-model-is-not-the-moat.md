@@ -1,7 +1,7 @@
 ---
 title: "The model is not the moat: pedagogy, trust, and entering a crowded EdTech market"
 summary: "Every EdTech company now says it has AI. When the model layer commoditises, the differentiators that survive are the two hardest to copy: a defensible stance on pedagogy and a defensible stance on trust. Anthropic's Claude for Education play — read against the Australian market — is a clean case study in winning a mature category without competing on capability."
-date: 2026-06-09
+date: 2025-10-27
 readingTime: "10 min read"
 skill: "Go-to-Market & Product Marketing"
 topics: ["EdTech", "Applied AI", "Positioning", "Go-to-Market", "Competitive Strategy"]

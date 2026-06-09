@@ -1,7 +1,7 @@
 ---
 title: "One country, many markets: why Australian EdTech is a game of wedges"
 summary: "Australia looks like a single education market. It is actually a federation of buyers — split by jurisdiction, split by the funding line between government and non-government schools — and the companies that win it almost never win it broadly. Read the landscape closely and a clear strategy lesson falls out: in a structurally fragmented market, the wedge beats the platform, and the org chart of the market is the go-to-market plan."
-date: 2026-06-09
+date: 2025-11-03
 readingTime: "11 min read"
 skill: "Product Strategy & Vision"
 topics: ["EdTech", "Market Strategy", "Go-to-Market", "Segmentation", "Higher Education"]
