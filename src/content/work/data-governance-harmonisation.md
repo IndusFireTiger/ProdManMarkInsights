@@ -10,8 +10,8 @@ draft: false
 
 > **New to Data Risk & Compliance?** I built
 > **[DRCDrivers](https://sindhu-prasanna-drc.netlify.app/)** — an interactive, end-to-end
-> explainer that drives you through the DRC concepts this product is built around, so
-> the context below lands without the jargon. Additionally, Data Governance is
+> explainer that drives you through the DRC concepts this product is built around.
+> For context: Data Governance is
 > inherently subjective — every organisation defines "governed", "sensitive" and
 > "compliant" differently. The job was to serve many such customers from a
 > single product without fragmenting it into bespoke forks.
