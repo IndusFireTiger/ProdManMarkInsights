@@ -13,6 +13,11 @@ draft: false
 > "compliant" differently. The job was to serve many such customers from a
 > single product without fragmenting it into bespoke forks.
 
+> **New to Data Risk & Compliance?** I built
+> **[DRCDrivers](https://sindhu-prasanna-drc.netlify.app/)** — an interactive, end-to-end
+> explainer that drives you through the DRC concepts this product is built around, so
+> the context below lands without the jargon.
+
 ## The problem
 
 Each enterprise arrived with its own governance processes, vocabulary and
