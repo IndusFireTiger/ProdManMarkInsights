@@ -16,6 +16,13 @@ draft: false
 > "compliant" differently. The job was to serve many such customers from a
 > single product without fragmenting it into bespoke forks.
 
+<figure>
+  <a href="https://sindhu-prasanna-drc.netlify.app/" target="_blank" rel="noopener noreferrer">
+    <img src="/work/drcdrivers-roadmap.png" alt="DRCDrivers — Drive the road of Data Risk & Compliance: a six-stop interactive explainer covering the data lifecycle, types of data risk, compliance as a spec, and the controls that reduce risk." />
+  </a>
+  <figcaption>DRCDrivers — the interactive DRC explainer I built. <a href="https://sindhu-prasanna-drc.netlify.app/" target="_blank" rel="noopener noreferrer">Click to drive the road →</a></figcaption>
+</figure>
+
 ## The problem
 
 Each enterprise arrived with its own governance processes, vocabulary and
