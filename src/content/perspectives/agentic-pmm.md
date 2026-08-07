@@ -107,7 +107,7 @@ with a defined output artifact and — critically — a defined human signature.
 | --- | --- | --- | --- |
 | **Market & competitive intelligence** | Ingests win/loss calls, competitor release notes, API docs, review-site movement; flags shifts in buyer language *before* discovery opens | Battlecards, feature-gap matrices, an objection ledger | PMM validates the market read and owns the ICP definition |
 | **Upstream positioning** | Turns a raw PRD or epic outline into a Working-Backwards press release, customer FAQ and internal FAQ; scores the proposal against known ICP pain | PR-FAQ, Dunford-style positioning frame, feature value scorecard | PMM + PM sign off *before* sprint allocation |
-| **Pricing & value architecture** | Correlates feature telemetry with deal data and churn to model willingness-to-pay and find the tiering seams | Packaging options, discount-threshold analysis | Product and finance leadership set the price |
+| **Pricing & value architecture** | Correlates feature telemetry with deal data and churn to model willingness-to-pay and find the tiering seams | Packaging options, discount-threshold analysis — [worked example](/work/fitpulse-pricing-agent) | Product and finance leadership set the price |
 | **Full-lifecycle GTM** | Generates persona-specific enablement matched to lifecycle stage — pain-led decks at introduction, ROI calculators and battlecards at growth, migration guides at maturity and decline | Modular launch kits, synced to wherever enablement lives | PMM edits for accuracy and runs the enablement itself |
 | **PMF health & saturation** | Watches time-to-first-value, activation, adoption curves and retention; flags features consuming engineering budget to serve a narrow vocal cohort | Monthly PMF health audit, expansion-vector options | Leadership decides portfolio shifts, sunsets, investment |
 
@@ -129,6 +129,16 @@ model or an expensive way to generate slop, so it's worth stating flatly:
 > Agents draft, gather, correlate and monitor. Humans decide, approve, price and
 > defend. Every artifact has an agent's byline and a human's signature, and the
 > signature is what makes it real.
+
+It's worth seeing that line drawn on a real artifact rather than asserted. I ran
+the pricing agent end-to-end on a synthetic brief and then marked up where its
+judgement runs out —
+[FitPulse: a pricing agent's first draft, and what a human still owns](/work/fitpulse-pricing-agent).
+Short version: it produced a good three days of analysis in minutes, correctly
+found that usage frequency and willingness-to-pay were inversely correlated, and
+still left every load-bearing decision unmade. It rationalised the price it was
+handed instead of challenging it, read a survivor-biased signal as demand, and
+had no way to price the trust cost of taking a free feature away.
 
 That isn't ceremony. Three concrete reasons the split has to hold:
 
@@ -270,6 +280,8 @@ they describe the surveyed population, not a universal law. Further reading:
 [A quickstart guide to positioning — April Dunford](https://www.aprildunford.com/post/a-quickstart-guide-to-positioning);
 [Opportunity-Solution Alignment — Melanie Richards](https://melanie-richards.com/blog/opportunity-solution-alignment/);
 [Understand product-market fit expansion — Reforge](https://www.reforge.com/guides/understand-product-market-fit-expansion).
+Worked example:
+[FitPulse — a pricing agent's first draft, and what a human still owns](/work/fitpulse-pricing-agent).
 Companion pieces:
 [The GTM Factory](/perspectives/the-gtm-factory);
 [Product-market fit decays](/perspectives/catalog-to-enterprise-data-operations);
