@@ -10,10 +10,13 @@ node_modules/
 # macOS / editors
 .DS_Store
 
-# local-only notes and source material (not published)
+# local-only source material (not published)
 # This repo is PUBLIC. someInputs/ holds research PDFs including a form
-# submission with a personal phone number and email; ToDo/ holds career and
-# academy planning. Both live here for convenience, never in git history.
+# submission with a personal phone number and email address — it must never
+# enter git history.
+#
+# ToDo/ is deliberately NOT ignored: the planning docs are tracked so project
+# context travels with the repo. They were scanned for personal identifiers
+# before the first commit. Re-check before adding anything to that folder.
 TODO.md
-ToDo/
 someInputs/
