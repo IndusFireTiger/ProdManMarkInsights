@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import ProseLayout from '../../layouts/ProseLayout.astro';
+import TermsInThisPiece from '../../components/TermsInThisPiece.astro';
 
 export async function getStaticPaths() {
   const entries = await getCollection('work');
@@ -25,4 +26,5 @@ const meta = [entry.data.kind, entry.data.focus, entry.data.role].filter(
   backLabel="All work"
 >
   <Content />
+  <TermsInThisPiece />
 </ProseLayout>

@@ -38,4 +38,80 @@ const work = defineCollection({
   }),
 });
 
-export const collections = { perspectives, work };
+// ---------------------------------------------------------------------------
+// Marginalia — terms used across the writing, unpacked.
+// ---------------------------------------------------------------------------
+
+// PUBLIC filter roles. Consolidated from the 15 internal audiences below so a
+// reader gets a usable filter bar instead of fifteen chips.
+export const ROLES = [
+  'Product',
+  'Go-to-Market',
+  'Applied AI',
+  'Data & Governance',
+  'Design & Learning',
+  'Evidence & Metrics',
+] as const;
+
+// INTERNAL audiences — the learning map. Never rendered; drives the study queue
+// and any future academy export. See Portfolio/MARGINALIA-PLAN.md.
+export const AUDIENCES = [
+  'Product Manager',
+  'AI Product Manager',
+  'Founder / GM',
+  'Product Marketer',
+  'Marketer',
+  'Sales & Presales',
+  'Customer Success',
+  'Data Practitioner',
+  'Data & AI Governance',
+  'Solution Architect',
+  'Agile & Change Practitioner',
+  'UX / Product Designer',
+  'Growth & Analytics',
+  'Learning Designer',
+  'Sector Specialist',
+] as const;
+
+// Optional future academy home. Usually empty — this bank is a learning map
+// first, academy feedstock only incidentally.
+export const DESTINATIONS = [
+  'pm-academy',
+  'pmm-academy',
+  'data-aigov-academy',
+  'edtech-academy',
+] as const;
+
+const marginalia = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/marginalia' }),
+  schema: z.object({
+    // ---- rendered ----
+    term: z.string(),
+    aka: z.array(z.string()).default([]),
+    roles: z.array(z.enum(ROLES)).min(1),
+    kind: z.enum(['Deep', 'Coined', 'Disambiguation']).default('Deep'),
+    short: z.string(),
+    example: z.string().optional(),
+    related: z.array(z.string()).default([]),
+    appearsIn: z.array(z.string()).default([]),
+
+    // ---- build control: publishing is opt-in ----
+    portfolio: z.boolean().default(false),
+
+    // ---- NEVER rendered: the learning map ----
+    learning: z
+      .object({
+        audience: z.array(z.enum(AUDIENCES)).min(1),
+        level: z.enum(['foundation', 'practitioner', 'advanced']),
+        source: z.enum(['harvested', 'curriculum']).default('harvested'),
+        module: z.string().optional(),
+        status: z
+          .enum(['backlog', 'learning', 'confident', 'taught'])
+          .default('backlog'),
+        destination: z.enum(DESTINATIONS).optional(),
+      })
+      .optional(),
+  }),
+});
+
+export const collections = { perspectives, work, marginalia };

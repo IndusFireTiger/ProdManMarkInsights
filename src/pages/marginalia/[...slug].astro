@@ -1,0 +1,123 @@
+---
+import { getCollection, render } from 'astro:content';
+import ProseLayout from '../../layouts/ProseLayout.astro';
+
+export async function getStaticPaths() {
+  // Only published terms get a page. The rest of the collection is the
+  // invisible learning map — see Portfolio/MARGINALIA-PLAN.md.
+  const entries = (await getCollection('marginalia')).filter(
+    (e) => e.data.portfolio
+  );
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const all = (await getCollection('marginalia')).filter((e) => e.data.portfolio);
+const byId = new Map(all.map((e) => [e.id, e]));
+
+const related = entry.data.related
+  .map((slug) => byId.get(slug))
+  .filter((e): e is NonNullable<typeof e> => Boolean(e));
+
+const kindLabel =
+  entry.data.kind === 'Coined'
+    ? 'Coined here'
+    : entry.data.kind === 'Disambiguation'
+      ? 'Two meanings'
+      : null;
+
+const meta = [...entry.data.roles, kindLabel].filter(Boolean) as string[];
+
+// Turn '/perspectives/agentic-pmm' into a readable label.
+const titleCase = (path: string) => {
+  const slug = path.split('/').filter(Boolean).pop() ?? path;
+  return slug.replace(/-/g, ' ').replace(/^\w/, (c) => c.toUpperCase());
+};
+---
+<ProseLayout
+  title={entry.data.term}
+  description={entry.data.short}
+  eyebrow="Marginalia"
+  meta={meta}
+  backHref="/marginalia"
+  backLabel="All terms"
+>
+  {entry.data.aka.length > 0 && (
+    <p class="term-aka"><strong>Also written:</strong> {entry.data.aka.join(' · ')}</p>
+  )}
+
+  <Content />
+
+  {entry.data.example && (
+    <div class="term-panel">
+      <p class="term-panel__label">In practice</p>
+      <p>{entry.data.example}</p>
+    </div>
+  )}
+
+  {(entry.data.appearsIn.length > 0 || related.length > 0) && (
+    <div class="term-footer">
+      {entry.data.appearsIn.length > 0 && (
+        <p>
+          <strong>Appears in:</strong>{' '}
+          {entry.data.appearsIn.map((href, i) => (
+            <>
+              {i > 0 && ' · '}
+              <a href={href}>{titleCase(href)}</a>
+            </>
+          ))}
+        </p>
+      )}
+      {related.length > 0 && (
+        <p>
+          <strong>Related:</strong>{' '}
+          {related.map((r, i) => (
+            <>
+              {i > 0 && ' · '}
+              <a href={`/marginalia/${r.id}`}>{r.data.term}</a>
+            </>
+          ))}
+        </p>
+      )}
+    </div>
+  )}
+</ProseLayout>
+
+<style>
+  .term-aka {
+    font-family: var(--sans);
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-bottom: 2rem;
+  }
+  .term-panel {
+    border-left: 3px solid var(--accent-soft);
+    background: var(--paper-2);
+    padding: 1.1rem 1.4rem;
+    border-radius: 0 8px 8px 0;
+    margin: 2.25rem 0;
+  }
+  .term-panel__label {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--accent-soft);
+    margin: 0 0 0.5rem;
+  }
+  .term-panel p:last-child { margin: 0; }
+  .term-footer {
+    margin-top: 2.75rem;
+    padding-top: 1.35rem;
+    border-top: 1px solid var(--line);
+    font-family: var(--sans);
+    font-size: 0.9rem;
+  }
+  .term-footer p { margin: 0 0 0.5rem; }
+  .term-footer p:last-child { margin: 0; }
+</style>

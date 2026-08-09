@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { ROLES } from '../../content.config';
+
+const terms = (await getCollection('marginalia'))
+  .filter((t) => t.data.portfolio)
+  .sort((a, b) => a.data.term.localeCompare(b.data.term));
+
+const rolesInUse = ROLES.filter((r) =>
+  terms.some((t) => t.data.roles.includes(r))
+);
+
+const coinedCount = terms.filter((t) => t.data.kind === 'Coined').length;
+---
+<BaseLayout
+  title="Marginalia — ProdMan·Insights"
+  description="A working glossary of product, go-to-market, applied-AI and data-governance terms — each one unpacked with a worked example from the essays it appears in."
+>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Reference</p>
+      <h1 style="max-width:16ch;">Marginalia</h1>
+      <p class="lede muted" style="max-width:56ch;">
+        Notes in the margin of the essays — terms, unpacked. Every entry carries
+        a worked example and links back to the writing it appears in. Includes
+        {coinedCount} terms coined here, and the handful of acronyms that mean
+        two different things across this site.
+      </p>
+
+      <div class="filter-bar" data-filter-bar aria-label="Filter terms by role">
+        <button class="chip" type="button" data-filter="all" aria-pressed="true">
+          All<span class="chip__count">{terms.length}</span>
+        </button>
+        {rolesInUse.map((r) => (
+          <button class="chip" type="button" data-filter={r} aria-pressed="false">
+            {r}
+            <span class="chip__count">{terms.filter((t) => t.data.roles.includes(r)).length}</span>
+          </button>
+        ))}
+      </div>
+
+      <ul class="term-list" data-term-list>
+        {terms.map((t) => (
+          <li data-roles={t.data.roles.join('|')}>
+            <a href={`/marginalia/${t.id}`}>
+              <span class="term-name">
+                {t.data.term}
+                {t.data.kind !== 'Deep' && (
+                  <span class={`term-badge term-badge--${t.data.kind.toLowerCase()}`}>
+                    {t.data.kind === 'Coined' ? 'coined here' : 'two meanings'}
+                  </span>
+                )}
+              </span>
+              <span class="term-roles">{t.data.roles.join(' · ')}</span>
+              <p class="term-short">{t.data.short}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <p class="muted filter-empty" data-filter-empty hidden style="margin-top:2rem;">
+        No terms under this role yet.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .term-list { list-style: none; margin: 2rem 0 0; padding: 0; }
+  .term-list li { border-bottom: 1px solid var(--line); }
+  .term-list li[hidden] { display: none; }
+  .term-list a {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.35rem 1.5rem;
+    align-items: baseline;
+    padding: 1.35rem 0;
+    color: inherit;
+  }
+  .term-list a:hover { text-decoration: none; }
+  .term-list a:hover .term-name { color: var(--accent); }
+  .term-name {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    line-height: 1.25;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .term-badge {
+    font-family: var(--sans);
+    font-size: 0.64rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    padding: 0.2em 0.6em;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .term-badge--coined { color: var(--accent); border-color: var(--accent-soft); }
+  .term-roles {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .term-short { grid-column: 1 / -1; color: var(--muted); font-size: 0.98rem; margin: 0; }
+  @media (max-width: 640px) {
+    .term-list a { grid-template-columns: 1fr; }
+    .term-roles { order: -1; white-space: normal; }
+  }
+</style>
+
+<script>
+  const bar = document.querySelector('[data-filter-bar]');
+  const items = Array.from(
+    document.querySelectorAll<HTMLElement>('[data-term-list] [data-roles]')
+  );
+  const empty = document.querySelector<HTMLElement>('[data-filter-empty]');
+
+  bar?.addEventListener('click', (e) => {
+    const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('[data-filter]');
+    if (!btn) return;
+    const filter = btn.dataset.filter ?? 'all';
+
+    bar.querySelectorAll<HTMLButtonElement>('[data-filter]').forEach((c) =>
+      c.setAttribute('aria-pressed', String(c === btn))
+    );
+
+    let visible = 0;
+    for (const li of items) {
+      // Terms carry several roles; match against the pipe-separated list.
+      const roles = (li.dataset.roles ?? '').split('|');
+      const show = filter === 'all' || roles.includes(filter);
+      li.hidden = !show;
+      if (show) visible++;
+    }
+    if (empty) empty.hidden = visible !== 0;
+  });
+</script>

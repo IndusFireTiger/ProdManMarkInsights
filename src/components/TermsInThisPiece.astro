@@ -1,0 +1,55 @@
+---
+// Lists Marginalia entries that name the current page in their `appearsIn`.
+// Self-maintaining: adding a term with the right `appearsIn` makes it show up
+// here with no edit to the article itself.
+import { getCollection } from 'astro:content';
+
+const here = Astro.url.pathname.replace(/\/$/, '');
+
+const terms = (await getCollection('marginalia'))
+  .filter((t) => t.data.portfolio)
+  .filter((t) => t.data.appearsIn.some((p) => p.replace(/\/$/, '') === here))
+  .sort((a, b) => a.data.term.localeCompare(b.data.term));
+---
+{terms.length > 0 && (
+  <aside class="terms-used" aria-label="Terms used in this piece">
+    <p class="terms-used__label">Terms in this piece</p>
+    <ul>
+      {terms.map((t) => (
+        <li>
+          <a href={`/marginalia/${t.id}`}>{t.data.term}</a>
+          <span class="terms-used__gloss">{t.data.short}</span>
+        </li>
+      ))}
+    </ul>
+  </aside>
+)}
+
+<style>
+  .terms-used {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+  }
+  .terms-used__label {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--accent-soft);
+    margin: 0 0 1rem;
+  }
+  .terms-used ul { list-style: none; margin: 0; padding: 0; }
+  .terms-used li {
+    display: grid;
+    grid-template-columns: minmax(9rem, 14rem) 1fr;
+    gap: 0.25rem 1.25rem;
+    padding: 0.5rem 0;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+  }
+  .terms-used__gloss { color: var(--muted); }
+  @media (max-width: 640px) {
+    .terms-used li { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import ProseLayout from '../../layouts/ProseLayout.astro';
+import TermsInThisPiece from '../../components/TermsInThisPiece.astro';
 
 export async function getStaticPaths() {
   const entries = await getCollection('perspectives');
@@ -30,4 +31,5 @@ const meta = [dateFmt, entry.data.readingTime, ...entry.data.topics].filter(
   backLabel="All perspectives"
 >
   <Content />
+  <TermsInThisPiece />
 </ProseLayout>
