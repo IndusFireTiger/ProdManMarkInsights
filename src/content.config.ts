@@ -115,13 +115,37 @@ const marginalia = defineCollection({
 });
 
 // ---------------------------------------------------------------------------
-// Learning map — the invisible bank. Renders nowhere; no page is generated from
-// it. One YAML file so mastery status can be bulk-edited in a single pass.
-// Terms live here until they're worth publishing, at which point they move to a
-// marginalia/*.md file. See Portfolio/MARGINALIA-PLAN.md.
+// LEARNING MAP — the invisible bank. Renders nowhere; generates no pages.
+//
+// Terms harvested from the published corpus but deliberately NOT published in
+// Marginalia: commodity definitions that would dilute a peer-to-peer site and
+// can't earn a citation, but are exactly the foundation tier of a curriculum.
+//
+// Stored as a single JSON file (src/content/learning-map.json) so mastery
+// status can be bulk-edited in one pass, and so any tooling can read it with
+// no YAML dependency. JSON carries no comments, so the field semantics live
+// here instead:
+//
+//   type        term (vocabulary) | essay | case-study
+//                 'essay' and 'case-study' tag existing published work as
+//                 course material without touching its frontmatter.
+//   audience[]  who needs the term — the 15 internal AUDIENCES above. The
+//                 public Marginalia filter consolidates these into 6 ROLES.
+//   level       foundation | practitioner | advanced  (curriculum sequencing)
+//   source      harvested  = appears somewhere in the published corpus
+//               curriculum = study queue; not yet used in any essay
+//   status      mastery: backlog -> learning -> confident -> taught
+//                 ('taught' is the honest bar: you know it when you can teach it)
+//   destination optional future academy; usually absent — this is a learning
+//                 map first, academy feedstock only incidentally.
+//
+// TO PUBLISH A TERM: create src/content/marginalia/<id>.md with portfolio:true
+// and delete its row here.
+//
+// See Portfolio/MARGINALIA-PLAN.md for the full plan.
 // ---------------------------------------------------------------------------
 const learningMap = defineCollection({
-  loader: file('src/content/learning-map.yaml'),
+  loader: file('src/content/learning-map.json'),
   schema: z.object({
     // 'term' is vocabulary; 'essay' and 'case-study' tag existing published
     // work as course material without touching its frontmatter.

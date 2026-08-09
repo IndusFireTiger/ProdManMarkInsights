@@ -1,0 +1,1904 @@
+[
+  {
+    "id": "mvp",
+    "term": "MVP",
+    "aka": [
+      "minimum viable product"
+    ],
+    "short": "The smallest build that tests the riskiest assumption — a learning device, not a small version of the product.",
+    "audience": [
+      "Product Manager",
+      "Founder / GM"
+    ],
+    "level": "foundation",
+    "module": "Product craft",
+    "status": "confident",
+    "appearsIn": [
+      "/work/smartlaunch",
+      "/work/littlegurukul"
+    ]
+  },
+  {
+    "id": "prd",
+    "term": "PRD",
+    "aka": [
+      "product requirements document"
+    ],
+    "short": "The document stating what will be built and why; increasingly displaced by lighter artifacts as build cost falls.",
+    "audience": [
+      "Product Manager"
+    ],
+    "level": "foundation",
+    "module": "Product craft",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/ai-product-operating-model",
+      "/perspectives/agentic-pmm"
+    ]
+  },
+  {
+    "id": "sdlc",
+    "term": "SDLC",
+    "aka": [
+      "software development lifecycle"
+    ],
+    "short": "The stages software passes through from conception to retirement.",
+    "audience": [
+      "Product Manager",
+      "Solution Architect",
+      "Agile & Change Practitioner"
+    ],
+    "level": "foundation",
+    "module": "Product craft",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/agile-in-the-age-of-ai"
+    ]
+  },
+  {
+    "id": "pdlc",
+    "term": "PDLC",
+    "aka": [
+      "product development lifecycle"
+    ],
+    "short": "The product-side counterpart to the SDLC — discovery, definition, delivery, growth, sunset.",
+    "audience": [
+      "Product Manager"
+    ],
+    "level": "foundation",
+    "module": "Product craft",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/agile-in-the-age-of-ai"
+    ]
+  },
+  {
+    "id": "definition-of-done",
+    "term": "Definition of done",
+    "short": "The agreed bar a work item must clear to count as complete — the place marketing readiness belongs if launches are to stop lagging.",
+    "audience": [
+      "Agile & Change Practitioner",
+      "Product Manager"
+    ],
+    "level": "foundation",
+    "module": "Delivery",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/the-gtm-factory"
+    ]
+  },
+  {
+    "id": "roadmap",
+    "term": "Roadmap",
+    "short": "A statement of intended sequence and rationale; degrades into a delivery schedule when outcomes stop being attached.",
+    "audience": [
+      "Product Manager",
+      "Founder / GM"
+    ],
+    "level": "foundation",
+    "module": "Product craft",
+    "status": "confident"
+  },
+  {
+    "id": "backlog",
+    "term": "Backlog",
+    "short": "The ordered queue of not-yet-built work; its length is a measure of deferred decisions, not of ambition.",
+    "audience": [
+      "Product Manager",
+      "Agile & Change Practitioner"
+    ],
+    "level": "foundation",
+    "module": "Delivery",
+    "status": "confident"
+  },
+  {
+    "id": "continuous-discovery",
+    "term": "Continuous discovery",
+    "short": "Treating customer contact as a weekly habit rather than a project phase, so evidence arrives before decisions rather than after.",
+    "audience": [
+      "Product Manager"
+    ],
+    "level": "practitioner",
+    "module": "Discovery",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/agentic-pmm"
+    ]
+  },
+  {
+    "id": "product-trio",
+    "term": "Product trio",
+    "aka": [
+      "product triad",
+      "the trio"
+    ],
+    "short": "Product manager, designer and engineering lead as the core discovery unit — balancing value, usability and feasibility, and omitting market context.",
+    "audience": [
+      "Product Manager",
+      "Product Marketer"
+    ],
+    "level": "practitioner",
+    "module": "Operating models",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/agentic-pmm"
+    ]
+  },
+  {
+    "id": "spike-vs-spec",
+    "term": "Spike vs spec",
+    "short": "Building a throwaway probe to answer a question versus writing a document to predict the answer — the trade AI economics has shifted toward the spike.",
+    "audience": [
+      "Product Manager",
+      "Solution Architect"
+    ],
+    "level": "practitioner",
+    "module": "Discovery",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/ai-product-operating-model"
+    ]
+  },
+  {
+    "id": "opportunity-solution-alignment",
+    "term": "Opportunity-Solution Alignment",
+    "aka": [
+      "OSA"
+    ],
+    "short": "Widening early discovery beyond the trio to test whether a proposed build addresses a real opportunity before solution design begins.",
+    "audience": [
+      "Product Manager",
+      "Product Marketer"
+    ],
+    "level": "practitioner",
+    "module": "Discovery",
+    "status": "learning",
+    "appearsIn": [
+      "/perspectives/agentic-pmm"
+    ]
+  },
+  {
+    "id": "stage-gate",
+    "term": "Stage gate",
+    "short": "A checkpoint that work must pass before receiving further investment; only real if refusing is survivable under deadline.",
+    "audience": [
+      "Product Manager",
+      "Agile & Change Practitioner"
+    ],
+    "level": "practitioner",
+    "module": "Operating models",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/agentic-pmm"
+    ]
+  },
+  {
+    "id": "system-of-record",
+    "term": "System of record",
+    "short": "The authoritative source for a given entity; whoever owns it owns the integration surface and, usually, the account.",
+    "audience": [
+      "Product Manager",
+      "Solution Architect",
+      "Data Practitioner"
+    ],
+    "level": "practitioner",
+    "module": "Architecture",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/student-management-systems-australian-higher-ed",
+      "/perspectives/data-catalog-and-data-risk"
+    ]
+  },
+  {
+    "id": "pmf-expansion-vectors",
+    "term": "PMF expansion vectors",
+    "aka": [
+      "adapted, complementary, new PMF"
+    ],
+    "short": "The three routes out of a growth ceiling — reposition to an adjacent segment, add complementary value, or re-purpose the core for a new problem.",
+    "audience": [
+      "Product Manager",
+      "Founder / GM",
+      "Product Marketer"
+    ],
+    "level": "advanced",
+    "module": "Strategy",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/catalog-to-enterprise-data-operations",
+      "/perspectives/agentic-pmm"
+    ]
+  },
+  {
+    "id": "foundation-models",
+    "term": "Foundation models",
+    "short": "Large general-purpose models adapted to many tasks; the layer commoditising fastest, which is why positions rather than capabilities are becoming the differentiator.",
+    "audience": [
+      "AI Product Manager",
+      "Product Manager"
+    ],
+    "level": "foundation",
+    "module": "Applied AI",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/the-model-is-not-the-moat"
+    ]
+  },
+  {
+    "id": "multi-agent-systems",
+    "term": "Multi-agent systems",
+    "short": "Several specialised agents with distinct roles and handoffs, rather than one general agent asked to do everything.",
+    "audience": [
+      "AI Product Manager",
+      "Solution Architect"
+    ],
+    "level": "practitioner",
+    "module": "Applied AI",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/agentic-pmm"
+    ]
+  },
+  {
+    "id": "non-determinism",
+    "term": "Non-determinism",
+    "short": "The same input can produce different outputs, which breaks testing, support reproducibility and the user's ability to build a mental model.",
+    "audience": [
+      "AI Product Manager",
+      "UX / Product Designer",
+      "Solution Architect"
+    ],
+    "level": "advanced",
+    "module": "Applied AI",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/evolving-ux-after-ai",
+      "/perspectives/agile-in-the-age-of-ai"
+    ]
+  },
+  {
+    "id": "model-commoditisation",
+    "term": "Model commoditisation",
+    "short": "When a capability appears in every competitor's deck it stops differentiating and becomes the price of entry.",
+    "audience": [
+      "AI Product Manager",
+      "Product Marketer"
+    ],
+    "level": "advanced",
+    "module": "Applied AI",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/the-model-is-not-the-moat"
+    ]
+  },
+  {
+    "id": "build-evaluate-decide",
+    "term": "Build → evaluate → decide",
+    "short": "The inverted sequence when building is cheap — produce something testable first, then judge it, rather than researching to a specification.",
+    "audience": [
+      "AI Product Manager",
+      "Product Manager"
+    ],
+    "level": "advanced",
+    "module": "Operating models",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/ai-product-operating-model"
+    ]
+  },
+  {
+    "id": "moat",
+    "term": "Moat",
+    "short": "A durable advantage a competitor can't copy quickly; usually a position defended under pressure rather than a feature.",
+    "audience": [
+      "Founder / GM",
+      "Product Marketer"
+    ],
+    "level": "practitioner",
+    "module": "Strategy",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/the-model-is-not-the-moat"
+    ]
+  },
+  {
+    "id": "value-proposition",
+    "term": "Value proposition",
+    "short": "The specific benefit a defined buyer gets, stated in their terms — not a feature list and not a slogan.",
+    "audience": [
+      "Product Marketer",
+      "Marketer",
+      "Sales & Presales"
+    ],
+    "level": "foundation",
+    "module": "Positioning & category",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/the-gtm-factory"
+    ]
+  },
+  {
+    "id": "persona",
+    "term": "Persona",
+    "short": "A named, evidence-based sketch of a buyer or user, used to keep messaging and scope aimed at someone specific.",
+    "audience": [
+      "Product Marketer",
+      "Marketer",
+      "UX / Product Designer"
+    ],
+    "level": "foundation",
+    "module": "Audience",
+    "status": "confident",
+    "appearsIn": [
+      "/work/smartlaunch",
+      "/work/fitpulse-pricing-agent"
+    ]
+  },
+  {
+    "id": "icp",
+    "term": "ICP",
+    "aka": [
+      "ideal customer profile"
+    ],
+    "short": "The organisational characteristics of the accounts you serve best — used to decide who to pursue and, more usefully, who to decline.",
+    "audience": [
+      "Product Marketer",
+      "Sales & Presales",
+      "Marketer"
+    ],
+    "level": "foundation",
+    "module": "Audience",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/agentic-pmm"
+    ]
+  },
+  {
+    "id": "battlecard",
+    "term": "Battlecard",
+    "short": "A one-page sales aid covering a competitor or objection; goes stale fast, which is why generating them is the classic automation candidate.",
+    "audience": [
+      "Product Marketer",
+      "Sales & Presales"
+    ],
+    "level": "foundation",
+    "module": "Enablement",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/agentic-pmm"
+    ]
+  },
+  {
+    "id": "sales-enablement",
+    "term": "Sales enablement",
+    "short": "Equipping market-facing teams to articulate differentiation; a launch fails if reps can't say why the product is different.",
+    "audience": [
+      "Product Marketer",
+      "Sales & Presales"
+    ],
+    "level": "foundation",
+    "module": "Enablement",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/the-gtm-factory",
+      "/perspectives/agentic-pmm"
+    ]
+  },
+  {
+    "id": "product-lifecycle-stages",
+    "term": "Product lifecycle stages",
+    "aka": [
+      "introduction, growth, maturity, decline"
+    ],
+    "short": "The four phases across which go-to-market objectives, metrics and collateral all change — running one playbook across all four is how GTM falls out of sync.",
+    "audience": [
+      "Product Marketer",
+      "Marketer"
+    ],
+    "level": "foundation",
+    "module": "Launch operations",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/agentic-pmm"
+    ]
+  },
+  {
+    "id": "gtm",
+    "term": "Go-to-market",
+    "aka": [
+      "GTM"
+    ],
+    "short": "How a product reaches and convinces a buyer — channel, message, pricing, enablement — and a design constraint rather than a post-build activity.",
+    "audience": [
+      "Product Marketer",
+      "Marketer",
+      "Founder / GM"
+    ],
+    "level": "foundation",
+    "module": "Launch operations",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/the-gtm-factory"
+    ]
+  },
+  {
+    "id": "packaging-and-gating",
+    "term": "Packaging & gating",
+    "short": "Deciding which capabilities sit in which tier; the guardrail is to gate the outcome, never the daily habit loop.",
+    "audience": [
+      "Product Marketer",
+      "Founder / GM"
+    ],
+    "level": "practitioner",
+    "module": "Pricing & packaging",
+    "status": "taught",
+    "appearsIn": [
+      "/work/fitpulse-pricing-agent"
+    ]
+  },
+  {
+    "id": "price-anchoring",
+    "term": "Price anchoring",
+    "short": "Framing a price against a reference the buyer already accepts, so the number is judged as a discount rather than a cost.",
+    "audience": [
+      "Product Marketer",
+      "Sales & Presales"
+    ],
+    "level": "practitioner",
+    "module": "Pricing & packaging",
+    "status": "taught",
+    "appearsIn": [
+      "/work/fitpulse-pricing-agent"
+    ]
+  },
+  {
+    "id": "win-loss-analysis",
+    "term": "Win/loss analysis",
+    "short": "Structured review of why deals were won or lost; the richest source of positioning evidence and the most consistently neglected.",
+    "audience": [
+      "Product Marketer",
+      "Sales & Presales"
+    ],
+    "level": "practitioner",
+    "module": "Evidence",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/agentic-pmm"
+    ]
+  },
+  {
+    "id": "market-category-frame",
+    "term": "Market category frame",
+    "short": "The category you ask to be evaluated in — which sets the comparison set and the price expectation before any feature is discussed.",
+    "audience": [
+      "Product Marketer",
+      "Founder / GM"
+    ],
+    "level": "practitioner",
+    "module": "Positioning & category",
+    "status": "taught",
+    "appearsIn": [
+      "/work/fitpulse-pricing-agent",
+      "/perspectives/the-model-is-not-the-moat"
+    ]
+  },
+  {
+    "id": "pmm-to-pm-ratio",
+    "term": "PMM-to-PM ratio",
+    "short": "Product marketers per product manager. 1:2 is the benchmark; 1:5 and beyond is where upstream work becomes arithmetically impossible.",
+    "audience": [
+      "Product Marketer",
+      "Founder / GM"
+    ],
+    "level": "practitioner",
+    "module": "Operating models",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/agentic-pmm"
+    ]
+  },
+  {
+    "id": "pipeline-velocity",
+    "term": "Pipeline velocity",
+    "short": "How fast value moves through the funnel — opportunities × win rate × deal size ÷ cycle length. The metric that tells you whether enablement worked.",
+    "audience": [
+      "Sales & Presales",
+      "Growth & Analytics",
+      "Product Marketer"
+    ],
+    "level": "practitioner",
+    "module": "Metrics that matter",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/agentic-pmm"
+    ]
+  },
+  {
+    "id": "adoption-decay",
+    "term": "Adoption decay",
+    "short": "Feature usage falling within cohorts over time — an early signal of eroding fit that aggregate usage totals conceal.",
+    "audience": [
+      "Customer Success",
+      "Growth & Analytics",
+      "Product Manager"
+    ],
+    "level": "advanced",
+    "module": "Metrics that matter",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/agentic-pmm"
+    ]
+  },
+  {
+    "id": "pii",
+    "term": "PII",
+    "aka": [
+      "personally identifiable information"
+    ],
+    "short": "Data that identifies a person, directly or in combination; the classification that triggers most regulatory obligations.",
+    "audience": [
+      "Data Practitioner",
+      "Data & AI Governance"
+    ],
+    "level": "foundation",
+    "module": "Data governance foundations",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/data-catalog-and-data-risk"
+    ]
+  },
+  {
+    "id": "lineage",
+    "term": "Data lineage",
+    "short": "The traceable path of data from origin through transformation to use — the evidence base for both impact analysis and audit.",
+    "audience": [
+      "Data Practitioner",
+      "Data & AI Governance"
+    ],
+    "level": "foundation",
+    "module": "Data governance foundations",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/data-catalog-and-data-risk",
+      "/work/data-governance-harmonisation"
+    ]
+  },
+  {
+    "id": "stewardship",
+    "term": "Stewardship & ownership",
+    "short": "Naming a human accountable for a data asset's definition, quality and access; governance without it is documentation.",
+    "audience": [
+      "Data Practitioner",
+      "Data & AI Governance"
+    ],
+    "level": "foundation",
+    "module": "Data governance foundations",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/data-catalog-and-data-risk"
+    ]
+  },
+  {
+    "id": "metadata-harvesting",
+    "term": "Metadata harvesting",
+    "short": "Automated collection of technical metadata from source systems — the ingestion problem underneath every catalog.",
+    "audience": [
+      "Data Practitioner",
+      "Solution Architect"
+    ],
+    "level": "foundation",
+    "module": "Data governance foundations",
+    "status": "taught",
+    "appearsIn": [
+      "/work/data-governance-harmonisation"
+    ]
+  },
+  {
+    "id": "classification",
+    "term": "Classification & sensitivity tagging",
+    "short": "Labelling data by sensitivity so policy can act on it; useful in proportion to how precisely it drives enforcement.",
+    "audience": [
+      "Data Practitioner",
+      "Data & AI Governance"
+    ],
+    "level": "practitioner",
+    "module": "Data governance foundations",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/data-catalog-and-data-risk"
+    ]
+  },
+  {
+    "id": "data-observability",
+    "term": "Data observability",
+    "short": "Monitoring freshness, volume, schema and distribution to detect pipeline failures before consumers do.",
+    "audience": [
+      "Data Practitioner",
+      "Solution Architect"
+    ],
+    "level": "practitioner",
+    "module": "Data operations",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/catalog-to-enterprise-data-operations"
+    ]
+  },
+  {
+    "id": "audit-and-evidence",
+    "term": "Audit & evidence",
+    "short": "Producing defensible proof that controls operated as claimed — the requirement that separates a governance product from a documentation tool.",
+    "audience": [
+      "Data & AI Governance",
+      "Data Practitioner"
+    ],
+    "level": "practitioner",
+    "module": "Risk & compliance",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/data-catalog-and-data-risk"
+    ]
+  },
+  {
+    "id": "policy-and-access-governance",
+    "term": "Policy & access governance",
+    "short": "Defining who may use which data under what conditions, and enforcing it rather than publishing it.",
+    "audience": [
+      "Data & AI Governance",
+      "Data Practitioner"
+    ],
+    "level": "practitioner",
+    "module": "Risk & compliance",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/data-catalog-and-data-risk"
+    ]
+  },
+  {
+    "id": "data-mesh",
+    "term": "Data mesh",
+    "short": "Decentralising ownership to domain teams who publish data as products, with federated governance holding the standards.",
+    "audience": [
+      "Data Practitioner",
+      "Solution Architect"
+    ],
+    "level": "advanced",
+    "module": "Data architecture",
+    "status": "learning",
+    "appearsIn": [
+      "/perspectives/catalog-to-enterprise-data-operations"
+    ]
+  },
+  {
+    "id": "data-products",
+    "term": "Data products",
+    "short": "Treating a dataset as a product with an owner, consumers, a contract and a lifecycle rather than as pipeline output.",
+    "audience": [
+      "Data Practitioner",
+      "Product Manager"
+    ],
+    "level": "advanced",
+    "module": "Data architecture",
+    "status": "learning",
+    "appearsIn": [
+      "/perspectives/catalog-to-enterprise-data-operations"
+    ]
+  },
+  {
+    "id": "gdpr",
+    "term": "GDPR",
+    "aka": [
+      "General Data Protection Regulation"
+    ],
+    "short": "The EU regime setting lawful basis, subject rights and cross-border limits — the template most later privacy law follows.",
+    "audience": [
+      "Data & AI Governance",
+      "Data Practitioner"
+    ],
+    "level": "foundation",
+    "module": "Regulatory landscape",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/data-catalog-and-data-risk"
+    ]
+  },
+  {
+    "id": "ccpa",
+    "term": "CCPA",
+    "aka": [
+      "California Consumer Privacy Act",
+      "CPRA"
+    ],
+    "short": "California's privacy regime — opt-out rather than opt-in, with a broad definition of \"sale\" of personal information.",
+    "audience": [
+      "Data & AI Governance"
+    ],
+    "level": "foundation",
+    "module": "Regulatory landscape",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/data-catalog-and-data-risk"
+    ]
+  },
+  {
+    "id": "lgpd",
+    "term": "LGPD",
+    "aka": [
+      "Lei Geral de Proteção de Dados"
+    ],
+    "short": "Brazil's data protection law, closely modelled on GDPR — relevant to any product with Latin American customers.",
+    "audience": [
+      "Data & AI Governance"
+    ],
+    "level": "foundation",
+    "module": "Regulatory landscape",
+    "status": "learning",
+    "appearsIn": [
+      "/perspectives/data-catalog-and-data-risk"
+    ]
+  },
+  {
+    "id": "runtime-enforcement",
+    "term": "Runtime enforcement",
+    "short": "Policy applied at the moment of access rather than reviewed afterwards — the difference between a control and a report.",
+    "audience": [
+      "Data & AI Governance",
+      "Solution Architect"
+    ],
+    "level": "advanced",
+    "module": "Risk & compliance",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/data-catalog-and-data-risk"
+    ]
+  },
+  {
+    "id": "risk-types",
+    "term": "Regulatory, privacy & reputational risk",
+    "short": "The three exposures data governance is bought to reduce; they have different owners, different evidence and different tolerances.",
+    "audience": [
+      "Data & AI Governance",
+      "Founder / GM"
+    ],
+    "level": "advanced",
+    "module": "Risk & compliance",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/data-catalog-and-data-risk"
+    ]
+  },
+  {
+    "id": "api",
+    "term": "API",
+    "short": "A contract letting systems interoperate; in enterprise products the integration surface is often the product.",
+    "audience": [
+      "Solution Architect",
+      "Product Manager"
+    ],
+    "level": "foundation",
+    "module": "Architecture",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/student-management-systems-australian-higher-ed"
+    ]
+  },
+  {
+    "id": "sso",
+    "term": "SSO & federated identity",
+    "short": "One authentication across many systems; in institutional sales it's a procurement precondition rather than a feature.",
+    "audience": [
+      "Solution Architect",
+      "Product Manager"
+    ],
+    "level": "foundation",
+    "module": "Architecture",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/student-management-systems-australian-higher-ed"
+    ]
+  },
+  {
+    "id": "monolith-vs-composable",
+    "term": "Monolith vs composable",
+    "short": "One tightly integrated system versus interchangeable parts behind contracts — a strategy choice about future optionality, not an IT preference.",
+    "audience": [
+      "Solution Architect",
+      "Product Manager",
+      "Founder / GM"
+    ],
+    "level": "foundation",
+    "module": "Architecture",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/student-management-systems-australian-higher-ed"
+    ]
+  },
+  {
+    "id": "c4-model",
+    "term": "C4 model",
+    "short": "Describing architecture at four zoom levels — context, container, component, code — which makes subjective requirements estimable and priceable.",
+    "audience": [
+      "Solution Architect",
+      "Product Manager"
+    ],
+    "level": "practitioner",
+    "module": "Architecture",
+    "status": "taught",
+    "appearsIn": [
+      "/work/data-governance-harmonisation"
+    ]
+  },
+  {
+    "id": "ipaas",
+    "term": "iPaaS",
+    "aka": [
+      "integration platform as a service",
+      "integration layer"
+    ],
+    "short": "Managed middleware connecting systems that were never designed to meet; the layer composable architectures depend on.",
+    "audience": [
+      "Solution Architect"
+    ],
+    "level": "practitioner",
+    "module": "Architecture",
+    "status": "learning",
+    "appearsIn": [
+      "/perspectives/student-management-systems-australian-higher-ed"
+    ]
+  },
+  {
+    "id": "b2g-apis",
+    "term": "B2G APIs",
+    "short": "Government-facing interfaces for statutory reporting — non-negotiable, versioned on the regulator's timetable, and a moat for whoever implements them.",
+    "audience": [
+      "Solution Architect",
+      "Sector Specialist"
+    ],
+    "level": "practitioner",
+    "module": "Architecture",
+    "status": "learning",
+    "appearsIn": [
+      "/perspectives/student-management-systems-australian-higher-ed"
+    ]
+  },
+  {
+    "id": "quality-and-security-debt",
+    "term": "Quality & security debt",
+    "short": "Deferred correctness and hardening that accrues interest; AI-accelerated generation increases the rate at which it is taken on.",
+    "audience": [
+      "Solution Architect",
+      "Product Manager"
+    ],
+    "level": "practitioner",
+    "module": "Delivery",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/agile-in-the-age-of-ai"
+    ]
+  },
+  {
+    "id": "dora-metrics",
+    "term": "DORA metrics",
+    "short": "Deployment frequency, lead time, change failure rate and restore time — the standard four for delivery performance.",
+    "audience": [
+      "Agile & Change Practitioner",
+      "Solution Architect"
+    ],
+    "level": "advanced",
+    "module": "Delivery",
+    "status": "learning"
+  },
+  {
+    "id": "customisation-as-lock-in",
+    "term": "Customisation as lock-in",
+    "short": "Bespoke configuration bought as flexibility that becomes a loan against future agility — every customisation is an upgrade you can't take.",
+    "audience": [
+      "Solution Architect",
+      "Product Manager",
+      "Founder / GM"
+    ],
+    "level": "advanced",
+    "module": "Architecture",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/student-management-systems-australian-higher-ed"
+    ]
+  },
+  {
+    "id": "waterfall",
+    "term": "Waterfall",
+    "short": "Sequential delivery with sign-off between phases; still rational where change is genuinely expensive, and rarely where it isn't.",
+    "audience": [
+      "Agile & Change Practitioner",
+      "Product Manager"
+    ],
+    "level": "foundation",
+    "module": "Delivery",
+    "status": "taught"
+  },
+  {
+    "id": "scrum",
+    "term": "Scrum",
+    "short": "A time-boxed iterative framework with fixed roles and ceremonies; the most adopted and most cargo-culted agile method.",
+    "audience": [
+      "Agile & Change Practitioner",
+      "Product Manager"
+    ],
+    "level": "foundation",
+    "module": "Delivery",
+    "status": "taught"
+  },
+  {
+    "id": "sprint",
+    "term": "Sprint",
+    "short": "A fixed-length iteration ending in something potentially shippable; a forcing function for decisions, not merely a unit of scheduling.",
+    "audience": [
+      "Agile & Change Practitioner",
+      "Product Manager"
+    ],
+    "level": "foundation",
+    "module": "Delivery",
+    "status": "confident"
+  },
+  {
+    "id": "retrospective",
+    "term": "Retrospective",
+    "short": "The team's own review of how it worked; the only agile ceremony that changes the system rather than the plan.",
+    "audience": [
+      "Agile & Change Practitioner"
+    ],
+    "level": "foundation",
+    "module": "Delivery",
+    "status": "confident"
+  },
+  {
+    "id": "xp",
+    "term": "XP",
+    "aka": [
+      "Extreme Programming"
+    ],
+    "short": "Engineering-practice-led agility — pairing, TDD, continuous integration, collective ownership. The technical half Scrum usually omits.",
+    "audience": [
+      "Agile & Change Practitioner",
+      "Solution Architect"
+    ],
+    "level": "foundation",
+    "module": "Delivery",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/agile-in-the-age-of-ai"
+    ]
+  },
+  {
+    "id": "prioritisation-under-constraint",
+    "term": "Prioritisation under constraint",
+    "short": "Choosing when you cannot do everything; the skill becomes more valuable, not less, as building gets cheaper.",
+    "audience": [
+      "Product Manager",
+      "Agile & Change Practitioner"
+    ],
+    "level": "practitioner",
+    "module": "Product craft",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/agile-in-the-age-of-ai"
+    ]
+  },
+  {
+    "id": "problem-framing",
+    "term": "Problem framing",
+    "short": "Deciding which problem is worth solving and how it's stated — the input that determines whether everything downstream matters.",
+    "audience": [
+      "Product Manager",
+      "Founder / GM"
+    ],
+    "level": "practitioner",
+    "module": "Discovery",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/agile-in-the-age-of-ai"
+    ]
+  },
+  {
+    "id": "early-adopters",
+    "term": "Early adopters",
+    "short": "The first willing users, chosen for enthusiasm rather than representativeness — which makes them the engine of internal change and a biased sample of the market.",
+    "audience": [
+      "Agile & Change Practitioner",
+      "Product Marketer",
+      "Marketer"
+    ],
+    "level": "practitioner",
+    "module": "Change leadership",
+    "status": "taught",
+    "appearsIn": [
+      "/work/smartlaunch"
+    ]
+  },
+  {
+    "id": "taste-and-quality-judgement",
+    "term": "Taste & quality judgement",
+    "short": "Knowing which of several working solutions is the good one — the scarce human input once production is cheap.",
+    "audience": [
+      "Product Manager",
+      "UX / Product Designer",
+      "AI Product Manager"
+    ],
+    "level": "advanced",
+    "module": "Product craft",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/agile-in-the-age-of-ai",
+      "/perspectives/ai-product-operating-model"
+    ]
+  },
+  {
+    "id": "review-as-bottleneck",
+    "term": "Review as bottleneck",
+    "short": "When generation is cheap, verification becomes the constraint — and simultaneously the only remaining safeguard.",
+    "audience": [
+      "Agile & Change Practitioner",
+      "AI Product Manager",
+      "Solution Architect"
+    ],
+    "level": "advanced",
+    "module": "Operating models",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/agile-in-the-age-of-ai"
+    ]
+  },
+  {
+    "id": "discoverability",
+    "term": "Discoverability",
+    "short": "Whether a user can find a capability without being told it exists; the property conversational interfaces quietly discard.",
+    "audience": [
+      "UX / Product Designer",
+      "Product Manager"
+    ],
+    "level": "foundation",
+    "module": "Interface after AI",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/evolving-ux-after-ai"
+    ]
+  },
+  {
+    "id": "intent-capture",
+    "term": "Intent capture",
+    "short": "Eliciting what the user actually wants rather than which control they pressed — the input problem natural-language interfaces inherit.",
+    "audience": [
+      "UX / Product Designer",
+      "AI Product Manager"
+    ],
+    "level": "practitioner",
+    "module": "Interface after AI",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/evolving-ux-after-ai"
+    ]
+  },
+  {
+    "id": "legibility",
+    "term": "Legibility",
+    "short": "Whether a user can tell what the system just did and why; the requirement that replaces predictability once behaviour is generated.",
+    "audience": [
+      "UX / Product Designer",
+      "AI Product Manager",
+      "Data & AI Governance"
+    ],
+    "level": "practitioner",
+    "module": "Interface after AI",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/evolving-ux-after-ai"
+    ]
+  },
+  {
+    "id": "spatial-memory",
+    "term": "Spatial memory & predictability",
+    "short": "Users learn where things are; interfaces that rearrange themselves intelligently discard a real form of acquired expertise.",
+    "audience": [
+      "UX / Product Designer"
+    ],
+    "level": "practitioner",
+    "module": "Interface after AI",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/evolving-ux-after-ai"
+    ]
+  },
+  {
+    "id": "over-trust",
+    "term": "Over-trust",
+    "short": "Confidence exceeding reliability — the failure mode fluent output produces by default, and the reason calibration beats reassurance.",
+    "audience": [
+      "UX / Product Designer",
+      "AI Product Manager",
+      "Data & AI Governance"
+    ],
+    "level": "advanced",
+    "module": "Applied AI & responsibility",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/evolving-ux-after-ai"
+    ]
+  },
+  {
+    "id": "cac",
+    "term": "CAC",
+    "aka": [
+      "customer acquisition cost"
+    ],
+    "short": "Fully loaded cost to win one customer; inflated by weak positioning long before it shows up as a marketing problem.",
+    "audience": [
+      "Growth & Analytics",
+      "Founder / GM",
+      "Marketer"
+    ],
+    "level": "foundation",
+    "module": "Metrics that matter",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/agentic-pmm"
+    ]
+  },
+  {
+    "id": "clv",
+    "term": "CLV",
+    "aka": [
+      "customer lifetime value",
+      "LTV"
+    ],
+    "short": "Total margin expected from a customer relationship; only meaningful beside CAC and only honest when churn is measured properly.",
+    "audience": [
+      "Growth & Analytics",
+      "Founder / GM"
+    ],
+    "level": "foundation",
+    "module": "Metrics that matter",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/agentic-pmm"
+    ]
+  },
+  {
+    "id": "mrr",
+    "term": "MRR",
+    "aka": [
+      "monthly recurring revenue",
+      "net-new MRR",
+      "expansion MRR"
+    ],
+    "short": "Normalised recurring revenue; useful decomposed into new, expansion, contraction and churn, misleading as a single figure.",
+    "audience": [
+      "Growth & Analytics",
+      "Founder / GM"
+    ],
+    "level": "foundation",
+    "module": "Metrics that matter",
+    "status": "confident"
+  },
+  {
+    "id": "churn",
+    "term": "Churn",
+    "short": "Customers or revenue lost in a period; a lagging indicator of decisions taken several quarters earlier.",
+    "audience": [
+      "Growth & Analytics",
+      "Customer Success"
+    ],
+    "level": "foundation",
+    "module": "Metrics that matter",
+    "status": "confident"
+  },
+  {
+    "id": "activation-rate",
+    "term": "Activation rate",
+    "short": "The share of signups reaching a defined first value; the definition is where most teams quietly measure setup instead.",
+    "audience": [
+      "Growth & Analytics",
+      "Product Manager"
+    ],
+    "level": "foundation",
+    "module": "Metrics that matter",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/agentic-pmm"
+    ]
+  },
+  {
+    "id": "dau-mau",
+    "term": "DAU/MAU",
+    "short": "Daily over monthly actives — a habit measure. High ratios indicate frequency, not value, and the two often diverge.",
+    "audience": [
+      "Growth & Analytics",
+      "Product Manager"
+    ],
+    "level": "foundation",
+    "module": "Metrics that matter",
+    "status": "confident",
+    "appearsIn": [
+      "/work/fitpulse-pricing-agent"
+    ]
+  },
+  {
+    "id": "ab-testing",
+    "term": "A/B testing",
+    "short": "Randomised comparison of two variants; trustworthy only with adequate sample, a pre-declared metric and no peeking.",
+    "audience": [
+      "Growth & Analytics",
+      "Marketer",
+      "Product Manager"
+    ],
+    "level": "foundation",
+    "module": "Evidence & inference",
+    "status": "confident",
+    "appearsIn": [
+      "/work/smartlaunch"
+    ]
+  },
+  {
+    "id": "cohort-analysis",
+    "term": "Cohort analysis",
+    "short": "Grouping users by when they arrived and tracking each group separately — the only way early decay is visible before totals bend.",
+    "audience": [
+      "Growth & Analytics",
+      "Product Manager"
+    ],
+    "level": "practitioner",
+    "module": "Evidence & inference",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/agentic-pmm"
+    ]
+  },
+  {
+    "id": "pql",
+    "term": "PQL",
+    "aka": [
+      "product-qualified lead"
+    ],
+    "short": "A lead scored on in-product behaviour rather than marketing engagement; the product-led counterpart to an MQL.",
+    "audience": [
+      "Growth & Analytics",
+      "Marketer",
+      "Sales & Presales"
+    ],
+    "level": "practitioner",
+    "module": "Metrics that matter",
+    "status": "learning"
+  },
+  {
+    "id": "leading-vs-lagging",
+    "term": "Leading vs lagging indicators",
+    "short": "Metrics that move before an outcome versus after it; most dashboards are built almost entirely from the latter.",
+    "audience": [
+      "Growth & Analytics",
+      "Product Manager",
+      "Founder / GM"
+    ],
+    "level": "practitioner",
+    "module": "Evidence & inference",
+    "status": "confident"
+  },
+  {
+    "id": "vanity-metrics",
+    "term": "Vanity metrics",
+    "short": "Numbers that rise reliably and inform no decision — usually cumulative totals, which can only go up.",
+    "audience": [
+      "Growth & Analytics",
+      "Marketer"
+    ],
+    "level": "practitioner",
+    "module": "Evidence & inference",
+    "status": "confident"
+  },
+  {
+    "id": "scaffolding",
+    "term": "Scaffolding",
+    "short": "Temporary support that lets a learner attempt something just beyond their current reach, then is deliberately withdrawn.",
+    "audience": [
+      "Learning Designer",
+      "UX / Product Designer"
+    ],
+    "level": "foundation",
+    "module": "Learning design",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/personalising-education",
+      "/work/ai-companion"
+    ]
+  },
+  {
+    "id": "spaced-repetition",
+    "term": "Spaced repetition",
+    "aka": [
+      "SRS"
+    ],
+    "short": "Scheduling review at widening intervals timed against forgetting — among the best-evidenced findings in learning science.",
+    "audience": [
+      "Learning Designer"
+    ],
+    "level": "foundation",
+    "module": "Learning design",
+    "status": "taught",
+    "appearsIn": [
+      "/work/littlegurukul"
+    ]
+  },
+  {
+    "id": "gamification",
+    "term": "Gamification in service of learning",
+    "short": "Game mechanics pointed at the learning objective rather than at engagement; the distinction decides whether it helps or distracts.",
+    "audience": [
+      "Learning Designer",
+      "Product Manager"
+    ],
+    "level": "foundation",
+    "module": "Learning design",
+    "status": "taught",
+    "appearsIn": [
+      "/work/littlegurukul"
+    ]
+  },
+  {
+    "id": "progression-system",
+    "term": "Progression system",
+    "short": "A structured path of advancing stages that gives the learner somewhere to be going, rather than a score to accumulate.",
+    "audience": [
+      "Learning Designer"
+    ],
+    "level": "foundation",
+    "module": "Learning design",
+    "status": "taught",
+    "appearsIn": [
+      "/work/littlegurukul"
+    ]
+  },
+  {
+    "id": "knowledge-unlocks",
+    "term": "Knowledge unlocks",
+    "short": "Gating new content behind demonstrated understanding, so progress is evidence of learning rather than of time spent.",
+    "audience": [
+      "Learning Designer"
+    ],
+    "level": "foundation",
+    "module": "Learning design",
+    "status": "taught",
+    "appearsIn": [
+      "/work/littlegurukul"
+    ]
+  },
+  {
+    "id": "flow-design",
+    "term": "Flow design",
+    "short": "Tuning challenge against ability so the learner is stretched but not stalled — too easy is boredom, too hard is abandonment.",
+    "audience": [
+      "Learning Designer",
+      "UX / Product Designer"
+    ],
+    "level": "practitioner",
+    "module": "Learning design",
+    "status": "taught",
+    "appearsIn": [
+      "/work/ai-companion"
+    ]
+  },
+  {
+    "id": "difficulty-curve",
+    "term": "Difficulty curve",
+    "short": "The rate at which demand increases across a learning sequence; the parameter personalisation should adjust instead of removing the challenge.",
+    "audience": [
+      "Learning Designer"
+    ],
+    "level": "practitioner",
+    "module": "Learning design",
+    "status": "taught",
+    "appearsIn": [
+      "/work/ai-companion"
+    ]
+  },
+  {
+    "id": "adaptive-pacing",
+    "term": "Adaptive pacing",
+    "short": "Varying speed and sequencing to the individual learner while holding the standard constant.",
+    "audience": [
+      "Learning Designer",
+      "AI Product Manager"
+    ],
+    "level": "practitioner",
+    "module": "Learning design",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/personalising-education"
+    ]
+  },
+  {
+    "id": "socratic-mode",
+    "term": "Socratic mode",
+    "aka": [
+      "thinking partner, not answer machine"
+    ],
+    "short": "Guiding a learner to an answer through questioning instead of supplying it — a product position with a real commercial cost.",
+    "audience": [
+      "Learning Designer",
+      "AI Product Manager"
+    ],
+    "level": "advanced",
+    "module": "Learning design",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/the-model-is-not-the-moat"
+    ]
+  },
+  {
+    "id": "pedagogy-as-moat",
+    "term": "Pedagogy as moat",
+    "short": "A defensible teaching stance as competitive advantage — hard to copy not technically but organisationally, because holding it costs engagement.",
+    "audience": [
+      "Learning Designer",
+      "Product Marketer",
+      "Founder / GM"
+    ],
+    "level": "advanced",
+    "module": "Learning design",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/the-model-is-not-the-moat"
+    ]
+  },
+  {
+    "id": "lms",
+    "term": "LMS",
+    "aka": [
+      "learning management system"
+    ],
+    "short": "The course-delivery platform — content, assignments, grades. Distinct from the student management system, which is the administrative core.",
+    "audience": [
+      "Sector Specialist",
+      "Product Manager"
+    ],
+    "level": "foundation",
+    "module": "Sector landscape",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/student-management-systems-australian-higher-ed"
+    ]
+  },
+  {
+    "id": "vet",
+    "term": "VET",
+    "aka": [
+      "vocational education and training"
+    ],
+    "short": "Australia's vocational sector — different regulator, funding and reporting from higher education, and a separate market.",
+    "audience": [
+      "Sector Specialist"
+    ],
+    "level": "foundation",
+    "module": "Sector landscape",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/one-country-many-markets-australian-edtech"
+    ]
+  },
+  {
+    "id": "usi",
+    "term": "USI",
+    "aka": [
+      "Unique Student Identifier"
+    ],
+    "short": "The national identifier following an Australian learner across providers; a mandatory integration for anything touching enrolment.",
+    "audience": [
+      "Sector Specialist",
+      "Solution Architect"
+    ],
+    "level": "foundation",
+    "module": "Sector landscape",
+    "status": "confident",
+    "appearsIn": [
+      "/perspectives/student-management-systems-australian-higher-ed"
+    ]
+  },
+  {
+    "id": "teqsa",
+    "term": "TEQSA",
+    "aka": [
+      "Tertiary Education Quality and Standards Agency"
+    ],
+    "short": "Australia's higher-education regulator; now requires institutional AI action plans, which makes AI governance a procurement gate.",
+    "audience": [
+      "Sector Specialist",
+      "Data & AI Governance"
+    ],
+    "level": "practitioner",
+    "module": "Sector landscape",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/the-model-is-not-the-moat",
+      "/perspectives/student-management-systems-australian-higher-ed"
+    ]
+  },
+  {
+    "id": "tcsi",
+    "term": "TCSI",
+    "aka": [
+      "Tertiary Collection of Student Information"
+    ],
+    "short": "The Australian government's student data collection; statutory, dated, and a large share of why SMS replacement is so risky.",
+    "audience": [
+      "Sector Specialist",
+      "Data & AI Governance"
+    ],
+    "level": "practitioner",
+    "module": "Sector landscape",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/student-management-systems-australian-higher-ed"
+    ]
+  },
+  {
+    "id": "heims",
+    "term": "HEIMS",
+    "aka": [
+      "Higher Education Information Management System"
+    ],
+    "short": "TCSI's predecessor for higher-education reporting; still referenced in legacy integrations and institutional vocabulary.",
+    "audience": [
+      "Sector Specialist"
+    ],
+    "level": "practitioner",
+    "module": "Sector landscape",
+    "status": "learning",
+    "appearsIn": [
+      "/perspectives/student-management-systems-australian-higher-ed"
+    ]
+  },
+  {
+    "id": "cricos",
+    "term": "CRICOS",
+    "short": "The register of courses and providers permitted to enrol international students; compliance is existential for that revenue line.",
+    "audience": [
+      "Sector Specialist"
+    ],
+    "level": "practitioner",
+    "module": "Sector landscape",
+    "status": "learning",
+    "appearsIn": [
+      "/perspectives/student-management-systems-australian-higher-ed"
+    ]
+  },
+  {
+    "id": "esos",
+    "term": "ESOS regime",
+    "aka": [
+      "Education Services for Overseas Students"
+    ],
+    "short": "The legislative framework protecting international students; drives reporting duties no product in the sector can opt out of.",
+    "audience": [
+      "Sector Specialist",
+      "Data & AI Governance"
+    ],
+    "level": "practitioner",
+    "module": "Sector landscape",
+    "status": "learning",
+    "appearsIn": [
+      "/perspectives/student-management-systems-australian-higher-ed"
+    ]
+  },
+  {
+    "id": "funding-model-segmentation",
+    "term": "Funding model as segmentation line",
+    "short": "In Australian education the government/non-government funding split predicts buying behaviour better than size or geography.",
+    "audience": [
+      "Sector Specialist",
+      "Product Marketer"
+    ],
+    "level": "advanced",
+    "module": "Market entry",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/one-country-many-markets-australian-edtech"
+    ]
+  },
+  {
+    "id": "federation-of-buyers",
+    "term": "Federation of buyers",
+    "short": "A market that looks national and behaves as separate jurisdictions with their own budgets and procurement — the org chart of the market is the GTM plan.",
+    "audience": [
+      "Sector Specialist",
+      "Product Marketer",
+      "Founder / GM"
+    ],
+    "level": "advanced",
+    "module": "Market entry",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/one-country-many-markets-australian-edtech"
+    ]
+  },
+  {
+    "id": "essay-agentic-pmm",
+    "type": "essay",
+    "term": "Agentic PMM",
+    "short": "Upstream product marketing as an arithmetic problem; the five-agent system and the gate that makes it real.",
+    "audience": [
+      "Product Marketer",
+      "AI Product Manager",
+      "Product Manager"
+    ],
+    "level": "advanced",
+    "module": "Applied AI in GTM",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/agentic-pmm"
+    ]
+  },
+  {
+    "id": "essay-gtm-factory",
+    "type": "essay",
+    "term": "The GTM Factory",
+    "short": "Go-to-market as a repeatable production system — asset tiering, embedded virtual team, cadence locked to release.",
+    "audience": [
+      "Product Marketer",
+      "Marketer"
+    ],
+    "level": "advanced",
+    "module": "Launch operations",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/the-gtm-factory"
+    ]
+  },
+  {
+    "id": "essay-model-not-moat",
+    "type": "essay",
+    "term": "The model is not the moat",
+    "short": "Entering a crowded market on positions rather than capability; pedagogy and trust as non-commoditising differentiators.",
+    "audience": [
+      "Product Marketer",
+      "Founder / GM",
+      "Learning Designer"
+    ],
+    "level": "advanced",
+    "module": "Market entry",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/the-model-is-not-the-moat"
+    ]
+  },
+  {
+    "id": "essay-pmf-decay",
+    "type": "essay",
+    "term": "Product-market fit decays",
+    "short": "Fit as perishable, with the data catalog's evolution as the worked case.",
+    "audience": [
+      "Product Manager",
+      "Founder / GM"
+    ],
+    "level": "advanced",
+    "module": "Strategy",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/catalog-to-enterprise-data-operations"
+    ]
+  },
+  {
+    "id": "essay-data-risk",
+    "type": "essay",
+    "term": "A product lens on the invisible",
+    "short": "Making data risk operable; the catalog as the move that turns an invisible estate into a governable one.",
+    "audience": [
+      "Data & AI Governance",
+      "Data Practitioner",
+      "Product Manager"
+    ],
+    "level": "advanced",
+    "module": "Data governance foundations",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/data-catalog-and-data-risk"
+    ]
+  },
+  {
+    "id": "essay-operating-model",
+    "type": "essay",
+    "term": "AI product management: scarcity is gone",
+    "short": "The operating model as a response to expensive engineering time, and what inverts when that constraint dissolves.",
+    "audience": [
+      "AI Product Manager",
+      "Product Manager",
+      "Agile & Change Practitioner"
+    ],
+    "level": "advanced",
+    "module": "Operating models",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/ai-product-operating-model"
+    ]
+  },
+  {
+    "id": "essay-agile-ai",
+    "type": "essay",
+    "term": "Agile in the age of AI",
+    "short": "What remains scarce and human when iteration is nearly free.",
+    "audience": [
+      "Agile & Change Practitioner",
+      "AI Product Manager"
+    ],
+    "level": "advanced",
+    "module": "Delivery",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/agile-in-the-age-of-ai"
+    ]
+  },
+  {
+    "id": "essay-evolving-ux",
+    "type": "essay",
+    "term": "Designing for a machine that can understand you",
+    "short": "Interface as the place you steer and verify rather than operate; discoverability debt and trust calibration.",
+    "audience": [
+      "UX / Product Designer",
+      "AI Product Manager"
+    ],
+    "level": "advanced",
+    "module": "Interface after AI",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/evolving-ux-after-ai"
+    ]
+  },
+  {
+    "id": "essay-many-markets",
+    "type": "essay",
+    "term": "One country, many markets",
+    "short": "Wedge strategy in a structurally fragmented market; the org chart of the market as the go-to-market plan.",
+    "audience": [
+      "Sector Specialist",
+      "Product Marketer",
+      "Founder / GM"
+    ],
+    "level": "advanced",
+    "module": "Market entry",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/one-country-many-markets-australian-edtech"
+    ]
+  },
+  {
+    "id": "essay-sms",
+    "type": "essay",
+    "term": "The core that won't sit still",
+    "short": "Student management systems, composable re-architecture, and customisation as lock-in.",
+    "audience": [
+      "Sector Specialist",
+      "Solution Architect",
+      "Product Manager"
+    ],
+    "level": "advanced",
+    "module": "Architecture",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/student-management-systems-australian-higher-ed"
+    ]
+  },
+  {
+    "id": "essay-personalising",
+    "type": "essay",
+    "term": "Personalising education without losing the human touch",
+    "short": "Adapt the pace, protect the struggle; personalisation that supports a teacher rather than replacing one.",
+    "audience": [
+      "Learning Designer",
+      "AI Product Manager"
+    ],
+    "level": "practitioner",
+    "module": "Learning design",
+    "status": "taught",
+    "appearsIn": [
+      "/perspectives/personalising-education"
+    ]
+  },
+  {
+    "id": "case-fitpulse",
+    "type": "case-study",
+    "term": "FitPulse — a pricing agent's first draft",
+    "short": "Ready-made pricing exercise — value mapping, gating, risk, and where the agent's judgement runs out.",
+    "audience": [
+      "Product Marketer",
+      "AI Product Manager",
+      "Growth & Analytics"
+    ],
+    "level": "practitioner",
+    "module": "Pricing & packaging",
+    "status": "taught",
+    "appearsIn": [
+      "/work/fitpulse-pricing-agent"
+    ]
+  },
+  {
+    "id": "case-data-governance",
+    "type": "case-study",
+    "term": "Harmonising subjective data governance requirements",
+    "short": "Turning conflicting enterprise requirements into one estimable product, using the C4 model.",
+    "audience": [
+      "Data & AI Governance",
+      "Solution Architect",
+      "Product Manager"
+    ],
+    "level": "advanced",
+    "module": "Discovery",
+    "status": "taught",
+    "appearsIn": [
+      "/work/data-governance-harmonisation"
+    ]
+  },
+  {
+    "id": "case-littlegurukul",
+    "type": "case-study",
+    "term": "LittleGurukul",
+    "short": "Reusable game engines, a progression spine, and gamification pointed at learning rather than engagement.",
+    "audience": [
+      "Learning Designer",
+      "Product Manager"
+    ],
+    "level": "practitioner",
+    "module": "Learning design",
+    "status": "taught",
+    "appearsIn": [
+      "/work/littlegurukul"
+    ]
+  },
+  {
+    "id": "case-smartlaunch",
+    "type": "case-study",
+    "term": "SmartLaunch",
+    "short": "A simulated GTM campaign — segmentation, message testing, KPIs by phase.",
+    "audience": [
+      "Product Marketer",
+      "Marketer"
+    ],
+    "level": "foundation",
+    "module": "Launch operations",
+    "status": "taught",
+    "appearsIn": [
+      "/work/smartlaunch"
+    ]
+  },
+  {
+    "id": "case-ai-companion",
+    "type": "case-study",
+    "term": "AI Companion",
+    "short": "Responsible product thinking in a learning assistant — defer when uncertain, keep an adult in the loop.",
+    "audience": [
+      "Learning Designer",
+      "AI Product Manager",
+      "Data & AI Governance"
+    ],
+    "level": "practitioner",
+    "module": "Applied AI & responsibility",
+    "status": "taught",
+    "appearsIn": [
+      "/work/ai-companion"
+    ]
+  }
+]
