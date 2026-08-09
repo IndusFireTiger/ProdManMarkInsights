@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import ProseLayout from '../../layouts/ProseLayout.astro';
+import { definedTermSchema } from '../../lib/schema';
 
 export async function getStaticPaths() {
   // Only published terms get a page. The rest of the collection is the
@@ -33,6 +34,15 @@ const kindLabel =
 
 const meta = [...entry.data.roles, kindLabel].filter(Boolean) as string[];
 
+const jsonLd = definedTermSchema({
+  site: Astro.site,
+  path: `/marginalia/${entry.id}`,
+  name: entry.data.term,
+  description: entry.data.short,
+  termCode: entry.id,
+  aka: entry.data.aka,
+});
+
 // Turn '/perspectives/agentic-pmm' into a readable label.
 const titleCase = (path: string) => {
   const slug = path.split('/').filter(Boolean).pop() ?? path;
@@ -46,6 +56,7 @@ const titleCase = (path: string) => {
   meta={meta}
   backHref="/marginalia"
   backLabel="All terms"
+  jsonLd={jsonLd}
 >
   {entry.data.aka.length > 0 && (
     <p class="term-aka"><strong>Also written:</strong> {entry.data.aka.join(' · ')}</p>

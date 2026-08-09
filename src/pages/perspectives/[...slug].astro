@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import ProseLayout from '../../layouts/ProseLayout.astro';
 import TermsInThisPiece from '../../components/TermsInThisPiece.astro';
+import { articleSchema } from '../../lib/schema';
 
 export async function getStaticPaths() {
   const entries = await getCollection('perspectives');
@@ -21,6 +22,15 @@ const dateFmt = entry.data.date.toLocaleDateString('en-AU', {
 const meta = [dateFmt, entry.data.readingTime, ...entry.data.topics].filter(
   Boolean
 ) as string[];
+
+const jsonLd = articleSchema({
+  site: Astro.site,
+  path: `/perspectives/${entry.id}`,
+  headline: entry.data.title,
+  description: entry.data.summary,
+  datePublished: entry.data.date,
+  keywords: [entry.data.skill, ...entry.data.topics],
+});
 ---
 <ProseLayout
   title={entry.data.title}
@@ -29,6 +39,8 @@ const meta = [dateFmt, entry.data.readingTime, ...entry.data.topics].filter(
   meta={meta}
   backHref="/perspectives"
   backLabel="All perspectives"
+  jsonLd={jsonLd}
+  noindex={entry.data.draft}
 >
   <Content />
   <TermsInThisPiece />

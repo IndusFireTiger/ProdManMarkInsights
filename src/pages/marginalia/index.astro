@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { ROLES } from '../../content.config';
+import { definedTermSetSchema } from '../../lib/schema';
 
 const terms = (await getCollection('marginalia'))
   .filter((t) => t.data.portfolio)
@@ -12,10 +13,24 @@ const rolesInUse = ROLES.filter((r) =>
 );
 
 const coinedCount = terms.filter((t) => t.data.kind === 'Coined').length;
+
+const description =
+  'A working glossary of product, go-to-market, applied-AI and data-governance terms — each one unpacked with a worked example from the essays it appears in.';
+
+const jsonLd = definedTermSetSchema({
+  site: Astro.site,
+  description,
+  terms: terms.map((t) => ({
+    id: t.id,
+    name: t.data.term,
+    description: t.data.short,
+  })),
+});
 ---
 <BaseLayout
   title="Marginalia — ProdMan·Insights"
-  description="A working glossary of product, go-to-market, applied-AI and data-governance terms — each one unpacked with a worked example from the essays it appears in."
+  description={description}
+  jsonLd={jsonLd}
 >
   <section class="section">
     <div class="container">

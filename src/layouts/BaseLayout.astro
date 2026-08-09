@@ -6,10 +6,19 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  /** Schema.org structured data, rendered as ld+json. Object or array. */
+  jsonLd?: unknown;
+  /** og:type — 'website' for indexes, 'article' for essays and case studies. */
+  ogType?: string;
+  /** Keep out of search results (used for drafts that still build). */
+  noindex?: boolean;
 }
 const {
   title = 'ProdMan·Insights — Product strategy & applied AI',
   description = 'A product strategist and thought leader exploring product management, product marketing and applied AI — with a keen interest in education and training.',
+  jsonLd,
+  ogType = 'website',
+  noindex = false,
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -21,10 +30,16 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <meta property="og:type" content="website" />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="ProdMan·Insights" />
     <meta name="twitter:card" content="summary_large_image" />
+    {jsonLd && (
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    )}
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

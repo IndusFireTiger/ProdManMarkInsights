@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import ProseLayout from '../../layouts/ProseLayout.astro';
 import TermsInThisPiece from '../../components/TermsInThisPiece.astro';
+import { articleSchema } from '../../lib/schema';
 
 export async function getStaticPaths() {
   const entries = await getCollection('work');
@@ -16,6 +17,14 @@ const { Content } = await render(entry);
 const meta = [entry.data.kind, entry.data.focus, entry.data.role].filter(
   Boolean
 ) as string[];
+
+const jsonLd = articleSchema({
+  site: Astro.site,
+  path: `/work/${entry.id}`,
+  headline: entry.data.title,
+  description: entry.data.summary,
+  keywords: [entry.data.kind, entry.data.focus],
+});
 ---
 <ProseLayout
   title={entry.data.title}
@@ -24,6 +33,8 @@ const meta = [entry.data.kind, entry.data.focus, entry.data.role].filter(
   meta={meta}
   backHref="/work"
   backLabel="All work"
+  jsonLd={jsonLd}
+  noindex={entry.data.draft}
 >
   <Content />
   <TermsInThisPiece />

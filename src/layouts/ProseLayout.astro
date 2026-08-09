@@ -8,6 +8,9 @@ interface Props {
   meta?: string[];
   backHref?: string;
   backLabel?: string;
+  jsonLd?: unknown;
+  ogType?: string;
+  noindex?: boolean;
 }
 const {
   title,
@@ -16,9 +19,18 @@ const {
   meta = [],
   backHref = '/',
   backLabel = 'Back',
+  jsonLd,
+  ogType = 'article',
+  noindex = false,
 } = Astro.props;
 ---
-<BaseLayout title={`${title} — ProdMan·Insights`} description={description}>
+<BaseLayout
+  title={`${title} — ProdMan·Insights`}
+  description={description}
+  jsonLd={jsonLd}
+  ogType={ogType}
+  noindex={noindex}
+>
   <article class="article">
     <div class="container">
       <a class="back-link" href={backHref}>← {backLabel}</a>
