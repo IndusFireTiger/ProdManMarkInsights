@@ -1,0 +1,349 @@
+---
+// DEV-ONLY. Renders at http://localhost:4321/learning-map when running
+// `npm run dev`. In a production build getStaticPaths returns an empty array,
+// so no page is emitted and nothing reaches the deployed site.
+//
+// Verify with:  npm run build && ls dist | grep learning-map   (should be empty)
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { AUDIENCES } from '../../content.config';
+
+export function getStaticPaths() {
+  if (!import.meta.env.DEV) return [];
+  return [{ params: { slug: undefined } }];
+}
+
+const LEVELS = ['foundation', 'practitioner', 'advanced'] as const;
+const STATUSES = ['backlog', 'learning', 'confident', 'taught'] as const;
+
+type Row = {
+  id: string;
+  term: string;
+  short: string;
+  audience: string[];
+  level: string;
+  status: string;
+  source: string;
+  module: string;
+  published: boolean;
+  kind: string;
+};
+
+const map = await getCollection('learningMap');
+const published = await getCollection('marginalia');
+
+const rows: Row[] = [
+  ...map.map((e) => ({
+    id: e.id,
+    term: e.data.term,
+    short: e.data.short ?? '',
+    audience: e.data.audience,
+    level: e.data.level,
+    status: e.data.status,
+    source: e.data.source,
+    module: e.data.module ?? '—',
+    published: false,
+    kind: e.data.type,
+  })),
+  ...published.map((e) => ({
+    id: e.id,
+    term: e.data.term,
+    short: e.data.short,
+    audience: e.data.learning?.audience ?? [],
+    level: e.data.learning?.level ?? 'practitioner',
+    status: e.data.learning?.status ?? 'taught',
+    source: e.data.learning?.source ?? 'harvested',
+    module: e.data.learning?.module ?? '—',
+    published: true,
+    kind: 'term',
+  })),
+].sort((a, b) => a.term.localeCompare(b.term));
+
+const terms = rows.filter((r) => r.kind === 'term');
+const tally = <K extends keyof Row>(k: K) =>
+  terms.reduce<Record<string, number>>((acc, r) => {
+    const key = String(r[k]);
+    acc[key] = (acc[key] ?? 0) + 1;
+    return acc;
+  }, {});
+
+const byStatus = tally('status');
+const byLevel = tally('level');
+const bySource = tally('source');
+const queueCount = terms.filter(
+  (r) => r.status === 'backlog' || r.status === 'learning'
+).length;
+
+const audiencesUsed = AUDIENCES.filter((a) =>
+  terms.some((r) => r.audience.includes(a))
+);
+---
+<BaseLayout
+  title="Learning map (local only)"
+  description="Dev-only view of the invisible learning map."
+>
+  <section class="section">
+    <div class="container">
+      <p class="dev-flag">
+        Local only · not in the production build · {rows.length} entries
+      </p>
+      <h1 style="max-width:20ch;">Learning map</h1>
+      <p class="lede muted" style="max-width:58ch;">
+        Every term on the map, visible and invisible. Edit
+        <code>src/content/learning-map.json</code> to change a status — the id
+        of each row is shown so you can find it.
+      </p>
+
+      <div class="tiles">
+        <div class="tile"><span class="tile__n">{terms.length}</span><span class="tile__l">terms</span></div>
+        <div class="tile"><span class="tile__n">{terms.filter((r) => r.published).length}</span><span class="tile__l">published</span></div>
+        <div class="tile"><span class="tile__n">{rows.length - terms.length}</span><span class="tile__l">essays / cases</span></div>
+        <div class="tile tile--hot"><span class="tile__n">{queueCount}</span><span class="tile__l">in queue</span></div>
+      </div>
+
+      <div class="meters">
+        <div>
+          <p class="meters__h">Mastery</p>
+          {STATUSES.map((s) => (
+            <div class="meter">
+              <span class="meter__l">{s}</span>
+              <span class="meter__bar"><i style={`width:${((byStatus[s] ?? 0) / terms.length) * 100}%`} data-status={s}></i></span>
+              <span class="meter__n">{byStatus[s] ?? 0}</span>
+            </div>
+          ))}
+        </div>
+        <div>
+          <p class="meters__h">Level</p>
+          {LEVELS.map((l) => (
+            <div class="meter">
+              <span class="meter__l">{l}</span>
+              <span class="meter__bar"><i style={`width:${((byLevel[l] ?? 0) / terms.length) * 100}%`}></i></span>
+              <span class="meter__n">{byLevel[l] ?? 0}</span>
+            </div>
+          ))}
+          <p class="meters__h" style="margin-top:1.25rem;">Source</p>
+          {Object.entries(bySource).map(([k, v]) => (
+            <div class="meter">
+              <span class="meter__l">{k}</span>
+              <span class="meter__bar"><i style={`width:${(v / terms.length) * 100}%`}></i></span>
+              <span class="meter__n">{v}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <details class="cover">
+        <summary>Coverage — audience × level</summary>
+        <div class="cover__scroll">
+          <table>
+            <thead>
+              <tr><th>Audience</th>{LEVELS.map((l) => <th>{l}</th>)}<th>total</th></tr>
+            </thead>
+            <tbody>
+              {audiencesUsed.map((a) => {
+                const mine = terms.filter((r) => r.audience.includes(a));
+                return (
+                  <tr>
+                    <td class="cover__a">{a}</td>
+                    {LEVELS.map((l) => {
+                      const n = mine.filter((r) => r.level === l).length;
+                      return <td class={n === 0 ? 'cover__zero' : undefined}>{n === 0 ? '·' : n}</td>;
+                    })}
+                    <td><strong>{mine.length}</strong></td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+      <div class="controls">
+        <input type="search" placeholder="Search term, definition or id…" data-search aria-label="Search terms" />
+        <select data-aud aria-label="Filter by audience">
+          <option value="all">All audiences</option>
+          {audiencesUsed.map((a) => <option value={a}>{a}</option>)}
+        </select>
+      </div>
+
+      <div class="filter-bar" data-chips="status" aria-label="Filter by status">
+        <button class="chip" type="button" data-v="all" aria-pressed="true">Any status</button>
+        {STATUSES.map((s) => (
+          <button class="chip" type="button" data-v={s} aria-pressed="false">
+            {s}<span class="chip__count">{byStatus[s] ?? 0}</span>
+          </button>
+        ))}
+      </div>
+
+      <div class="filter-bar" data-chips="level" aria-label="Filter by level">
+        <button class="chip" type="button" data-v="all" aria-pressed="true">Any level</button>
+        {LEVELS.map((l) => (
+          <button class="chip" type="button" data-v={l} aria-pressed="false">
+            {l}<span class="chip__count">{byLevel[l] ?? 0}</span>
+          </button>
+        ))}
+        <button class="chip" type="button" data-v="curriculum" data-extra aria-pressed="false">
+          curriculum only<span class="chip__count">{bySource.curriculum ?? 0}</span>
+        </button>
+      </div>
+
+      <p class="count muted"><b data-count>{rows.length}</b> shown</p>
+
+      <ul class="rows" data-rows>
+        {rows.map((r) => (
+          <li
+            data-aud={r.audience.join('|')}
+            data-status={r.status}
+            data-level={r.level}
+            data-source={r.source}
+            data-text={`${r.term} ${r.short} ${r.id}`.toLowerCase()}
+          >
+            <div class="row__top">
+              <span class="row__term">{r.term}</span>
+              <span class={`pill pill--${r.status}`}>{r.status}</span>
+              <span class="pill pill--ghost">{r.level}</span>
+              {r.source === 'curriculum' && <span class="pill pill--cur">curriculum</span>}
+              {r.published && <span class="pill pill--pub">published</span>}
+              {r.kind !== 'term' && <span class="pill pill--ghost">{r.kind}</span>}
+            </div>
+            {r.short && <p class="row__short">{r.short}</p>}
+            <p class="row__meta">
+              <code>{r.id}</code> · {r.module} · {r.audience.join(' · ')}
+            </p>
+          </li>
+        ))}
+      </ul>
+
+      <p class="muted" data-empty hidden style="margin-top:2rem;">Nothing matches those filters.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .dev-flag {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #8a5a00;
+    background: #fff5e0;
+    border: 1px solid #f0d9a8;
+    padding: 0.35em 0.75em;
+    border-radius: 999px;
+    margin-bottom: 1.25rem;
+  }
+  .tiles { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 2rem 0 2.5rem; }
+  .tile {
+    flex: 1 1 8rem; padding: 1rem 1.2rem;
+    border: 1px solid var(--line); border-radius: 10px; background: var(--paper-2);
+  }
+  .tile--hot { border-color: var(--accent-soft); }
+  .tile__n { display: block; font-family: var(--serif); font-size: 1.9rem; line-height: 1; }
+  .tile__l {
+    display: block; margin-top: 0.35rem; font-family: var(--sans);
+    font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+  }
+  .meters { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+  .meters__h {
+    font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.09em;
+    text-transform: uppercase; color: var(--accent-soft); margin: 0 0 0.6rem;
+  }
+  .meter { display: grid; grid-template-columns: 6.5rem 1fr 2.5rem; align-items: center; gap: 0.6rem; font-family: var(--sans); font-size: 0.82rem; padding: 0.15rem 0; }
+  .meter__bar { background: var(--paper-2); border-radius: 999px; height: 8px; overflow: hidden; }
+  .meter__bar i { display: block; height: 100%; background: var(--accent-soft); }
+  .meter__bar i[data-status="backlog"] { background: #c2703a; }
+  .meter__bar i[data-status="learning"] { background: #d4a534; }
+  .meter__n { text-align: right; color: var(--muted); }
+  .cover { margin-bottom: 2rem; border: 1px solid var(--line); border-radius: 10px; padding: 0.9rem 1.1rem; }
+  .cover summary { cursor: pointer; font-family: var(--sans); font-size: 0.85rem; }
+  .cover__scroll { overflow-x: auto; margin-top: 1rem; }
+  .cover table { border-collapse: collapse; width: 100%; font-family: var(--sans); font-size: 0.82rem; }
+  .cover th, .cover td { padding: 0.4rem 0.7rem; text-align: right; border-bottom: 1px solid var(--line); }
+  .cover th:first-child, .cover td:first-child { text-align: left; white-space: nowrap; }
+  .cover th { font-size: 0.68rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--accent-soft); }
+  .cover__zero { color: #c2703a; }
+  .controls { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.5rem; }
+  .controls input, .controls select {
+    font-family: var(--sans); font-size: 0.88rem; padding: 0.55em 0.8em;
+    border: 1px solid var(--line); border-radius: 8px; background: var(--paper); color: inherit;
+  }
+  .controls input { flex: 1 1 18rem; }
+  .count { font-family: var(--sans); font-size: 0.8rem; margin: 1.25rem 0 0.5rem; }
+  .rows { list-style: none; margin: 0; padding: 0; }
+  .rows li { border-bottom: 1px solid var(--line); padding: 0.95rem 0; }
+  .rows li[hidden] { display: none; }
+  .row__top { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+  .row__term { font-family: var(--serif); font-size: 1.12rem; }
+  .row__short { margin: 0.35rem 0 0.3rem; color: var(--muted); font-size: 0.93rem; }
+  .row__meta { margin: 0; font-family: var(--sans); font-size: 0.72rem; color: var(--muted); }
+  .row__meta code { font-size: 0.95em; }
+  .pill {
+    font-family: var(--sans); font-size: 0.62rem; letter-spacing: 0.07em;
+    text-transform: uppercase; padding: 0.22em 0.6em; border-radius: 999px; border: 1px solid var(--line); color: var(--muted);
+  }
+  .pill--backlog { color: #a8541f; border-color: #e6c3a8; background: #fdf1e7; }
+  .pill--learning { color: #8a6a00; border-color: #ecd9a0; background: #fdf8e7; }
+  .pill--confident { color: var(--accent); border-color: var(--accent-soft); }
+  .pill--taught { color: var(--paper); background: var(--accent); border-color: var(--accent); }
+  .pill--cur { color: #7a4fa3; border-color: #d9c4ea; background: #f7f1fc; }
+  .pill--pub { color: var(--accent); border-color: var(--accent-soft); }
+  @media (max-width: 720px) { .meters { grid-template-columns: 1fr; } }
+</style>
+
+<script>
+  const rows = Array.from(document.querySelectorAll<HTMLElement>('[data-rows] li'));
+  const search = document.querySelector<HTMLInputElement>('[data-search]');
+  const aud = document.querySelector<HTMLSelectElement>('[data-aud]');
+  const countEl = document.querySelector<HTMLElement>('[data-count]');
+  const emptyEl = document.querySelector<HTMLElement>('[data-empty]');
+
+  const state = { status: 'all', level: 'all', source: 'all' };
+
+  function apply() {
+    const q = (search?.value ?? '').trim().toLowerCase();
+    const a = aud?.value ?? 'all';
+    let n = 0;
+    for (const li of rows) {
+      const audiences = (li.dataset.aud ?? '').split('|');
+      const ok =
+        (a === 'all' || audiences.includes(a)) &&
+        (state.status === 'all' || li.dataset.status === state.status) &&
+        (state.level === 'all' || li.dataset.level === state.level) &&
+        (state.source === 'all' || li.dataset.source === state.source) &&
+        (!q || (li.dataset.text ?? '').includes(q));
+      li.hidden = !ok;
+      if (ok) n++;
+    }
+    if (countEl) countEl.textContent = String(n);
+    if (emptyEl) emptyEl.hidden = n !== 0;
+  }
+
+  for (const bar of document.querySelectorAll<HTMLElement>('[data-chips]')) {
+    bar.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('[data-v]');
+      if (!btn) return;
+      const group = bar.dataset.chips as 'status' | 'level';
+      const v = btn.dataset.v ?? 'all';
+
+      // The "curriculum only" chip filters source, not level.
+      if (btn.hasAttribute('data-extra')) {
+        const on = btn.getAttribute('aria-pressed') === 'true';
+        state.source = on ? 'all' : 'curriculum';
+        btn.setAttribute('aria-pressed', String(!on));
+        apply();
+        return;
+      }
+
+      state[group] = v;
+      bar.querySelectorAll<HTMLButtonElement>('[data-v]:not([data-extra])').forEach((c) =>
+        c.setAttribute('aria-pressed', String(c === btn))
+      );
+      apply();
+    });
+  }
+
+  search?.addEventListener('input', apply);
+  aud?.addEventListener('change', apply);
+  apply();
+</script>
