@@ -1,5 +1,5 @@
 import { defineCollection, z } from 'astro:content';
-import { glob } from 'astro/loaders';
+import { glob, file } from 'astro/loaders';
 
 // Skill highlights a Product Management / Product Marketing professional is
 // positioned against. Each perspective is filed under exactly one.
@@ -114,4 +114,31 @@ const marginalia = defineCollection({
   }),
 });
 
-export const collections = { perspectives, work, marginalia };
+// ---------------------------------------------------------------------------
+// Learning map — the invisible bank. Renders nowhere; no page is generated from
+// it. One YAML file so mastery status can be bulk-edited in a single pass.
+// Terms live here until they're worth publishing, at which point they move to a
+// marginalia/*.md file. See Portfolio/MARGINALIA-PLAN.md.
+// ---------------------------------------------------------------------------
+const learningMap = defineCollection({
+  loader: file('src/content/learning-map.yaml'),
+  schema: z.object({
+    // 'term' is vocabulary; 'essay' and 'case-study' tag existing published
+    // work as course material without touching its frontmatter.
+    type: z.enum(['term', 'essay', 'case-study']).default('term'),
+    term: z.string(),
+    aka: z.array(z.string()).default([]),
+    short: z.string().optional(),
+    audience: z.array(z.enum(AUDIENCES)).min(1),
+    level: z.enum(['foundation', 'practitioner', 'advanced']),
+    source: z.enum(['harvested', 'curriculum']).default('harvested'),
+    module: z.string().optional(),
+    status: z
+      .enum(['backlog', 'learning', 'confident', 'taught'])
+      .default('backlog'),
+    destination: z.enum(DESTINATIONS).optional(),
+    appearsIn: z.array(z.string()).default([]),
+  }),
+});
+
+export const collections = { perspectives, work, marginalia, learningMap };
