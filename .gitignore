@@ -10,10 +10,13 @@ node_modules/
 # macOS / editors
 .DS_Store
 
-# local-only source material (not published)
-# This repo is PUBLIC. someInputs/ holds research PDFs including a form
-# submission with a personal phone number and email address — it must never
-# enter git history.
+# This repo is PUBLIC.
+#
+# someInputs/ now lives one level up, in Portfolio/ — deliberately OUTSIDE this
+# repo, so its need for cloud backup stays visible rather than being quietly
+# solved by git. The rule below is kept as a tripwire: if that folder is ever
+# moved back in, it stays out of history. It holds research PDFs including a
+# form submission carrying a personal phone number and email address.
 #
 # ToDo/ is deliberately NOT ignored: the planning docs are tracked so project
 # context travels with the repo. They were scanned for personal identifiers
