@@ -1900,5 +1900,1194 @@
     "appearsIn": [
       "/work/ai-companion"
     ]
+  },
+  {
+    "id": "aigp",
+    "term": "AIGP",
+    "aka": [
+      "Artificial Intelligence Governance Professional"
+    ],
+    "short": "The IAPP's AI governance certification — the credential that formalises the regulatory, risk and lifecycle vocabulary of the discipline.",
+    "audience": [
+      "Data & AI Governance"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Credentials",
+    "status": "backlog",
+    "destination": "data-aigov-academy"
+  },
+  {
+    "id": "eu-ai-act",
+    "term": "EU AI Act",
+    "short": "The EU's risk-tiered AI regulation — obligations scale from minimal through limited and high risk to prohibited practices, with the tier determined by use case rather than model.",
+    "audience": [
+      "Data & AI Governance",
+      "AI Product Manager"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Regulatory landscape",
+    "status": "backlog",
+    "destination": "data-aigov-academy"
+  },
+  {
+    "id": "nist-ai-rmf",
+    "term": "NIST AI RMF",
+    "aka": [
+      "AI Risk Management Framework"
+    ],
+    "short": "A voluntary US framework structured around four functions — Govern, Map, Measure, Manage — widely used as the operating skeleton for an AI governance programme.",
+    "audience": [
+      "Data & AI Governance",
+      "AI Product Manager"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Frameworks",
+    "status": "backlog",
+    "destination": "data-aigov-academy"
+  },
+  {
+    "id": "iso-42001",
+    "term": "ISO/IEC 42001",
+    "short": "The certifiable management-system standard for AI — the AI equivalent of ISO 27001, giving governance an auditable shape rather than a policy document.",
+    "audience": [
+      "Data & AI Governance"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Frameworks",
+    "status": "backlog",
+    "destination": "data-aigov-academy"
+  },
+  {
+    "id": "iso-31000",
+    "term": "ISO 31000",
+    "short": "Generic risk-management guidance; the vocabulary (likelihood, consequence, appetite, treatment) that AI-specific frameworks assume you already speak.",
+    "audience": [
+      "Data & AI Governance"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Frameworks",
+    "status": "backlog",
+    "destination": "data-aigov-academy"
+  },
+  {
+    "id": "model-card",
+    "term": "Model card",
+    "short": "Structured documentation of a model's intended use, training data, evaluation results and known limitations — the disclosure artifact regulators increasingly expect.",
+    "audience": [
+      "Data & AI Governance",
+      "AI Product Manager"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "AI documentation",
+    "status": "backlog",
+    "destination": "data-aigov-academy"
+  },
+  {
+    "id": "ai-inventory",
+    "term": "AI inventory",
+    "aka": [
+      "AI register",
+      "model registry"
+    ],
+    "short": "The enumeration of every model and AI-enabled feature in an organisation; the AI counterpart of the data catalog, and the same precondition — you cannot govern what nobody can list.",
+    "audience": [
+      "Data & AI Governance"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "AI operations",
+    "status": "backlog",
+    "destination": "data-aigov-academy"
+  },
+  {
+    "id": "drift-monitoring",
+    "term": "Drift monitoring",
+    "aka": [
+      "model drift",
+      "data drift"
+    ],
+    "short": "Detecting when live inputs or model behaviour diverge from the conditions the model was validated against — decay in a form the accuracy metric may not show.",
+    "audience": [
+      "Data & AI Governance",
+      "AI Product Manager"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "AI operations",
+    "status": "backlog",
+    "destination": "data-aigov-academy"
+  },
+  {
+    "id": "algorithmic-accountability",
+    "term": "Algorithmic accountability",
+    "short": "Establishing who answers for an automated decision, and how that answer is evidenced after the fact.",
+    "audience": [
+      "Data & AI Governance",
+      "Founder / GM"
+    ],
+    "level": "advanced",
+    "source": "curriculum",
+    "module": "AI governance",
+    "status": "backlog",
+    "destination": "data-aigov-academy"
+  },
+  {
+    "id": "explainability-vs-interpretability",
+    "term": "Explainability vs interpretability",
+    "short": "Explaining a specific output after the fact versus building a model whose mechanism is legible by construction — routinely conflated, with different regulatory weight.",
+    "audience": [
+      "Data & AI Governance",
+      "AI Product Manager"
+    ],
+    "level": "advanced",
+    "source": "curriculum",
+    "module": "AI governance",
+    "status": "backlog",
+    "destination": "data-aigov-academy"
+  },
+  {
+    "id": "ai-impact-assessment",
+    "term": "AI impact assessment",
+    "aka": [
+      "AIA",
+      "algorithmic impact assessment"
+    ],
+    "short": "Structured pre-deployment analysis of who an AI system could harm and how — increasingly a condition of approval rather than a courtesy.",
+    "audience": [
+      "Data & AI Governance"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "AI governance",
+    "status": "backlog",
+    "destination": "data-aigov-academy"
+  },
+  {
+    "id": "dpia",
+    "term": "DPIA",
+    "aka": [
+      "data protection impact assessment"
+    ],
+    "short": "The privacy assessment required where processing is likely to be high risk; the closest existing analogue to an AI impact assessment.",
+    "audience": [
+      "Data & AI Governance"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Privacy",
+    "status": "backlog",
+    "destination": "data-aigov-academy"
+  },
+  {
+    "id": "purpose-limitation",
+    "term": "Purpose limitation",
+    "short": "The principle that data collected for one stated purpose may not be quietly reused for another — the clause most often broken by training a model on existing customer data.",
+    "audience": [
+      "Data & AI Governance",
+      "AI Product Manager"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Privacy",
+    "status": "backlog",
+    "destination": "data-aigov-academy"
+  },
+  {
+    "id": "data-provenance",
+    "term": "Data provenance",
+    "short": "Documented origin and chain of custody for data — the question that decides whether a training set is defensible.",
+    "audience": [
+      "Data & AI Governance",
+      "Data Practitioner"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Privacy",
+    "status": "backlog",
+    "destination": "data-aigov-academy"
+  },
+  {
+    "id": "privacy-act-au",
+    "term": "Privacy Act & APPs",
+    "aka": [
+      "Australian Privacy Principles"
+    ],
+    "short": "Australia's federal privacy regime and its principles governing collection, use, disclosure and access — currently mid-reform and diverging from the GDPR template in places.",
+    "audience": [
+      "Data & AI Governance",
+      "Sector Specialist"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Regulatory landscape",
+    "status": "backlog",
+    "destination": "data-aigov-academy"
+  },
+  {
+    "id": "oaic",
+    "term": "OAIC",
+    "aka": [
+      "Office of the Australian Information Commissioner"
+    ],
+    "short": "Australia's privacy and freedom-of-information regulator — the body that investigates breaches and issues binding guidance.",
+    "audience": [
+      "Data & AI Governance",
+      "Sector Specialist"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Regulatory landscape",
+    "status": "backlog",
+    "destination": "data-aigov-academy"
+  },
+  {
+    "id": "apra-prudential-standards",
+    "term": "APRA prudential standards",
+    "aka": [
+      "CPS 230",
+      "CPS 234"
+    ],
+    "short": "Australia's prudential requirements for regulated financial entities covering operational risk and information security — the standards that make governance a board-level obligation in banking and insurance.",
+    "audience": [
+      "Data & AI Governance"
+    ],
+    "level": "advanced",
+    "source": "curriculum",
+    "module": "Regulatory landscape",
+    "status": "backlog",
+    "destination": "data-aigov-academy"
+  },
+  {
+    "id": "au-ai-ethics-principles",
+    "term": "Australia's AI Ethics Principles",
+    "short": "The federal voluntary principles covering human wellbeing, fairness, privacy, reliability, transparency, contestability and accountability — voluntary, but the reference point local procurement cites.",
+    "audience": [
+      "Data & AI Governance",
+      "Sector Specialist"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Regulatory landscape",
+    "status": "backlog",
+    "destination": "data-aigov-academy"
+  },
+  {
+    "id": "ai-red-teaming",
+    "term": "AI red teaming",
+    "short": "Adversarial testing of a model for harmful, biased or unsafe behaviour before release — increasingly named explicitly in regulatory guidance.",
+    "audience": [
+      "Data & AI Governance",
+      "AI Product Manager"
+    ],
+    "level": "advanced",
+    "source": "curriculum",
+    "module": "AI assurance",
+    "status": "backlog",
+    "destination": "data-aigov-academy"
+  },
+  {
+    "id": "governance-by-design",
+    "term": "Governance by design",
+    "short": "Building controls into architecture rather than layering review on top — the AI analogue of privacy by design, and the difference between a control and a report.",
+    "audience": [
+      "Data & AI Governance",
+      "Solution Architect"
+    ],
+    "level": "advanced",
+    "source": "curriculum",
+    "module": "AI governance",
+    "status": "backlog",
+    "destination": "data-aigov-academy"
+  },
+  {
+    "id": "shadow-ai",
+    "term": "Shadow AI",
+    "short": "Unsanctioned use of AI tools inside an organisation; the governance problem that exists before any policy does, and the reason inventories are always incomplete.",
+    "audience": [
+      "Data & AI Governance",
+      "Founder / GM"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "AI operations",
+    "status": "backlog",
+    "destination": "data-aigov-academy"
+  },
+  {
+    "id": "rag",
+    "term": "RAG",
+    "aka": [
+      "retrieval-augmented generation"
+    ],
+    "short": "Retrieving relevant source material and supplying it to a model at generation time, so answers are grounded in your corpus rather than in training data.",
+    "audience": [
+      "AI Product Manager",
+      "Solution Architect"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Applied AI",
+    "status": "backlog"
+  },
+  {
+    "id": "mcp",
+    "term": "MCP",
+    "aka": [
+      "Model Context Protocol"
+    ],
+    "short": "An open protocol for connecting models to tools and data sources through a common interface, rather than bespoke integration per system.",
+    "audience": [
+      "AI Product Manager",
+      "Solution Architect"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Applied AI",
+    "status": "backlog"
+  },
+  {
+    "id": "fine-tuning",
+    "term": "Fine-tuning",
+    "short": "Further training a base model on task-specific examples to shift its behaviour — usually the wrong first move when prompting or retrieval would do.",
+    "audience": [
+      "AI Product Manager"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Applied AI",
+    "status": "backlog"
+  },
+  {
+    "id": "context-window",
+    "term": "Context window",
+    "short": "How much text a model can consider at once; the constraint that shapes chunking, retrieval strategy and cost.",
+    "audience": [
+      "AI Product Manager",
+      "Solution Architect"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Applied AI",
+    "status": "backlog"
+  },
+  {
+    "id": "token",
+    "term": "Token",
+    "short": "The unit models read and bill in — roughly a word fragment. The reason cost estimates built on word counts are wrong.",
+    "audience": [
+      "AI Product Manager"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Applied AI",
+    "status": "backlog"
+  },
+  {
+    "id": "embeddings",
+    "term": "Embeddings",
+    "short": "Numeric representations placing similar meanings near each other, enabling search by meaning rather than by keyword.",
+    "audience": [
+      "AI Product Manager",
+      "Solution Architect"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Applied AI",
+    "status": "backlog"
+  },
+  {
+    "id": "vector-database",
+    "term": "Vector database",
+    "short": "Storage optimised for nearest-neighbour search over embeddings; the retrieval half of most RAG systems.",
+    "audience": [
+      "Solution Architect",
+      "AI Product Manager"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Applied AI",
+    "status": "backlog"
+  },
+  {
+    "id": "evals",
+    "term": "Evals",
+    "aka": [
+      "evaluations"
+    ],
+    "short": "Systematic measurement of model output quality against a fixed test set — the discipline that replaces 'it looked good in the demo'.",
+    "audience": [
+      "AI Product Manager",
+      "Data & AI Governance"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "AI assurance",
+    "status": "backlog"
+  },
+  {
+    "id": "guardrails",
+    "term": "Guardrails",
+    "short": "Constraints applied around a model to block unacceptable inputs or outputs — necessary because the model itself offers no guarantees.",
+    "audience": [
+      "AI Product Manager",
+      "Data & AI Governance"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "AI assurance",
+    "status": "backlog"
+  },
+  {
+    "id": "prompt-injection",
+    "term": "Prompt injection",
+    "short": "Untrusted content carrying instructions the model then follows; the security failure mode with no clean fix, only mitigation.",
+    "audience": [
+      "AI Product Manager",
+      "Solution Architect",
+      "Data & AI Governance"
+    ],
+    "level": "advanced",
+    "source": "curriculum",
+    "module": "AI assurance",
+    "status": "backlog"
+  },
+  {
+    "id": "hallucination",
+    "term": "Hallucination",
+    "short": "Fluent output asserting things that are not true — the concrete mechanism behind the plausible-versus-correct gap.",
+    "audience": [
+      "AI Product Manager",
+      "UX / Product Designer"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Applied AI",
+    "status": "backlog"
+  },
+  {
+    "id": "latency-cost-tradeoff",
+    "term": "Latency / cost trade-off",
+    "short": "Choosing model size, context length and call pattern against response time and unit economics — an AI product's central design tension.",
+    "audience": [
+      "AI Product Manager",
+      "Founder / GM"
+    ],
+    "level": "advanced",
+    "source": "curriculum",
+    "module": "Applied AI",
+    "status": "backlog"
+  },
+  {
+    "id": "tool-use",
+    "term": "Tool use",
+    "aka": [
+      "function calling"
+    ],
+    "short": "Letting a model call defined functions to act rather than only describe — the mechanism that turns a chatbot into an agent.",
+    "audience": [
+      "AI Product Manager",
+      "Solution Architect"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Applied AI",
+    "status": "backlog"
+  },
+  {
+    "id": "aeo",
+    "term": "AEO",
+    "aka": [
+      "answer engine optimisation"
+    ],
+    "short": "Optimising to be the source a generative engine cites when it composes an answer, rather than a link someone clicks.",
+    "audience": [
+      "Marketer",
+      "Product Marketer"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Search & discovery",
+    "status": "backlog"
+  },
+  {
+    "id": "geo",
+    "term": "GEO",
+    "aka": [
+      "generative engine optimisation"
+    ],
+    "short": "Near-synonym for AEO, emphasising the generative layer; both describe competing for citation rather than for ranking.",
+    "audience": [
+      "Marketer",
+      "Product Marketer"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Search & discovery",
+    "status": "backlog"
+  },
+  {
+    "id": "seo",
+    "term": "SEO",
+    "short": "Optimising for retrieval and ranking in conventional search — still the substrate answer engines mostly retrieve from.",
+    "audience": [
+      "Marketer"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Search & discovery",
+    "status": "backlog"
+  },
+  {
+    "id": "thin-content",
+    "term": "Thin content",
+    "short": "Low-substance pages produced at scale; discounted by search engines and, because assessment is partly site-level, capable of dragging down neighbouring pages.",
+    "audience": [
+      "Marketer"
+    ],
+    "level": "advanced",
+    "source": "curriculum",
+    "module": "Search & discovery",
+    "status": "backlog"
+  },
+  {
+    "id": "citation-worthiness",
+    "term": "Citation-worthiness",
+    "short": "Whether a page gives an answer engine a reason to name it — usually a worked example or a distinctive claim, never a restated definition.",
+    "audience": [
+      "Marketer",
+      "Product Marketer"
+    ],
+    "level": "advanced",
+    "source": "curriculum",
+    "module": "Search & discovery",
+    "status": "backlog"
+  },
+  {
+    "id": "demand-generation",
+    "term": "Demand generation",
+    "short": "Creating and capturing interest at scale; distinct from product marketing, and frequently confused with it in org design.",
+    "audience": [
+      "Marketer"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Demand",
+    "status": "backlog"
+  },
+  {
+    "id": "mql",
+    "term": "MQL",
+    "aka": [
+      "marketing-qualified lead"
+    ],
+    "short": "A lead judged ready for sales on marketing engagement signals; the metric most likely to be optimised at the expense of pipeline quality.",
+    "audience": [
+      "Marketer",
+      "Sales & Presales"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Demand",
+    "status": "backlog"
+  },
+  {
+    "id": "funnel-stages",
+    "term": "TOFU / MOFU / BOFU",
+    "short": "Top, middle and bottom of funnel — a content and channel taxonomy by buyer intent stage.",
+    "audience": [
+      "Marketer"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Demand",
+    "status": "backlog"
+  },
+  {
+    "id": "attribution",
+    "term": "Attribution",
+    "short": "Assigning credit for a conversion across touchpoints; every model is wrong, and the choice of model quietly decides budget.",
+    "audience": [
+      "Marketer",
+      "Growth & Analytics"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Demand",
+    "status": "backlog"
+  },
+  {
+    "id": "nurture-sequence",
+    "term": "Nurture sequence",
+    "short": "Staged communication moving a prospect toward readiness rather than asking for the decision immediately.",
+    "audience": [
+      "Marketer"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Demand",
+    "status": "backlog"
+  },
+  {
+    "id": "share-of-voice",
+    "term": "Share of voice",
+    "short": "Your presence in category conversation relative to competitors; a leading indicator where brand precedes demand.",
+    "audience": [
+      "Marketer"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Brand",
+    "status": "backlog"
+  },
+  {
+    "id": "category-creation",
+    "term": "Category creation",
+    "short": "Defining a new category rather than competing in an existing one — high cost, high payoff, and usually claimed more often than achieved.",
+    "audience": [
+      "Marketer",
+      "Founder / GM",
+      "Product Marketer"
+    ],
+    "level": "advanced",
+    "source": "curriculum",
+    "module": "Brand",
+    "status": "backlog"
+  },
+  {
+    "id": "brand-vs-performance",
+    "term": "Brand vs performance",
+    "short": "Long-run memory building against short-run measurable conversion; the allocation argument that recurs every budget cycle.",
+    "audience": [
+      "Marketer",
+      "Founder / GM"
+    ],
+    "level": "advanced",
+    "source": "curriculum",
+    "module": "Brand",
+    "status": "backlog"
+  },
+  {
+    "id": "meddic",
+    "term": "MEDDIC",
+    "aka": [
+      "MEDDPICC"
+    ],
+    "short": "An enterprise qualification checklist — metrics, economic buyer, decision criteria and process, pain, champion — used to test whether a deal is real.",
+    "audience": [
+      "Sales & Presales",
+      "Product Marketer"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Enterprise sales",
+    "status": "backlog"
+  },
+  {
+    "id": "champion",
+    "term": "Champion",
+    "short": "Someone inside the account who wants the purchase and will spend their own credibility on it; without one, the deal is a conversation.",
+    "audience": [
+      "Sales & Presales"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Enterprise sales",
+    "status": "backlog"
+  },
+  {
+    "id": "economic-buyer",
+    "term": "Economic buyer",
+    "short": "The person who can actually release the budget, who is frequently not the person you have been meeting.",
+    "audience": [
+      "Sales & Presales",
+      "Founder / GM"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Enterprise sales",
+    "status": "backlog"
+  },
+  {
+    "id": "discovery-call",
+    "term": "Discovery call",
+    "short": "The early conversation establishing whether a real problem exists and who owns it — diagnostic, not a pitch.",
+    "audience": [
+      "Sales & Presales"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Enterprise sales",
+    "status": "backlog"
+  },
+  {
+    "id": "rfp",
+    "term": "RFP",
+    "aka": [
+      "request for proposal"
+    ],
+    "short": "Formal competitive procurement; usually written around an incumbent's capabilities, which is itself information.",
+    "audience": [
+      "Sales & Presales",
+      "Sector Specialist"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Enterprise sales",
+    "status": "backlog"
+  },
+  {
+    "id": "procurement",
+    "term": "Procurement",
+    "short": "The institutional purchasing process — security review, legal, vendor risk. Where most enterprise deals actually die.",
+    "audience": [
+      "Sales & Presales",
+      "Product Marketer",
+      "Sector Specialist"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Enterprise sales",
+    "status": "backlog"
+  },
+  {
+    "id": "land-and-expand",
+    "term": "Land and expand",
+    "short": "Entering with a small deployment and growing inside the account; the commercial expression of a wedge strategy.",
+    "audience": [
+      "Sales & Presales",
+      "Founder / GM",
+      "Customer Success"
+    ],
+    "level": "advanced",
+    "source": "curriculum",
+    "module": "Enterprise sales",
+    "status": "backlog"
+  },
+  {
+    "id": "objection-handling",
+    "term": "Objection handling",
+    "short": "Addressing stated resistance; most objections are proxies for risk aversion rather than disputes about features.",
+    "audience": [
+      "Sales & Presales",
+      "Product Marketer"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Enterprise sales",
+    "status": "backlog"
+  },
+  {
+    "id": "sales-cycle",
+    "term": "Enterprise sales cycle",
+    "short": "Elapsed time from first contact to signature; the number that determines how much positioning has to do before sales begins.",
+    "audience": [
+      "Sales & Presales",
+      "Founder / GM"
+    ],
+    "level": "advanced",
+    "source": "curriculum",
+    "module": "Enterprise sales",
+    "status": "backlog"
+  },
+  {
+    "id": "onboarding",
+    "term": "Onboarding",
+    "short": "The guided path from purchase to first value; the highest-leverage surface in the entire retention chain.",
+    "audience": [
+      "Customer Success",
+      "Product Manager"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Retention",
+    "status": "backlog"
+  },
+  {
+    "id": "qbr",
+    "term": "QBR",
+    "aka": [
+      "quarterly business review"
+    ],
+    "short": "A structured account review with the customer; useful when it revisits their outcomes, theatre when it reviews your usage charts.",
+    "audience": [
+      "Customer Success"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Retention",
+    "status": "backlog"
+  },
+  {
+    "id": "health-score",
+    "term": "Health score",
+    "short": "A composite predicting renewal likelihood; only as good as whether its inputs lead the outcome rather than describe it.",
+    "audience": [
+      "Customer Success",
+      "Growth & Analytics"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Retention",
+    "status": "backlog"
+  },
+  {
+    "id": "renewal",
+    "term": "Renewal",
+    "short": "The recurring re-decision to keep paying; won or lost months earlier, in onboarding and in whether value was reached.",
+    "audience": [
+      "Customer Success"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Retention",
+    "status": "backlog"
+  },
+  {
+    "id": "expansion-motion",
+    "term": "Expansion motion",
+    "short": "The deliberate play that grows an existing account — seats, tiers or modules — and the main engine behind NRR above 100%.",
+    "audience": [
+      "Customer Success",
+      "Product Marketer"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Retention",
+    "status": "backlog"
+  },
+  {
+    "id": "escalation-path",
+    "term": "Escalation path",
+    "short": "The agreed route for surfacing a failing account before it churns; its absence is why churn appears to arrive without warning.",
+    "audience": [
+      "Customer Success"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Retention",
+    "status": "backlog"
+  },
+  {
+    "id": "unit-economics",
+    "term": "Unit economics",
+    "short": "Contribution per customer or transaction; whether growth compounds or consumes capital.",
+    "audience": [
+      "Founder / GM",
+      "Growth & Analytics"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Business fundamentals",
+    "status": "backlog"
+  },
+  {
+    "id": "tam-sam-som",
+    "term": "TAM / SAM / SOM",
+    "short": "Total, serviceable and obtainable market — a sizing frame usually deployed to justify a decision already taken.",
+    "audience": [
+      "Founder / GM",
+      "Product Marketer"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Business fundamentals",
+    "status": "backlog"
+  },
+  {
+    "id": "burn-and-runway",
+    "term": "Burn & runway",
+    "short": "Net monthly cash consumption and the months remaining at that rate — the constraint behind most roadmap arguments.",
+    "audience": [
+      "Founder / GM"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Business fundamentals",
+    "status": "backlog"
+  },
+  {
+    "id": "gross-margin",
+    "term": "Gross margin",
+    "short": "Revenue less cost of delivery; the number AI inference costs are quietly eroding in products priced as pure software.",
+    "audience": [
+      "Founder / GM",
+      "AI Product Manager"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Business fundamentals",
+    "status": "backlog"
+  },
+  {
+    "id": "pl-ownership",
+    "term": "P&L ownership",
+    "short": "Accountability for revenue and cost of a business line — the step from senior product roles into general management.",
+    "audience": [
+      "Founder / GM"
+    ],
+    "level": "advanced",
+    "source": "curriculum",
+    "module": "Business fundamentals",
+    "status": "backlog"
+  },
+  {
+    "id": "pricing-power",
+    "term": "Pricing power",
+    "short": "The ability to raise price without losing volume; the cleanest available measure of whether a moat is real.",
+    "audience": [
+      "Founder / GM",
+      "Product Marketer"
+    ],
+    "level": "advanced",
+    "source": "curriculum",
+    "module": "Business fundamentals",
+    "status": "backlog"
+  },
+  {
+    "id": "build-vs-buy",
+    "term": "Build vs buy",
+    "short": "Whether to develop a capability or acquire it; decided by whether it is core to differentiation, not by cost comparison.",
+    "audience": [
+      "Founder / GM",
+      "Solution Architect",
+      "Product Manager"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Business fundamentals",
+    "status": "backlog"
+  },
+  {
+    "id": "statistical-significance",
+    "term": "Statistical significance",
+    "short": "Whether an observed difference is distinguishable from noise; a threshold, not a measure of importance, and routinely read as both.",
+    "audience": [
+      "Growth & Analytics",
+      "Marketer"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Evidence & inference",
+    "status": "backlog"
+  },
+  {
+    "id": "simpsons-paradox",
+    "term": "Simpson's paradox",
+    "short": "A trend that holds in every subgroup and reverses when the groups are combined — the reason aggregate results need segmenting before they are believed.",
+    "audience": [
+      "Growth & Analytics",
+      "Product Manager"
+    ],
+    "level": "advanced",
+    "source": "curriculum",
+    "module": "Evidence & inference",
+    "status": "backlog"
+  },
+  {
+    "id": "regression-to-the-mean",
+    "term": "Regression to the mean",
+    "short": "Extreme measurements tending toward average on repeat — which makes any intervention launched after a bad month look effective.",
+    "audience": [
+      "Growth & Analytics",
+      "Founder / GM"
+    ],
+    "level": "advanced",
+    "source": "curriculum",
+    "module": "Evidence & inference",
+    "status": "backlog"
+  },
+  {
+    "id": "confounding",
+    "term": "Confounding",
+    "short": "A third factor driving both the supposed cause and the effect; the reason observational wins so often fail to replicate in a controlled test.",
+    "audience": [
+      "Growth & Analytics"
+    ],
+    "level": "advanced",
+    "source": "curriculum",
+    "module": "Evidence & inference",
+    "status": "backlog"
+  },
+  {
+    "id": "affordance",
+    "term": "Affordance",
+    "short": "A visible property suggesting how something can be used; the concept conversational interfaces discard wholesale.",
+    "audience": [
+      "UX / Product Designer"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Design fundamentals",
+    "status": "backlog"
+  },
+  {
+    "id": "information-architecture",
+    "term": "Information architecture",
+    "short": "How content and capability are organised, labelled and navigated — the structure discoverability depends on.",
+    "audience": [
+      "UX / Product Designer",
+      "Product Manager"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Design fundamentals",
+    "status": "backlog"
+  },
+  {
+    "id": "progressive-disclosure",
+    "term": "Progressive disclosure",
+    "short": "Revealing complexity only as needed, so novices are not overwhelmed and experts are not constrained.",
+    "audience": [
+      "UX / Product Designer"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Design fundamentals",
+    "status": "backlog"
+  },
+  {
+    "id": "wcag",
+    "term": "WCAG",
+    "aka": [
+      "Web Content Accessibility Guidelines"
+    ],
+    "short": "The accessibility conformance standard referenced by procurement and, increasingly, by law — a gate rather than a nicety in institutional sales.",
+    "audience": [
+      "UX / Product Designer",
+      "Sector Specialist"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Design fundamentals",
+    "status": "backlog"
+  },
+  {
+    "id": "formative-vs-summative",
+    "term": "Formative vs summative assessment",
+    "short": "Assessment that informs ongoing learning versus assessment that judges the outcome; products conflate them and lose the feedback loop.",
+    "audience": [
+      "Learning Designer"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Learning design",
+    "status": "backlog"
+  },
+  {
+    "id": "zpd",
+    "term": "Zone of proximal development",
+    "aka": [
+      "ZPD"
+    ],
+    "short": "The band just beyond independent ability where support enables success — the target scaffolding and adaptive pacing aim at.",
+    "audience": [
+      "Learning Designer"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Learning design",
+    "status": "backlog"
+  },
+  {
+    "id": "desirable-difficulty",
+    "term": "Desirable difficulty",
+    "short": "Effort that slows performance during practice and improves durable retention — the research foundation under protect the struggle.",
+    "audience": [
+      "Learning Designer"
+    ],
+    "level": "advanced",
+    "source": "curriculum",
+    "module": "Learning design",
+    "status": "backlog"
+  },
+  {
+    "id": "learner-agency",
+    "term": "Learner agency",
+    "short": "The degree of genuine control a learner holds over path and pace; motivation depends on it more than on rewards.",
+    "audience": [
+      "Learning Designer",
+      "UX / Product Designer"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Learning design",
+    "status": "backlog"
+  },
+  {
+    "id": "blooms-taxonomy",
+    "term": "Bloom's taxonomy",
+    "short": "A hierarchy of cognitive demand from recall to creation; useful for checking that assessment tests understanding rather than memory.",
+    "audience": [
+      "Learning Designer"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Learning design",
+    "status": "backlog"
+  },
+  {
+    "id": "rice",
+    "term": "RICE",
+    "short": "Reach, impact, confidence, effort as a prioritisation score — valuable mainly for exposing disagreement about the inputs.",
+    "audience": [
+      "Product Manager"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Product craft",
+    "status": "backlog"
+  },
+  {
+    "id": "jobs-to-be-done",
+    "term": "Jobs to be done",
+    "aka": [
+      "JTBD"
+    ],
+    "short": "Framing demand around the progress a customer is trying to make rather than their demographics — a discipline for finding the real competitive alternative.",
+    "audience": [
+      "Product Manager",
+      "Product Marketer"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Discovery",
+    "status": "backlog"
+  },
+  {
+    "id": "north-star-metric",
+    "term": "North star metric",
+    "short": "The single measure a team aligns on as a proxy for delivered value; powerful when chosen well and distorting when chosen carelessly.",
+    "audience": [
+      "Product Manager",
+      "Founder / GM",
+      "Growth & Analytics"
+    ],
+    "level": "practitioner",
+    "source": "curriculum",
+    "module": "Metrics that matter",
+    "status": "backlog"
+  },
+  {
+    "id": "okr",
+    "term": "OKRs",
+    "aka": [
+      "objectives and key results"
+    ],
+    "short": "Goal-setting pairing a qualitative objective with measurable results; degrades into a task list when the results are outputs.",
+    "audience": [
+      "Product Manager",
+      "Founder / GM",
+      "Agile & Change Practitioner"
+    ],
+    "level": "foundation",
+    "source": "curriculum",
+    "module": "Operating models",
+    "status": "backlog"
   }
 ]
