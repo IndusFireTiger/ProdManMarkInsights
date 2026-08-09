@@ -175,7 +175,8 @@
     "status": "learning",
     "appearsIn": [
       "/perspectives/agentic-pmm"
-    ]
+    ],
+    "priority": "next"
   },
   {
     "id": "stage-gate",
@@ -686,7 +687,8 @@
     "status": "learning",
     "appearsIn": [
       "/perspectives/catalog-to-enterprise-data-operations"
-    ]
+    ],
+    "priority": "next"
   },
   {
     "id": "data-products",
@@ -701,7 +703,8 @@
     "status": "learning",
     "appearsIn": [
       "/perspectives/catalog-to-enterprise-data-operations"
-    ]
+    ],
+    "priority": "next"
   },
   {
     "id": "gdpr",
@@ -754,7 +757,8 @@
     "status": "learning",
     "appearsIn": [
       "/perspectives/data-catalog-and-data-risk"
-    ]
+    ],
+    "priority": "next"
   },
   {
     "id": "runtime-enforcement",
@@ -863,7 +867,8 @@
     "status": "learning",
     "appearsIn": [
       "/perspectives/student-management-systems-australian-higher-ed"
-    ]
+    ],
+    "priority": "next"
   },
   {
     "id": "b2g-apis",
@@ -878,7 +883,8 @@
     "status": "learning",
     "appearsIn": [
       "/perspectives/student-management-systems-australian-higher-ed"
-    ]
+    ],
+    "priority": "later"
   },
   {
     "id": "quality-and-security-debt",
@@ -905,7 +911,8 @@
     ],
     "level": "advanced",
     "module": "Delivery",
-    "status": "learning"
+    "status": "learning",
+    "priority": "next"
   },
   {
     "id": "customisation-as-lock-in",
@@ -1285,7 +1292,8 @@
     ],
     "level": "practitioner",
     "module": "Metrics that matter",
-    "status": "learning"
+    "status": "learning",
+    "priority": "next"
   },
   {
     "id": "leading-vs-lagging",
@@ -1571,7 +1579,8 @@
     "status": "learning",
     "appearsIn": [
       "/perspectives/student-management-systems-australian-higher-ed"
-    ]
+    ],
+    "priority": "someday"
   },
   {
     "id": "cricos",
@@ -1585,7 +1594,8 @@
     "status": "learning",
     "appearsIn": [
       "/perspectives/student-management-systems-australian-higher-ed"
-    ]
+    ],
+    "priority": "someday"
   },
   {
     "id": "esos",
@@ -1603,7 +1613,8 @@
     "status": "learning",
     "appearsIn": [
       "/perspectives/student-management-systems-australian-higher-ed"
-    ]
+    ],
+    "priority": "someday"
   },
   {
     "id": "funding-model-segmentation",
@@ -1915,7 +1926,8 @@
     "source": "curriculum",
     "module": "Credentials",
     "status": "backlog",
-    "destination": "data-aigov-academy"
+    "destination": "data-aigov-academy",
+    "priority": "now"
   },
   {
     "id": "eu-ai-act",
@@ -1929,7 +1941,8 @@
     "source": "curriculum",
     "module": "Regulatory landscape",
     "status": "backlog",
-    "destination": "data-aigov-academy"
+    "destination": "data-aigov-academy",
+    "priority": "now"
   },
   {
     "id": "nist-ai-rmf",
@@ -1946,7 +1959,8 @@
     "source": "curriculum",
     "module": "Frameworks",
     "status": "backlog",
-    "destination": "data-aigov-academy"
+    "destination": "data-aigov-academy",
+    "priority": "now"
   },
   {
     "id": "iso-42001",
@@ -1959,7 +1973,8 @@
     "source": "curriculum",
     "module": "Frameworks",
     "status": "backlog",
-    "destination": "data-aigov-academy"
+    "destination": "data-aigov-academy",
+    "priority": "now"
   },
   {
     "id": "iso-31000",
@@ -1972,7 +1987,8 @@
     "source": "curriculum",
     "module": "Frameworks",
     "status": "backlog",
-    "destination": "data-aigov-academy"
+    "destination": "data-aigov-academy",
+    "priority": "next"
   },
   {
     "id": "model-card",
@@ -1986,7 +2002,8 @@
     "source": "curriculum",
     "module": "AI documentation",
     "status": "backlog",
-    "destination": "data-aigov-academy"
+    "destination": "data-aigov-academy",
+    "priority": "now"
   },
   {
     "id": "ai-inventory",
@@ -2003,7 +2020,8 @@
     "source": "curriculum",
     "module": "AI operations",
     "status": "backlog",
-    "destination": "data-aigov-academy"
+    "destination": "data-aigov-academy",
+    "priority": "next"
   },
   {
     "id": "drift-monitoring",
@@ -2021,7 +2039,8 @@
     "source": "curriculum",
     "module": "AI operations",
     "status": "backlog",
-    "destination": "data-aigov-academy"
+    "destination": "data-aigov-academy",
+    "priority": "next"
   },
   {
     "id": "algorithmic-accountability",
@@ -2035,7 +2054,8 @@
     "source": "curriculum",
     "module": "AI governance",
     "status": "backlog",
-    "destination": "data-aigov-academy"
+    "destination": "data-aigov-academy",
+    "priority": "next"
   },
   {
     "id": "explainability-vs-interpretability",
@@ -2049,7 +2069,8 @@
     "source": "curriculum",
     "module": "AI governance",
     "status": "backlog",
-    "destination": "data-aigov-academy"
+    "destination": "data-aigov-academy",
+    "priority": "next"
   },
   {
     "id": "ai-impact-assessment",
@@ -2066,7 +2087,8 @@
     "source": "curriculum",
     "module": "AI governance",
     "status": "backlog",
-    "destination": "data-aigov-academy"
+    "destination": "data-aigov-academy",
+    "priority": "now"
   },
   {
     "id": "dpia",
@@ -2082,7 +2104,8 @@
     "source": "curriculum",
     "module": "Privacy",
     "status": "backlog",
-    "destination": "data-aigov-academy"
+    "destination": "data-aigov-academy",
+    "priority": "next"
   },
   {
     "id": "purpose-limitation",
@@ -2096,7 +2119,8 @@
     "source": "curriculum",
     "module": "Privacy",
     "status": "backlog",
-    "destination": "data-aigov-academy"
+    "destination": "data-aigov-academy",
+    "priority": "next"
   },
   {
     "id": "data-provenance",
@@ -2110,7 +2134,8 @@
     "source": "curriculum",
     "module": "Privacy",
     "status": "backlog",
-    "destination": "data-aigov-academy"
+    "destination": "data-aigov-academy",
+    "priority": "next"
   },
   {
     "id": "privacy-act-au",
@@ -2127,7 +2152,8 @@
     "source": "curriculum",
     "module": "Regulatory landscape",
     "status": "backlog",
-    "destination": "data-aigov-academy"
+    "destination": "data-aigov-academy",
+    "priority": "now"
   },
   {
     "id": "oaic",
@@ -2144,7 +2170,8 @@
     "source": "curriculum",
     "module": "Regulatory landscape",
     "status": "backlog",
-    "destination": "data-aigov-academy"
+    "destination": "data-aigov-academy",
+    "priority": "now"
   },
   {
     "id": "apra-prudential-standards",
@@ -2161,7 +2188,8 @@
     "source": "curriculum",
     "module": "Regulatory landscape",
     "status": "backlog",
-    "destination": "data-aigov-academy"
+    "destination": "data-aigov-academy",
+    "priority": "next"
   },
   {
     "id": "au-ai-ethics-principles",
@@ -2175,7 +2203,8 @@
     "source": "curriculum",
     "module": "Regulatory landscape",
     "status": "backlog",
-    "destination": "data-aigov-academy"
+    "destination": "data-aigov-academy",
+    "priority": "now"
   },
   {
     "id": "ai-red-teaming",
@@ -2189,7 +2218,8 @@
     "source": "curriculum",
     "module": "AI assurance",
     "status": "backlog",
-    "destination": "data-aigov-academy"
+    "destination": "data-aigov-academy",
+    "priority": "next"
   },
   {
     "id": "governance-by-design",
@@ -2203,7 +2233,8 @@
     "source": "curriculum",
     "module": "AI governance",
     "status": "backlog",
-    "destination": "data-aigov-academy"
+    "destination": "data-aigov-academy",
+    "priority": "next"
   },
   {
     "id": "shadow-ai",
@@ -2217,7 +2248,8 @@
     "source": "curriculum",
     "module": "AI operations",
     "status": "backlog",
-    "destination": "data-aigov-academy"
+    "destination": "data-aigov-academy",
+    "priority": "next"
   },
   {
     "id": "rag",
@@ -2233,7 +2265,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Applied AI",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "now"
   },
   {
     "id": "mcp",
@@ -2249,7 +2282,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Applied AI",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "next"
   },
   {
     "id": "fine-tuning",
@@ -2261,7 +2295,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Applied AI",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "next"
   },
   {
     "id": "context-window",
@@ -2274,7 +2309,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Applied AI",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "now"
   },
   {
     "id": "token",
@@ -2286,7 +2322,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Applied AI",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "next"
   },
   {
     "id": "embeddings",
@@ -2299,7 +2336,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Applied AI",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "next"
   },
   {
     "id": "vector-database",
@@ -2312,7 +2350,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Applied AI",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "next"
   },
   {
     "id": "evals",
@@ -2328,7 +2367,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "AI assurance",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "now"
   },
   {
     "id": "guardrails",
@@ -2341,7 +2381,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "AI assurance",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "now"
   },
   {
     "id": "prompt-injection",
@@ -2355,7 +2396,8 @@
     "level": "advanced",
     "source": "curriculum",
     "module": "AI assurance",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "now"
   },
   {
     "id": "hallucination",
@@ -2368,7 +2410,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Applied AI",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "now"
   },
   {
     "id": "latency-cost-tradeoff",
@@ -2381,7 +2424,8 @@
     "level": "advanced",
     "source": "curriculum",
     "module": "Applied AI",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "next"
   },
   {
     "id": "tool-use",
@@ -2397,7 +2441,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Applied AI",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "now"
   },
   {
     "id": "aeo",
@@ -2413,7 +2458,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Search & discovery",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "next"
   },
   {
     "id": "geo",
@@ -2429,7 +2475,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Search & discovery",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "next"
   },
   {
     "id": "seo",
@@ -2441,7 +2488,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Search & discovery",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "next"
   },
   {
     "id": "thin-content",
@@ -2453,7 +2501,8 @@
     "level": "advanced",
     "source": "curriculum",
     "module": "Search & discovery",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "next"
   },
   {
     "id": "citation-worthiness",
@@ -2466,7 +2515,8 @@
     "level": "advanced",
     "source": "curriculum",
     "module": "Search & discovery",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "next"
   },
   {
     "id": "demand-generation",
@@ -2478,7 +2528,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Demand",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "mql",
@@ -2494,7 +2545,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Demand",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "funnel-stages",
@@ -2506,7 +2558,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Demand",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "attribution",
@@ -2519,7 +2572,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Demand",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "nurture-sequence",
@@ -2531,7 +2585,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Demand",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "share-of-voice",
@@ -2543,7 +2598,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Brand",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "category-creation",
@@ -2557,7 +2613,8 @@
     "level": "advanced",
     "source": "curriculum",
     "module": "Brand",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "brand-vs-performance",
@@ -2570,7 +2627,8 @@
     "level": "advanced",
     "source": "curriculum",
     "module": "Brand",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "meddic",
@@ -2586,7 +2644,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Enterprise sales",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "champion",
@@ -2598,7 +2657,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Enterprise sales",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "economic-buyer",
@@ -2611,7 +2671,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Enterprise sales",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "discovery-call",
@@ -2623,7 +2684,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Enterprise sales",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "rfp",
@@ -2639,7 +2701,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Enterprise sales",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "procurement",
@@ -2653,7 +2716,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Enterprise sales",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "land-and-expand",
@@ -2667,7 +2731,8 @@
     "level": "advanced",
     "source": "curriculum",
     "module": "Enterprise sales",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "objection-handling",
@@ -2680,7 +2745,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Enterprise sales",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "sales-cycle",
@@ -2693,7 +2759,8 @@
     "level": "advanced",
     "source": "curriculum",
     "module": "Enterprise sales",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "onboarding",
@@ -2706,7 +2773,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Retention",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "qbr",
@@ -2721,7 +2789,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Retention",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "health-score",
@@ -2734,7 +2803,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Retention",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "renewal",
@@ -2746,7 +2816,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Retention",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "expansion-motion",
@@ -2759,7 +2830,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Retention",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "escalation-path",
@@ -2771,7 +2843,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Retention",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "unit-economics",
@@ -2784,7 +2857,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Business fundamentals",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "tam-sam-som",
@@ -2797,7 +2871,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Business fundamentals",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "burn-and-runway",
@@ -2809,7 +2884,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Business fundamentals",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "gross-margin",
@@ -2822,7 +2898,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Business fundamentals",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "pl-ownership",
@@ -2834,7 +2911,8 @@
     "level": "advanced",
     "source": "curriculum",
     "module": "Business fundamentals",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "pricing-power",
@@ -2847,7 +2925,8 @@
     "level": "advanced",
     "source": "curriculum",
     "module": "Business fundamentals",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "build-vs-buy",
@@ -2861,7 +2940,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Business fundamentals",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "statistical-significance",
@@ -2874,7 +2954,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Evidence & inference",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "simpsons-paradox",
@@ -2887,7 +2968,8 @@
     "level": "advanced",
     "source": "curriculum",
     "module": "Evidence & inference",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "regression-to-the-mean",
@@ -2900,7 +2982,8 @@
     "level": "advanced",
     "source": "curriculum",
     "module": "Evidence & inference",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "confounding",
@@ -2912,7 +2995,8 @@
     "level": "advanced",
     "source": "curriculum",
     "module": "Evidence & inference",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "later"
   },
   {
     "id": "affordance",
@@ -2924,7 +3008,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Design fundamentals",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "someday"
   },
   {
     "id": "information-architecture",
@@ -2937,7 +3022,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Design fundamentals",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "someday"
   },
   {
     "id": "progressive-disclosure",
@@ -2949,7 +3035,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Design fundamentals",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "someday"
   },
   {
     "id": "wcag",
@@ -2965,7 +3052,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Design fundamentals",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "someday"
   },
   {
     "id": "formative-vs-summative",
@@ -2977,7 +3065,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Learning design",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "someday"
   },
   {
     "id": "zpd",
@@ -2992,7 +3081,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Learning design",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "someday"
   },
   {
     "id": "desirable-difficulty",
@@ -3004,7 +3094,8 @@
     "level": "advanced",
     "source": "curriculum",
     "module": "Learning design",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "someday"
   },
   {
     "id": "learner-agency",
@@ -3017,7 +3108,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Learning design",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "someday"
   },
   {
     "id": "blooms-taxonomy",
@@ -3029,7 +3121,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Learning design",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "someday"
   },
   {
     "id": "rice",
@@ -3041,7 +3134,8 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Product craft",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "someday"
   },
   {
     "id": "jobs-to-be-done",
@@ -3057,7 +3151,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Discovery",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "someday"
   },
   {
     "id": "north-star-metric",
@@ -3071,7 +3166,8 @@
     "level": "practitioner",
     "source": "curriculum",
     "module": "Metrics that matter",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "someday"
   },
   {
     "id": "okr",
@@ -3088,6 +3184,7 @@
     "level": "foundation",
     "source": "curriculum",
     "module": "Operating models",
-    "status": "backlog"
+    "status": "backlog",
+    "priority": "someday"
   }
 ]

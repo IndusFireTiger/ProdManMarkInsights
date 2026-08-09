@@ -136,6 +136,10 @@ const marginalia = defineCollection({
 //               curriculum = study queue; not yet used in any essay
 //   status      mastery: backlog -> learning -> confident -> taught
 //                 ('taught' is the honest bar: you know it when you can teach it)
+//   priority    study order for queue items only: now | next | later | someday
+//                 Tiers rather than absolute ranks, so nothing needs renumbering
+//                 when one item moves. Only set where status is backlog or
+//                 learning; absent once a term reaches confident.
 //   destination optional future academy; usually absent — this is a learning
 //                 map first, academy feedstock only incidentally.
 //
@@ -160,6 +164,7 @@ const learningMap = defineCollection({
     status: z
       .enum(['backlog', 'learning', 'confident', 'taught'])
       .default('backlog'),
+    priority: z.enum(['now', 'next', 'later', 'someday']).optional(),
     destination: z.enum(DESTINATIONS).optional(),
     appearsIn: z.array(z.string()).default([]),
   }),

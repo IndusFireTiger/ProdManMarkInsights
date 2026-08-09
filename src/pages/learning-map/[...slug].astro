@@ -27,7 +27,10 @@ type Row = {
   module: string;
   published: boolean;
   kind: string;
+  priority: string;
 };
+
+const PRIORITIES = ['now', 'next', 'later', 'someday'] as const;
 
 const map = await getCollection('learningMap');
 const published = await getCollection('marginalia');
@@ -44,6 +47,7 @@ const rows: Row[] = [
     module: e.data.module ?? '—',
     published: false,
     kind: e.data.type,
+    priority: e.data.priority ?? '',
   })),
   ...published.map((e) => ({
     id: e.id,
@@ -56,8 +60,15 @@ const rows: Row[] = [
     module: e.data.learning?.module ?? '—',
     published: true,
     kind: 'term',
+    priority: '',
   })),
-].sort((a, b) => a.term.localeCompare(b.term));
+].sort(
+  (a, b) =>
+    // Queue items first, in priority order; everything else alphabetical.
+    (a.priority ? PRIORITIES.indexOf(a.priority as any) : 99) -
+      (b.priority ? PRIORITIES.indexOf(b.priority as any) : 99) ||
+    a.term.localeCompare(b.term)
+);
 
 const terms = rows.filter((r) => r.kind === 'term');
 const tally = <K extends keyof Row>(k: K) =>
@@ -187,6 +198,15 @@ const audiencesUsed = AUDIENCES.filter((a) =>
         </button>
       </div>
 
+      <div class="filter-bar" data-chips="priority" aria-label="Filter by study priority">
+        <button class="chip" type="button" data-v="all" aria-pressed="true">Any priority</button>
+        {PRIORITIES.map((p) => (
+          <button class="chip" type="button" data-v={p} aria-pressed="false">
+            {p}<span class="chip__count">{terms.filter((r) => r.priority === p).length}</span>
+          </button>
+        ))}
+      </div>
+
       <p class="count muted"><b data-count>{rows.length}</b> shown</p>
 
       <ul class="rows" data-rows>
@@ -196,9 +216,11 @@ const audiencesUsed = AUDIENCES.filter((a) =>
             data-status={r.status}
             data-level={r.level}
             data-source={r.source}
+            data-priority={r.priority}
             data-text={`${r.term} ${r.short} ${r.id}`.toLowerCase()}
           >
             <div class="row__top">
+              {r.priority && <span class={`pri pri--${r.priority}`}>{r.priority}</span>}
               <span class="row__term">{r.term}</span>
               <span class={`pill pill--${r.status}`}>{r.status}</span>
               <span class="pill pill--ghost">{r.level}</span>
@@ -288,6 +310,15 @@ const audiencesUsed = AUDIENCES.filter((a) =>
   .pill--taught { color: var(--paper); background: var(--accent); border-color: var(--accent); }
   .pill--cur { color: #7a4fa3; border-color: #d9c4ea; background: #f7f1fc; }
   .pill--pub { color: var(--accent); border-color: var(--accent-soft); }
+  .pri {
+    font-family: var(--sans); font-size: 0.6rem; font-weight: 600;
+    letter-spacing: 0.09em; text-transform: uppercase;
+    padding: 0.25em 0.55em; border-radius: 4px; color: #fff;
+  }
+  .pri--now { background: #b8431f; }
+  .pri--next { background: #c2822a; }
+  .pri--later { background: #6f7d76; }
+  .pri--someday { background: #a8aeaa; }
   @media (max-width: 720px) { .meters { grid-template-columns: 1fr; } }
 </style>
 
@@ -298,7 +329,7 @@ const audiencesUsed = AUDIENCES.filter((a) =>
   const countEl = document.querySelector<HTMLElement>('[data-count]');
   const emptyEl = document.querySelector<HTMLElement>('[data-empty]');
 
-  const state = { status: 'all', level: 'all', source: 'all' };
+  const state = { status: 'all', level: 'all', source: 'all', priority: 'all' };
 
   function apply() {
     const q = (search?.value ?? '').trim().toLowerCase();
@@ -311,6 +342,7 @@ const audiencesUsed = AUDIENCES.filter((a) =>
         (state.status === 'all' || li.dataset.status === state.status) &&
         (state.level === 'all' || li.dataset.level === state.level) &&
         (state.source === 'all' || li.dataset.source === state.source) &&
+        (state.priority === 'all' || li.dataset.priority === state.priority) &&
         (!q || (li.dataset.text ?? '').includes(q));
       li.hidden = !ok;
       if (ok) n++;
@@ -323,7 +355,7 @@ const audiencesUsed = AUDIENCES.filter((a) =>
     bar.addEventListener('click', (e) => {
       const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('[data-v]');
       if (!btn) return;
-      const group = bar.dataset.chips as 'status' | 'level';
+      const group = bar.dataset.chips as 'status' | 'level' | 'priority';
       const v = btn.dataset.v ?? 'all';
 
       // The "curriculum only" chip filters source, not level.

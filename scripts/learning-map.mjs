@@ -73,27 +73,56 @@ if (!arg || arg === 'all') {
 }
 
 // ------------------------------------------------------------ study queue
-if (!arg || arg === 'all' || arg === 'queue') {
-  const queue = terms
-    .filter((e) => (e.status ?? 'backlog') === 'backlog' || e.status === 'learning')
-    .sort(
-      (a, b) =>
-        LEVELS.indexOf(a.level) - LEVELS.indexOf(b.level) ||
-        a.term.localeCompare(b.term)
-    );
+const PRIORITIES = ['now', 'next', 'later', 'someday'];
 
-  section(`STUDY QUEUE  (${queue.length})`);
-  if (queue.length === 0) {
+const rankedQueue = terms
+  .filter((e) => (e.status ?? 'backlog') === 'backlog' || e.status === 'learning')
+  .sort(
+    (a, b) =>
+      PRIORITIES.indexOf(a.priority ?? 'someday') -
+        PRIORITIES.indexOf(b.priority ?? 'someday') ||
+      LEVELS.indexOf(a.level) - LEVELS.indexOf(b.level) ||
+      a.term.localeCompare(b.term)
+  );
+
+// `next` on its own: the five things to actually pick up, not the whole list.
+if (arg === 'next') {
+  const n = Number(process.argv[3] ?? 5);
+  section(`NEXT ${n}`);
+  for (const e of rankedQueue.slice(0, n)) {
+    console.log(`  ${pad(e.priority ?? '—', 8)} ${pad(e.level, 13)} ${e.term}`);
+    console.log(`  ${pad('', 8)} ${e.short ?? ''}`);
+    console.log(`  ${pad('', 8)} \x1b[2m${e.audience.join(' · ')}  [${e.id}]\x1b[0m\n`);
+  }
+  console.log(`  ${rankedQueue.length - n} more in the queue.\n`);
+  process.exit(0);
+}
+
+if (!arg || arg === 'all' || arg === 'queue') {
+  section(`STUDY QUEUE  (${rankedQueue.length})`);
+  if (rankedQueue.length === 0) {
     console.log('  empty — every mapped term is confident or taught.');
-    console.log('  Add curriculum terms (Phase 3) to populate it.');
   } else {
-    for (const e of queue) {
+    const byPriority = count(rankedQueue, 'priority');
+    console.log(
+      '  ' +
+        PRIORITIES.map((p) => `${p} ${byPriority[p] ?? 0}`).join('   ') +
+        '\n'
+    );
+    let shown = null;
+    for (const e of rankedQueue) {
+      const p = e.priority ?? '—';
+      if (p !== shown) {
+        console.log(`  \x1b[1m${p.toUpperCase()}\x1b[0m`);
+        shown = p;
+      }
       const flag = (e.source ?? 'harvested') === 'curriculum' ? '✎' : ' ';
       console.log(
-        `  ${flag} ${pad(e.status ?? 'backlog', 9)} ${pad(e.level, 13)} ${e.term}`
+        `   ${flag} ${pad(e.status ?? 'backlog', 9)} ${pad(e.level, 13)} ${e.term}`
       );
-      console.log(`      ${pad('', 9)} ${e.audience.join(' · ')}`);
     }
+    console.log('\n  ✎ = not yet used in any essay');
+    console.log('  npm run learning:map -- next 5   the five to pick up now');
   }
 }
 
