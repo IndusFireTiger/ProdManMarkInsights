@@ -6,7 +6,7 @@ kind: "Deep"
 short: "The frame of reference a buyer uses to evaluate you — the category they file you under, and what they therefore expect on price, capability and comparison."
 example: "Not \"a fitness app with more features\" but \"an AI coach replacing the guesswork a personal trainer charges $50–150 a session for.\" The same $9.99 goes from expensive upgrade to 90% discount."
 related: ["competitive-alternative", "upstream-product-marketing", "willingness-to-pay", "wedge-strategy"]
-appearsIn: ["/perspectives/the-model-is-not-the-moat", "/perspectives/agentic-pmm", "/work/fitpulse-pricing-agent"]
+appearsIn: ["/perspectives/the-model-is-not-the-moat", "/perspectives/agentic-pmm", "/work/fitpulse-pricing-agent", "/perspectives/the-decision-is-the-deliverable"]
 portfolio: true
 learning:
   audience: ["Product Marketer", "Product Manager", "Marketer", "Founder / GM"]

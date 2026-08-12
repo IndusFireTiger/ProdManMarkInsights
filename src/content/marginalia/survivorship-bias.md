@@ -6,7 +6,7 @@ kind: "Deep"
 short: "The specific selection bias where you only hear from whatever made it through — the churned, the failed and the silent leave no data behind."
 example: "Retention dashboards are built almost entirely from survivors. The users who found the product confusing in week one aren't in your engagement metrics at all — they're in a gap you can't see."
 related: ["selection-bias", "product-market-fit", "net-revenue-retention"]
-appearsIn: ["/work/fitpulse-pricing-agent"]
+appearsIn: ["/work/fitpulse-pricing-agent", "/perspectives/what-product-management-is-not"]
 portfolio: true
 learning:
   audience: ["Growth & Analytics", "Product Manager", "Founder / GM"]

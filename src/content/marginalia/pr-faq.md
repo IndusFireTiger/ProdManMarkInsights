@@ -6,7 +6,7 @@ kind: "Disambiguation"
 short: "Amazon's practice of drafting the launch press release and customer FAQ before writing any code. The PR is press release — not public relations."
 example: "Writing the announcement first forces agreement on customer value, positioning, target metrics and pricing while changing your mind is still cheap."
 related: ["upstream-product-marketing", "positioning", "agentic-pmm"]
-appearsIn: ["/perspectives/agentic-pmm"]
+appearsIn: ["/perspectives/agentic-pmm", "/perspectives/the-decision-is-the-deliverable"]
 portfolio: true
 learning:
   audience: ["Product Manager", "Product Marketer", "Founder / GM"]

@@ -6,7 +6,7 @@ kind: "Deep"
 short: "Spending heavily on continuous feature shipping purely to hold market position — all the cost of progress, none of the gain."
 example: "A feature consuming a quarter of the engineering budget to serve a narrow, vocal power-user segment, while adding complexity that suppresses adoption among everyone else."
 related: ["pmf-decay", "feature-factory", "product-market-fit"]
-appearsIn: ["/perspectives/agentic-pmm", "/perspectives/catalog-to-enterprise-data-operations"]
+appearsIn: ["/perspectives/agentic-pmm", "/perspectives/catalog-to-enterprise-data-operations", "/perspectives/the-decision-is-the-deliverable"]
 portfolio: true
 learning:
   audience: ["Product Manager", "Founder / GM", "Growth & Analytics"]

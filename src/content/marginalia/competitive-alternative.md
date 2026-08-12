@@ -6,7 +6,7 @@ kind: "Deep"
 short: "What the buyer would actually do if your product didn't exist — which is usually a spreadsheet, a manual process, or nothing at all, not a rival vendor."
 example: "For an AI training-plan generator the alternative isn't another app; it's a personal trainer at $50–150 a session, a static template, or trial and error. That choice sets the whole price frame."
 related: ["positioning", "willingness-to-pay", "wedge-strategy", "institutional-no"]
-appearsIn: ["/work/fitpulse-pricing-agent", "/perspectives/the-model-is-not-the-moat"]
+appearsIn: ["/work/fitpulse-pricing-agent", "/perspectives/the-model-is-not-the-moat", "/perspectives/what-product-management-is-not", "/perspectives/the-decision-is-the-deliverable"]
 portfolio: true
 learning:
   audience: ["Product Marketer", "Product Manager", "Sales & Presales", "Marketer"]

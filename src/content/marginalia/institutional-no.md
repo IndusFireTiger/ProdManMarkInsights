@@ -6,7 +6,7 @@ kind: "Coined"
 short: "The real competitor in most enterprise deals — not a rival vendor, but the organisation's default of doing nothing, which costs nobody anything to choose."
 example: "In a crowded market full of trusted local incumbents, the winning move isn't a feature war. It's making the institution experience the purchase as relief rather than risk."
 related: ["competitive-alternative", "wedge-strategy", "positioning"]
-appearsIn: ["/perspectives/the-model-is-not-the-moat", "/perspectives/one-country-many-markets-australian-edtech"]
+appearsIn: ["/perspectives/the-model-is-not-the-moat", "/perspectives/one-country-many-markets-australian-edtech", "/perspectives/what-product-management-is-not", "/perspectives/the-decision-is-the-deliverable"]
 portfolio: true
 learning:
   audience: ["Sales & Presales", "Product Marketer", "Founder / GM", "Sector Specialist"]

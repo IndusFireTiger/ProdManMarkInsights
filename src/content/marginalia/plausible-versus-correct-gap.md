@@ -5,7 +5,7 @@ kind: "Coined"
 short: "The distance between an answer that reads as right and one that is right — and the fact that fluency, the signal humans use to judge, no longer tracks accuracy."
 example: "Every heuristic people use to assess trustworthiness — confidence, coherence, correct register — is now cheap to produce and independent of whether the content is true."
 related: ["human-in-the-loop", "trust-calibration", "collapsed-complexity"]
-appearsIn: ["/perspectives/evolving-ux-after-ai", "/perspectives/agile-in-the-age-of-ai"]
+appearsIn: ["/perspectives/evolving-ux-after-ai", "/perspectives/agile-in-the-age-of-ai", "/perspectives/the-decision-is-the-deliverable"]
 portfolio: true
 learning:
   audience: ["AI Product Manager", "UX / Product Designer", "Data & AI Governance"]

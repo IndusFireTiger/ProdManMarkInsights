@@ -6,7 +6,7 @@ kind: "Deep"
 short: "How long from signup until a user gets the thing they came for — the single best early predictor of whether they'll still be there in ninety days."
 example: "For a new Pro subscriber it isn't when they open the app; it's when they receive an AI-generated plan and act on it. Everything before that is setup, not value."
 related: ["net-revenue-retention", "pmf-decay", "product-market-fit"]
-appearsIn: ["/perspectives/agentic-pmm", "/work/fitpulse-pricing-agent"]
+appearsIn: ["/perspectives/agentic-pmm", "/work/fitpulse-pricing-agent", "/perspectives/the-decision-is-the-deliverable"]
 portfolio: true
 learning:
   audience: ["Growth & Analytics", "Product Manager", "Customer Success", "Product Marketer"]

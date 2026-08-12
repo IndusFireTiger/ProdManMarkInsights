@@ -6,7 +6,7 @@ kind: "Deep"
 short: "What a buyer would actually hand over for a given outcome — a function of the alternative they're comparing against, and almost never a function of how often they use something."
 example: "Workout logging is used daily by 95% of users and is worth close to nothing. The AI plan generator is used by 15% and carries the price. Usage and value ran in opposite directions."
 related: ["competitive-alternative", "positioning", "selection-bias", "net-revenue-retention"]
-appearsIn: ["/work/fitpulse-pricing-agent", "/perspectives/agentic-pmm"]
+appearsIn: ["/work/fitpulse-pricing-agent", "/perspectives/agentic-pmm", "/perspectives/the-decision-is-the-deliverable"]
 portfolio: true
 learning:
   audience: ["Product Marketer", "Growth & Analytics", "Founder / GM", "Product Manager"]
