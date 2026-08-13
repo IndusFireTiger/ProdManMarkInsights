@@ -6,7 +6,7 @@ kind: "Deep"
 short: "An organisation that measures itself on shipping rather than on outcomes — where output is the product and nobody is accountable for whether it changed anything."
 example: "A product-first culture without embedded product marketing collapses into one of these: capabilities keep landing, each defensible on its own, none attached to a buyer's problem."
 related: ["pmf-decay", "red-queen-effect", "upstream-product-marketing", "synthetic-product-quad"]
-appearsIn: ["/perspectives/agentic-pmm", "/perspectives/ai-product-operating-model", "/perspectives/what-product-management-is-not"]
+appearsIn: ["/perspectives/agentic-pmm", "/perspectives/ai-product-operating-model", "/perspectives/what-product-management-is-not", "/perspectives/agents-dont-give-you-hours"]
 portfolio: true
 learning:
   audience: ["Product Manager", "Agile & Change Practitioner", "Founder / GM"]

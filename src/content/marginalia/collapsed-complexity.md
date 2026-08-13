@@ -5,7 +5,7 @@ kind: "Coined"
 short: "When a multi-step expert workflow becomes a single sentence — and the steps that used to teach the user what was happening disappear along with the effort."
 example: "The old flow was tedious and it was also a curriculum: each step showed a bit of the model underneath. Compress it and the task gets easier while the user's grasp of it gets thinner."
 related: ["discoverability-debt", "intent-over-mechanics", "protect-the-struggle"]
-appearsIn: ["/perspectives/evolving-ux-after-ai"]
+appearsIn: ["/perspectives/evolving-ux-after-ai", "/perspectives/agents-dont-give-you-hours"]
 portfolio: true
 learning:
   audience: ["UX / Product Designer", "AI Product Manager", "Learning Designer"]

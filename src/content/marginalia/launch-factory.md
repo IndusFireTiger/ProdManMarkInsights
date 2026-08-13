@@ -5,7 +5,7 @@ kind: "Coined"
 short: "The reactive state a stretched product-marketing function collapses into — servicing a queue of launch requests, with no capacity left for the upstream work that would prevent them."
 example: "Automating it makes the disease cheaper to sustain: when announcements are nearly free, the pressure that would have moved product marketing upstream disappears."
 related: ["upstream-product-marketing", "gtm-factory", "agentic-pmm", "feature-factory"]
-appearsIn: ["/perspectives/agentic-pmm", "/perspectives/what-product-management-is-not"]
+appearsIn: ["/perspectives/agentic-pmm", "/perspectives/what-product-management-is-not", "/perspectives/agents-dont-give-you-hours"]
 portfolio: true
 learning:
   audience: ["Product Marketer", "Marketer", "Founder / GM"]

@@ -6,7 +6,7 @@ kind: "Coined"
 short: "Filling the missing fourth seat in the product trio — market context and commercialisation — with a human product marketer amplified by agents, when the org won't fund a fourth person."
 example: "You can't buy a fourth chair in the trio. You might be able to staff one: turning a 1:5 headcount reality into something closer to a synthetic 1:1 pairing without adding a person."
 related: ["upstream-product-marketing", "agentic-pmm", "feature-factory"]
-appearsIn: ["/perspectives/agentic-pmm", "/perspectives/what-product-management-is-not", "/perspectives/the-decision-is-the-deliverable"]
+appearsIn: ["/perspectives/agentic-pmm", "/perspectives/what-product-management-is-not", "/perspectives/the-decision-is-the-deliverable", "/perspectives/agents-dont-give-you-hours"]
 portfolio: true
 learning:
   audience: ["Product Manager", "Product Marketer", "AI Product Manager", "Founder / GM"]

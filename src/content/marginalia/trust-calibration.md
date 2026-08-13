@@ -5,7 +5,7 @@ kind: "Deep"
 short: "Designing so a user's confidence in a system matches its actual reliability — neither over-trusting fluent output nor dismissing a system that is usually right."
 example: "Over-trust and under-trust are both failures, and they cost differently. One ships a wrong answer into a decision; the other wastes a capability the organisation paid for."
 related: ["plausible-versus-correct-gap", "human-in-the-loop", "intent-over-mechanics"]
-appearsIn: ["/perspectives/evolving-ux-after-ai", "/work/ai-companion", "/perspectives/the-decision-is-the-deliverable"]
+appearsIn: ["/perspectives/evolving-ux-after-ai", "/work/ai-companion", "/perspectives/the-decision-is-the-deliverable", "/perspectives/agents-dont-give-you-hours", "/perspectives/fluency-is-free-now"]
 portfolio: true
 learning:
   audience: ["UX / Product Designer", "AI Product Manager", "Data & AI Governance"]

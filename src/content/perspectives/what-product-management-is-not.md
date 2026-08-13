@@ -326,6 +326,11 @@ long enough to become excellent at something. It's worth checking what.
 *The other half of this argument — what the effort should go into instead, and
 how to make judgement legible enough to be rewarded — is in the companion piece:
 [The decision is the deliverable](/perspectives/the-decision-is-the-deliverable).
+The bridge between the two — how to find the attention the craft requires, by
+delegating the chaos to agents — is
+[Agents don't give you hours, they give you attention](/perspectives/agents-dont-give-you-hours).
+The series closes with the faculty all three assume you have:
+[Fluency is free now — discernment and the AI-native product company](/perspectives/fluency-is-free-now).
 Also related:
 [AI product management: the legacy product operating model was built around scarcity](/perspectives/ai-product-operating-model);
 [Agentic PMM: everyone agrees product marketing belongs upstream](/perspectives/agentic-pmm);

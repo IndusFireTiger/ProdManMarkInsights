@@ -6,7 +6,7 @@ kind: "Deep"
 short: "The slow loss of product-market fit caused by the market moving rather than the product breaking — which is why the dashboards look fine while it happens."
 example: "A data catalog that won on search in 2015 was table stakes by 2020. Nothing about the product got worse; the market's definition of sufficient moved past it."
 related: ["product-market-fit", "red-queen-effect", "net-revenue-retention", "feature-factory"]
-appearsIn: ["/perspectives/catalog-to-enterprise-data-operations", "/perspectives/agentic-pmm", "/perspectives/what-product-management-is-not", "/perspectives/the-decision-is-the-deliverable"]
+appearsIn: ["/perspectives/catalog-to-enterprise-data-operations", "/perspectives/agentic-pmm", "/perspectives/what-product-management-is-not", "/perspectives/the-decision-is-the-deliverable", "/perspectives/agents-dont-give-you-hours"]
 portfolio: true
 learning:
   audience: ["Product Manager", "Founder / GM", "Product Marketer", "Growth & Analytics"]

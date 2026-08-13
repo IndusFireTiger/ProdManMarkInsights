@@ -6,7 +6,7 @@ kind: "Deep"
 short: "A design where a person retains the decision while the system does the work — and the loop is real only if the person can realistically say no."
 example: "Agents draft, gather, correlate and monitor. Humans decide, approve, price and defend. Every artifact carries an agent's byline and a human's signature."
 related: ["agentic-pmm", "plausible-versus-correct-gap", "protect-the-struggle"]
-appearsIn: ["/perspectives/agentic-pmm", "/perspectives/evolving-ux-after-ai", "/work/ai-companion", "/work/fitpulse-pricing-agent"]
+appearsIn: ["/perspectives/agentic-pmm", "/perspectives/evolving-ux-after-ai", "/work/ai-companion", "/work/fitpulse-pricing-agent", "/perspectives/agents-dont-give-you-hours", "/perspectives/fluency-is-free-now"]
 portfolio: true
 learning:
   audience: ["AI Product Manager", "Data & AI Governance", "UX / Product Designer", "Product Manager"]

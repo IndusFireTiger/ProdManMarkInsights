@@ -6,7 +6,7 @@ kind: "Coined"
 short: "The design rule for learning products: adapt difficulty to the learner, but never remove the effort that produces the understanding — because the struggle is the mechanism, not the friction."
 example: "An engine optimising for \"questions answered correctly\" optimises for engagement, not learning. It manufactures the appearance of progress while hollowing out the substance."
 related: ["collapsed-complexity", "human-in-the-loop", "seeker-to-sage"]
-appearsIn: ["/perspectives/personalising-education", "/work/ai-companion", "/perspectives/the-model-is-not-the-moat"]
+appearsIn: ["/perspectives/personalising-education", "/work/ai-companion", "/perspectives/the-model-is-not-the-moat", "/perspectives/agents-dont-give-you-hours", "/perspectives/fluency-is-free-now"]
 portfolio: true
 learning:
   audience: ["Learning Designer", "AI Product Manager", "UX / Product Designer"]

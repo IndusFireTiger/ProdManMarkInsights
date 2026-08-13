@@ -6,7 +6,7 @@ kind: "Deep"
 short: "When the group you measured isn't representative of the group you're drawing conclusions about — because of how they ended up in your sample."
 example: "\"The AI plan generator drives 80% of positive reviews.\" That 80% can only contain people who found the feature, tried it, liked it, and felt strongly enough to write a review. It was close to guaranteed regardless of how good the feature is."
 related: ["survivorship-bias", "willingness-to-pay", "product-market-fit"]
-appearsIn: ["/work/fitpulse-pricing-agent", "/perspectives/agentic-pmm", "/perspectives/what-product-management-is-not"]
+appearsIn: ["/work/fitpulse-pricing-agent", "/perspectives/agentic-pmm", "/perspectives/what-product-management-is-not", "/perspectives/fluency-is-free-now"]
 portfolio: true
 learning:
   audience: ["Growth & Analytics", "Product Manager", "AI Product Manager", "Product Marketer"]

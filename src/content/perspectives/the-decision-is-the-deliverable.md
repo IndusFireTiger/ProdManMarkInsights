@@ -331,6 +331,12 @@ Write more receipts.
 
 *Companion to
 [Ten years of the wrong experience: what product management is not](/perspectives/what-product-management-is-not).
+This piece assumes a marginal hour that most PMs don't have; the third in the
+series is about where it comes from —
+[Agents don't give you hours, they give you attention](/perspectives/agents-dont-give-you-hours),
+which uses the decision record above as the delegation contract. The fourth piece,
+[Fluency is free now](/perspectives/fluency-is-free-now), is about the faculty
+that has to be working before any of these fields can be filled honestly.
 Related: [AI product management: the legacy operating model was built around scarcity](/perspectives/ai-product-operating-model).
 The three sources behind the craft sections: Annie Duke's "Thinking in Bets" and
 "Quit" (decision quality versus outcome, and the under-practised skill of
