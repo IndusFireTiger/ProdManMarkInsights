@@ -6,6 +6,8 @@ readingTime: "7 min read"
 skill: "Go-to-Market & Product Marketing"
 topics: ["Product Marketing", "GTM", "Frameworks"]
 featured: true
+series: "product-marketing"
+part: 1
 draft: false
 ---
 

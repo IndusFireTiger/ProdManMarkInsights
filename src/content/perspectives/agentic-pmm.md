@@ -6,6 +6,8 @@ readingTime: "12 min read"
 skill: "Go-to-Market & Product Marketing"
 topics: ["Product Marketing", "Applied AI", "Agentic AI", "Go-to-Market", "Org Design"]
 featured: false
+series: "product-marketing"
+part: 2
 draft: false
 ---
 

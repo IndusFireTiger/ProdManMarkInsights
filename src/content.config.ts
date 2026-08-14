@@ -34,6 +34,11 @@ export const SERIES = {
     blurb:
       'One market examined three ways: how it segments and where the wedges are, the core systems institutions actually run on, and what it takes to enter it against trusted incumbents.',
   },
+  'product-marketing': {
+    title: 'Product marketing: the system and the seat',
+    blurb:
+      'The same discipline from opposite ends — making go-to-market a repeatable system downstream, and the staffing arithmetic that keeps product marketing out of the room upstream, with agents as the way back in.',
+  },
   'data-catalog': {
     title: 'The data catalog, examined twice',
     blurb:
