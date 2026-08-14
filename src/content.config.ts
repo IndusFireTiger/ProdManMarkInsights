@@ -24,6 +24,21 @@ export const SERIES = {
     blurb:
       'Four pieces arguing one case: most product careers accumulate the wrong experience, the real craft is decision-making made legible, agents can buy back the attention it needs — and the faculty that finally decides is discernment.',
   },
+  'ai-and-the-crafts': {
+    title: 'What AI changed in the crafts',
+    blurb:
+      'The same inversion — building gets cheap, judgement gets scarce — arriving in three disciplines: engineering, interface design, and the product operating model itself.',
+  },
+  'australian-edtech': {
+    title: 'Reading a market: Australian education',
+    blurb:
+      'One market examined three ways: how it segments and where the wedges are, the core systems institutions actually run on, and what it takes to enter it against trusted incumbents.',
+  },
+  'data-catalog': {
+    title: 'The data catalog, examined twice',
+    blurb:
+      'A single product from two angles: first as a lens that makes invisible data risk operable, then as a case study in re-founding a product when its market fit decays.',
+  },
 } as const;
 
 export type SeriesId = keyof typeof SERIES;

@@ -6,6 +6,8 @@ readingTime: "9 min read"
 skill: "Product Strategy & Vision"
 topics: ["Product Strategy", "Data Governance", "Risk & Compliance", "Data Catalog"]
 featured: false
+series: "data-catalog"
+part: 1
 draft: false
 ---
 

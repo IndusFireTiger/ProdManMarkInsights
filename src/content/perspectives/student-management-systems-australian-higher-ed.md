@@ -6,6 +6,8 @@ readingTime: "10 min read"
 skill: "Product Strategy & Vision"
 topics: ["EdTech", "Product Strategy", "Enterprise Architecture", "Higher Education", "Composable Systems"]
 featured: false
+series: "australian-edtech"
+part: 2
 draft: false
 ---
 

@@ -6,6 +6,8 @@ readingTime: "10 min read"
 skill: "Go-to-Market & Product Marketing"
 topics: ["EdTech", "Applied AI", "Positioning", "Go-to-Market", "Competitive Strategy"]
 featured: false
+series: "australian-edtech"
+part: 3
 draft: false
 ---
 

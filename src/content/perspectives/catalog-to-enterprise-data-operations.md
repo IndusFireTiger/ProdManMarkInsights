@@ -6,6 +6,8 @@ readingTime: "9 min read"
 skill: "Product Strategy & Vision"
 topics: ["Product Strategy", "Product-Market Fit", "Data Catalog", "Data Operations"]
 featured: false
+series: "data-catalog"
+part: 2
 draft: false
 ---
 

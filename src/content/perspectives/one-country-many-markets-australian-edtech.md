@@ -6,6 +6,8 @@ readingTime: "11 min read"
 skill: "Product Strategy & Vision"
 topics: ["EdTech", "Market Strategy", "Go-to-Market", "Segmentation", "Higher Education"]
 featured: false
+series: "australian-edtech"
+part: 1
 draft: false
 ---
 
