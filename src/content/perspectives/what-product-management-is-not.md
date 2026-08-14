@@ -6,6 +6,8 @@ readingTime: "12 min read"
 skill: "Product Strategy & Vision"
 topics: ["Product Strategy", "Product Craft", "Career", "Operating Model", "Org Design"]
 featured: false
+series: "product-craft"
+part: 1
 draft: false
 ---
 

@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import ProseLayout from '../../layouts/ProseLayout.astro';
 import TermsInThisPiece from '../../components/TermsInThisPiece.astro';
 import { articleSchema } from '../../lib/schema';
+import { SERIES } from '../../content.config';
 
 export async function getStaticPaths() {
   const entries = await getCollection('perspectives');
@@ -23,6 +24,19 @@ const meta = [dateFmt, entry.data.readingTime, ...entry.data.topics].filter(
   Boolean
 ) as string[];
 
+// Series membership, if any — rendered as a short note above the essay.
+const seriesId = entry.data.series as keyof typeof SERIES | undefined;
+const series = seriesId
+  ? {
+      ...SERIES[seriesId],
+      anchor: `/perspectives#series-${seriesId}`,
+      part: entry.data.part,
+      total: (await getCollection('perspectives')).filter(
+        (p) => !p.data.draft && p.data.series === seriesId
+      ).length,
+    }
+  : null;
+
 const jsonLd = articleSchema({
   site: Astro.site,
   path: `/perspectives/${entry.id}`,
@@ -42,6 +56,12 @@ const jsonLd = articleSchema({
   jsonLd={jsonLd}
   noindex={entry.data.draft}
 >
+  {series && (
+    <p class="series-note">
+      {series.part ? `Part ${series.part} of ${series.total} in ` : 'Part of '}
+      <a href={series.anchor}>{series.title}</a>
+    </p>
+  )}
   <Content />
   <TermsInThisPiece />
 </ProseLayout>

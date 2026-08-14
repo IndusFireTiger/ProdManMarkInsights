@@ -6,6 +6,8 @@ readingTime: "14 min read"
 skill: "Applied AI in Product"
 topics: ["Applied AI", "Product Craft", "Decision Making", "Operating Model", "Org Design"]
 featured: false
+series: "product-craft"
+part: 4
 draft: false
 ---
 

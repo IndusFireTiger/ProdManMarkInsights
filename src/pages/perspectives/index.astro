@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
-import { SKILLS } from '../../content.config';
+import { getCollection, type CollectionEntry } from 'astro:content';
+import { SKILLS, SERIES } from '../../content.config';
 
 const dateFmt = (d: Date) =>
   d.toLocaleDateString('en-AU', { month: 'short', year: 'numeric' });
@@ -22,6 +22,32 @@ const posts = (await getCollection('perspectives'))
 // Only surface filter chips for skills that have at least one published post,
 // kept in the canonical SKILLS order.
 const skillsInUse = SKILLS.filter((s) => posts.some((p) => p.data.skill === s));
+
+// Series members collapse into one grouped row, placed where the most recent
+// part falls in the chronological list. Everything else renders as before.
+type Post = CollectionEntry<'perspectives'>;
+type Row =
+  | { kind: 'post'; post: Post }
+  | { kind: 'series'; id: keyof typeof SERIES; parts: Post[] };
+
+const rows: Row[] = [];
+const placed = new Set<string>();
+for (const post of posts) {
+  const id = post.data.series;
+  if (!id) {
+    rows.push({ kind: 'post', post });
+    continue;
+  }
+  if (placed.has(id)) continue;
+  placed.add(id);
+  rows.push({
+    kind: 'series',
+    id: id as keyof typeof SERIES,
+    parts: posts
+      .filter((p) => p.data.series === id)
+      .sort((a, b) => (a.data.part ?? Infinity) - (b.data.part ?? Infinity)),
+  });
+}
 ---
 <BaseLayout
   title="Perspectives — ProdMan·Insights"
@@ -50,14 +76,33 @@ const skillsInUse = SKILLS.filter((s) => posts.some((p) => p.data.skill === s));
       </div>
 
       <ul class="post-list" style="margin-top:2rem;" data-post-list>
-        {posts.map((p) => (
-          <li data-skill={p.data.skill}>
-            <a href={`/perspectives/${p.id}`}>
-              <span class="post-skill">{SKILL_LABEL[p.data.skill] ?? p.data.skill}</span>
-              <span class="post-title">{p.data.title}</span>
-              <span class="post-meta">{dateFmt(p.data.date)}{p.data.readingTime ? ` · ${p.data.readingTime}` : ''}</span>
-              <p class="post-summary">{p.data.summary}</p>
+        {rows.map((row) => row.kind === 'post' ? (
+          <li data-skill={row.post.data.skill}>
+            <a href={`/perspectives/${row.post.id}`}>
+              <span class="post-skill">{SKILL_LABEL[row.post.data.skill] ?? row.post.data.skill}</span>
+              <span class="post-title">{row.post.data.title}</span>
+              <span class="post-meta">{dateFmt(row.post.data.date)}{row.post.data.readingTime ? ` · ${row.post.data.readingTime}` : ''}</span>
+              <p class="post-summary">{row.post.data.summary}</p>
             </a>
+          </li>
+        ) : (
+          <li class="series" id={`series-${row.id}`} data-series>
+            <p class="post-skill">Series · {row.parts.length} parts</p>
+            <h2 class="series__title">{SERIES[row.id].title}</h2>
+            <p class="series__blurb muted">{SERIES[row.id].blurb}</p>
+            <ol class="series__parts">
+              {row.parts.map((p) => (
+                <li data-skill={p.data.skill} data-part>
+                  <a href={`/perspectives/${p.id}`}>
+                    <span class="series__num" aria-hidden="true">{String(p.data.part ?? '·').padStart(2, '0')}</span>
+                    <span class="series__part-title">{p.data.title}</span>
+                    <span class="series__part-meta">
+                      {SKILL_LABEL[p.data.skill] ?? p.data.skill}{p.data.readingTime ? ` · ${p.data.readingTime}` : ''}
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ol>
           </li>
         ))}
       </ul>
@@ -71,8 +116,9 @@ const skillsInUse = SKILLS.filter((s) => posts.some((p) => p.data.skill === s));
 
 <script>
   const bar = document.querySelector('[data-filter-bar]');
-  const items = Array.from(
-    document.querySelectorAll<HTMLElement>('[data-post-list] [data-skill]')
+  // Top-level rows: either a single post, or a series block holding parts.
+  const rows = Array.from(
+    document.querySelectorAll<HTMLElement>('[data-post-list] > li')
   );
   const empty = document.querySelector<HTMLElement>('[data-filter-empty]');
 
@@ -86,10 +132,23 @@ const skillsInUse = SKILLS.filter((s) => posts.some((p) => p.data.skill === s));
     );
 
     let visible = 0;
-    for (const li of items) {
-      const show = filter === 'all' || li.dataset.skill === filter;
-      li.hidden = !show;
-      if (show) visible++;
+    for (const row of rows) {
+      if (row.hasAttribute('data-series')) {
+        // A series survives the filter if any of its parts does; the parts that
+        // don't match are hidden inside it.
+        let shown = 0;
+        row.querySelectorAll<HTMLElement>('[data-part]').forEach((part) => {
+          const show = filter === 'all' || part.dataset.skill === filter;
+          part.hidden = !show;
+          if (show) shown++;
+        });
+        row.hidden = shown === 0;
+        visible += shown;
+      } else {
+        const show = filter === 'all' || row.dataset.skill === filter;
+        row.hidden = !show;
+        if (show) visible++;
+      }
     }
     if (empty) empty.hidden = visible !== 0;
   });

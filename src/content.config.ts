@@ -11,6 +11,23 @@ export const SKILLS = [
   'EdTech & Education',
 ] as const;
 
+// Multi-part essays that argue one case across several pieces. Parts collapse
+// into a single grouped block on the perspectives index — ordered by `part`,
+// positioned where the most recent part would have fallen chronologically.
+//
+// TO ADD A SERIES: add an entry here, then set `series` (a key below) and
+// `part` (1-based) on each member. Set both or neither; a piece with `series`
+// and no `part` sorts to the end of its block.
+export const SERIES = {
+  'product-craft': {
+    title: 'What product management is, isn’t, and becomes',
+    blurb:
+      'Four pieces arguing one case: most product careers accumulate the wrong experience, the real craft is decision-making made legible, agents can buy back the attention it needs — and the faculty that finally decides is discernment.',
+  },
+} as const;
+
+export type SeriesId = keyof typeof SERIES;
+
 const perspectives = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/perspectives' }),
   schema: z.object({
@@ -22,6 +39,15 @@ const perspectives = defineCollection({
     topics: z.array(z.string()).default([]),
     featured: z.boolean().default(false),
     draft: z.boolean().default(false),
+
+    // ---- optional series membership; see SERIES above ----
+    series: z
+      .string()
+      .refine((s): s is SeriesId => s in SERIES, {
+        message: `series must be one of: ${Object.keys(SERIES).join(', ')}`,
+      })
+      .optional(),
+    part: z.number().int().positive().optional(),
   }),
 });
 
