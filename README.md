@@ -1,7 +1,7 @@
 # ProdMan·Insights
 
 An editorial portfolio site — product strategy, product marketing & applied AI,
-with a keen interest in education. Built with [Astro](https://astro.build).
+by a product manager working in fintech. Built with [Astro](https://astro.build).
 
 ## Develop
 
