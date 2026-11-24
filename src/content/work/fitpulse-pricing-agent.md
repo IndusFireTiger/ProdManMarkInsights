@@ -4,7 +4,7 @@ summary: "A worked example of the Pricing & Value Architecture agent from the Ag
 focus: "Applied AI • Pricing & Packaging • Agentic PMM"
 role: "Independent learning project"
 kind: "Learning Lab"
-order: 3
+order: 5
 draft: false
 ---
 

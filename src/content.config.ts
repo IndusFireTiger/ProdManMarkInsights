@@ -78,7 +78,9 @@ const work = defineCollection({
     summary: z.string(),
     focus: z.string(),
     role: z.string().optional(),
-    kind: z.enum(['Enterprise', 'Learning Lab']).default('Learning Lab'),
+    kind: z.enum(['Enterprise', 'Live build', 'Learning Lab']).default('Learning Lab'),
+    // Live builds: the running app. Rendered as a "Try it live" button.
+    liveUrl: z.string().url().optional(),
     order: z.number().default(99),
     draft: z.boolean().default(false),
   }),

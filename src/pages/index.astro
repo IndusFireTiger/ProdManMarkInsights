@@ -77,7 +77,7 @@ const work = (await getCollection('work'))
             <span class="tag">{w.data.kind} · {w.data.focus.split('•')[0].trim()}</span>
             <h3>{w.data.title}</h3>
             <p>{w.data.summary}</p>
-            <span class="more">View case study →</span>
+            <span class="more">{w.data.liveUrl ? 'See the build →' : 'View case study →'}</span>
           </a>
         ))}
       </div>

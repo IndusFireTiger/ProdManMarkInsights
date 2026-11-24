@@ -29,13 +29,18 @@ const jsonLd = articleSchema({
 <ProseLayout
   title={entry.data.title}
   description={entry.data.summary}
-  eyebrow="Case study"
+  eyebrow={entry.data.kind === 'Live build' ? 'Live build' : 'Case study'}
   meta={meta}
   backHref="/work"
   backLabel="All work"
   jsonLd={jsonLd}
   noindex={entry.data.draft}
 >
+  {entry.data.liveUrl && (
+    <p class="live-cta">
+      <a class="btn btn--accent" href={entry.data.liveUrl} target="_blank" rel="noopener noreferrer">Try it live ↗</a>
+    </p>
+  )}
   <Content />
   <TermsInThisPiece />
 </ProseLayout>

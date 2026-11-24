@@ -426,3 +426,9 @@ a.chip:hover { text-decoration: none; }
   font-size: 1.05rem;
   line-height: 1.65;
 }
+
+/* work index groups and live builds */
+.work-group { margin-top: 3.5rem; scroll-margin-top: 5rem; }
+.work-group .card-grid { margin-top: 1.5rem; }
+.live-cta { margin: 0 0 2rem; }
+.live-cta .btn:hover { text-decoration: none; }

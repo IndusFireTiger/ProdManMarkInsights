@@ -4,7 +4,7 @@ summary: "GuruBot: an AI assistant that adapts story difficulty and pacing to a 
 focus: "AI Product • Ethics • Personalisation"
 role: "Independent learning project"
 kind: "Learning Lab"
-order: 4
+order: 6
 draft: false
 ---
 

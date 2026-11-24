@@ -132,6 +132,7 @@ export const LENSES: Lens[] = [
       'AI-assisted compliance review built into the product',
       'Traceability and de-identified testing as product capabilities',
       'Harmonising many enterprises’ subjective requirements into one product',
+      'Two live governance learning products: DRC Academy and AI Governance Academy',
     ],
     career: [
       { when: 'Now', role: "First Product Manager \u00b7 AI products for financial advice and insurance", line: "AI products for financial advice, where a Statement or Record of Advice is a compliance document. Built Claude-based compliance review tools and tested AI workflows on de-identified client files." },
@@ -141,11 +142,42 @@ export const LENSES: Lens[] = [
     work: [
       'founding-product-function-ai-advice',
       'data-governance-harmonisation',
+      'drc-academy',
+      'aigov-academy',
     ],
     perspectives: [
       'data-catalog-and-data-risk',
       'catalog-to-enterprise-data-operations',
       'fluency-is-free-now',
+    ],
+  },
+  {
+    id: 'ai-governance',
+    label: 'AI & data governance',
+    title: 'AI and data governance',
+    pitch:
+      'Governance is where I have spent my recent career, from both sides. I built product and go-to-market for enterprise Data Risk & Compliance software, and I now run product for AI products in financial advice, where every output has to stand up to a compliance reviewer. Outside work I build governance learning products and write about AI governance in practice.',
+    strengths: [
+      'Data Risk & Compliance and Data Governance product depth',
+      'AI governance in practice: compliance review tooling, traceability, de-identified testing',
+      'Two live learning products: DRC Academy and AI Governance Academy',
+      'Writing on AI governance as a practice at Governed·AI',
+    ],
+    career: [
+      { when: 'Now', role: 'First Product Manager · AI products for financial advice and insurance', line: 'Built Claude-based compliance review tools, PRD-to-ticket traceability and feature-flagged rollouts, and run AI acceptance testing on de-identified client files.' },
+      { when: 'Jan–Aug 2026', role: 'Head of Product Marketing and Principal Product Manager · enterprise Data Risk & Compliance', line: 'Led product marketing and shaped the product for Data Risk & Compliance and Data Governance, harmonising many enterprises’ subjective requirements into one product.' },
+      { when: 'Earlier', role: 'Senior Product Manager, Product Owner, Technical Lead, Senior Software Engineer', line: 'As Product Owner for harvesting and orchestration, scoped metadata harvesting, scanning and SQL processing for governance use cases.' },
+    ],
+    work: [
+      'drc-academy',
+      'aigov-academy',
+      'data-governance-harmonisation',
+      'founding-product-function-ai-advice',
+    ],
+    perspectives: [
+      'data-catalog-and-data-risk',
+      'catalog-to-enterprise-data-operations',
+      'ai-product-operating-model',
     ],
   },
   {
@@ -159,13 +191,14 @@ export const LENSES: Lens[] = [
       'Gamification and progression design for learning products',
       'Responsible AI personalisation with a human in the loop',
       'Product and go-to-market thinking applied to learning products',
+      'A live learning product: a 38-lesson, self-paced AI governance curriculum',
     ],
     career: [
       { when: 'Now', role: "First Product Manager \u00b7 AI products for financial advice and insurance", line: "Running product for AI products in a regulated domain: the same craft of trust, evaluation and human oversight that responsible learning products need." },
       { when: 'Jan–Aug 2026', role: "Head of Product Marketing and Principal Product Manager \u00b7 enterprise Data Risk & Compliance", line: "Led product marketing in enterprise software: positioning, segmentation and launch systems that carry over to education markets." },
       { when: 'Earlier', role: "Senior Product Manager, Product Owner, Technical Lead, Senior Software Engineer", line: "Outside work: a Masters in Public Administration, editing a student e-journal, coordinating campus placements and volunteering with Project Manthan." },
     ],
-    work: ['ai-companion', 'smartlaunch'],
+    work: ['aigov-academy', 'ai-companion', 'smartlaunch'],
     perspectives: [
       'one-country-many-markets-australian-edtech',
       'student-management-systems-australian-higher-ed',
