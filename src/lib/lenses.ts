@@ -40,12 +40,12 @@ export const LENSES: Lens[] = [
       'I run product for AI products today, and I came up through engineering, so I can work in the detail of how models, workflows and evaluation actually behave. My focus is the part AI does not automate: deciding what to build, measuring whether it worked, and keeping a human accountable where the output matters.',
     strengths: [
       'Owning an AI product portfolio end to end, from strategy to acceptance testing',
-      'An AI-Driven Development Lifecycle: short cycles, PRD-to-ticket tracing, feature-flagged rollouts',
+      'An AI-Driven Development Lifecycle built on bolts, each led by a forward-deployed engineer and shown to a customer',
       'Evaluation and benchmark testing tied to an outcome customers feel',
       'Hands-on: RAG, prompt engineering, MCP and agents (Claude, n8n, Zapier)',
     ],
     career: [
-      { when: 'Now', role: "First Product Manager \u00b7 AI products for financial advice and insurance", line: "Own the planning product in a portfolio of three AI products. Run an AI-Driven Development Lifecycle, benchmark testing against time to complete a piece of advice, and AI acceptance testing on de-identified client files." },
+      { when: 'Now', role: "First Product Manager \u00b7 AI products for financial advice and insurance", line: "Own the planning product in a portfolio of three AI products and lead six developers and three QA engineers through an AI-Driven Development Lifecycle of about eight bolts a sprint, each led by a developer or pair working as forward-deployed engineers with one QA engineer, showcased to a customer, and measured on cycle time and defect escape alongside a customer outcome metric." },
       { when: 'Jan–Aug 2026', role: "Head of Product Marketing and Principal Product Manager \u00b7 enterprise Data Risk & Compliance", line: "Prototyped an AI Asset Description generator and an AI Code Explainer, and designed AI-driven automation across product and marketing workflows." },
       { when: 'Earlier', role: "Senior Product Manager, Product Owner, Technical Lead, Senior Software Engineer", line: "An engineer first, which is why I can work in the detail of models, workflows and evaluation. Completed a six-month GenAI program at IIT Patna." },
     ],
@@ -70,12 +70,13 @@ export const LENSES: Lens[] = [
       'I have built product functions as well as products: most recently as the first product manager brought in to establish the discipline, and before that leading a product marketing team as Head of Product Marketing and Principal Product Manager. I care about the operating model: how decisions get made, measured and revisited.',
     strengths: [
       'Establishing a product function from zero: strategy, roadmap, OKRs, intake',
+      'Leading six developers and three QA engineers; setting sprint goals with the C-suite',
       'Leading a product marketing team alongside a principal PM remit',
       'Outcome metrics and decision-making made legible',
       'Change leadership: moving teams from waterfall habits to iterative delivery',
     ],
     career: [
-      { when: 'Now', role: "First Product Manager \u00b7 AI products for financial advice and insurance", line: "Brought in to establish the product management function: strategy and roadmap, product OKRs, a structured customer intake and an AI-driven delivery lifecycle." },
+      { when: 'Now', role: "First Product Manager \u00b7 AI products for financial advice and insurance", line: "Brought in to establish the product management function. I lead six developers and three QA engineers, set sprint goals with the C-suite around bolts and the customer each one is shown to, and own strategy, roadmap, OKRs and a structured customer intake." },
       { when: 'Jan–Aug 2026', role: "Head of Product Marketing and Principal Product Manager \u00b7 enterprise Data Risk & Compliance", line: "Led the product marketing team while holding a principal product manager remit, partnering with regional sales and executives on go-to-market." },
       { when: 'Earlier', role: "Senior Product Manager, Product Owner, Technical Lead, Senior Software Engineer", line: "Climbed the whole ladder from engineering to product, so I've worked from inside every seat a product leader depends on." },
     ],
@@ -134,7 +135,7 @@ export const LENSES: Lens[] = [
       'Two live governance learning products: DRC Academy and AI Governance Academy',
     ],
     career: [
-      { when: 'Now', role: "First Product Manager \u00b7 AI products for financial advice and insurance", line: "AI products for financial advice, where a Statement or Record of Advice is a compliance document. Built Claude-based compliance review tools and tested AI workflows on de-identified client files." },
+      { when: 'Now', role: "First Product Manager \u00b7 AI products for financial advice and insurance", line: "AI products for financial advice, a regulated domain where every output must be defensible. Built Claude-based compliance review tools and tested AI workflows on de-identified client files." },
       { when: 'Jan–Aug 2026', role: "Head of Product Marketing and Principal Product Manager \u00b7 enterprise Data Risk & Compliance", line: "Product and go-to-market for Data Risk & Compliance and Data Governance, harmonising many enterprises' subjective requirements into one product." },
       { when: 'Earlier', role: "Senior Product Manager, Product Owner, Technical Lead, Senior Software Engineer", line: "As Product Owner for harvesting and orchestration, scoped metadata harvesting, scanning and SQL processing using C4-model estimation." },
     ],
