@@ -4,7 +4,7 @@ summary: "Turning a folder of Mahabharata animations into a sticky learning app:
 focus: "EdTech • Gamification systems • Platform & wedge strategy"
 role: "Independent learning project"
 kind: "Learning Lab"
-order: 2
+order: 5
 draft: false
 ---
 

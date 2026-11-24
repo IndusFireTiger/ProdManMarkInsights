@@ -396,3 +396,14 @@ hr {
   .post-list a { grid-template-columns: 1fr; }
   .post-meta { order: -1; }
 }
+
+/* role reading paths (/for) */
+.chip-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+a.chip:hover { text-decoration: none; }
+.lens-strengths {
+  margin: 1.75rem 0 0;
+  padding-left: 1.1rem;
+  max-width: 60ch;
+  color: var(--muted);
+}
+.lens-strengths li { margin-bottom: 0.35rem; }

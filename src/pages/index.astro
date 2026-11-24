@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { LENSES } from '../lib/lenses';
 
 const dateFmt = (d: Date) =>
   d.toLocaleDateString('en-AU', { month: 'short', year: 'numeric' });
@@ -25,12 +26,29 @@ const work = (await getCollection('work'))
       <p class="lede">
         I'm a product leader who grew up as an engineer: fifteen years from
         writing code to leading technical teams to owning products and their
-        go-to-market. I write about how products are imagined, validated and
-        taken to market — with a keen interest in education and training.
+        go-to-market. Today I run product for AI products in a regulated
+        domain. I write about how products are imagined, validated and taken
+        to market.
       </p>
       <div class="hero__cta">
         <a class="btn btn--accent" href="/perspectives">Read the perspectives</a>
         <a class="btn" href="/work">See selected work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- READING PATHS BY ROLE -->
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Hiring for a particular role?</h2>
+        <a href="/for">All reading paths →</a>
+      </div>
+      <p class="muted" style="max-width:56ch; margin-top:0;">
+        Pick the closest fit for a short pitch and the most relevant work.
+      </p>
+      <div class="chip-row">
+        {LENSES.map((l) => <a class="chip" href={`/for/${l.id}`}>{l.label}</a>)}
       </div>
     </div>
   </section>
@@ -103,11 +121,12 @@ const work = (await getCollection('work'))
     <div class="container">
       <p class="eyebrow">About</p>
       <p class="lede">
-        Head of Product Marketing & Principal Product Manager in enterprise
-        Data&nbsp;Risk&nbsp;&amp;&nbsp;Compliance. I translate ambiguous,
-        subjective requirements into scoped, priced, shippable products — and
-        I'm exploring how applied AI reshapes both the product and its
-        go-to-market.
+        First product manager at an AI-first company in financial advice and
+        insurance; before that, Head of Product Marketing and Principal Product
+        Manager in enterprise Data&nbsp;Risk&nbsp;&amp;&nbsp;Compliance. I
+        translate ambiguous, regulated requirements into scoped, measurable,
+        shippable products, and I'm exploring how applied AI reshapes both the
+        product and its go-to-market.
       </p>
       <p style="margin-top:1.5rem;"><a class="btn" href="/about">Read the full story →</a></p>
     </div>

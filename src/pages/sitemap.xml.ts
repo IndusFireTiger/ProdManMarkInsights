@@ -7,6 +7,7 @@
 //   - unpublished marginalia terms (portfolio:false never generates a page)
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
+import { LENSES } from '../lib/lenses';
 
 type Entry = { path: string; lastmod?: string; priority: string };
 
@@ -35,6 +36,8 @@ export const GET: APIRoute = async ({ site }) => {
     { path: '/work', priority: '0.8' },
     { path: '/marginalia', priority: '0.8' },
     { path: '/about', priority: '0.6' },
+    { path: '/for', priority: '0.7' },
+    ...LENSES.map((l) => ({ path: `/for/${l.id}`, priority: '0.7' })),
     ...perspectives.map((e) => ({
       path: `/perspectives/${e.id}`,
       lastmod: iso(e.data.date),

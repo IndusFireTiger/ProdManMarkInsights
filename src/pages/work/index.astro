@@ -8,16 +8,17 @@ const work = (await getCollection('work'))
 ---
 <BaseLayout
   title="Work — ProdMan·Insights"
-  description="Selected product case studies across enterprise data governance and EdTech."
+  description="Selected product case studies: AI products in financial advice, enterprise data governance, applied AI and EdTech."
 >
   <section class="section">
     <div class="container">
       <p class="eyebrow">Case studies</p>
       <h1 style="max-width:18ch;">Selected work</h1>
       <p class="lede muted" style="max-width:56ch;">
-        A mix of enterprise product work and independent learning-lab projects —
-        chosen to show range across discovery, MVP design, go-to-market and
-        applied AI.
+        Enterprise product work first, then independent learning-lab projects,
+        chosen to show range across discovery, building a product function,
+        go-to-market and applied AI. Hiring for something specific?
+        <a href="/for">Pick a reading path</a>.
       </p>
       <div class="card-grid" style="margin-top:3rem;">
         {work.map((w) => (

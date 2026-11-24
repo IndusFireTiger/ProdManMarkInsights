@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { LENSES, type Lens } from '../../lib/lenses';
+
+export async function getStaticPaths() {
+  return LENSES.map((lens) => ({ params: { lens: lens.id }, props: { lens } }));
+}
+
+const { lens } = Astro.props as { lens: Lens };
+
+const pick = <T extends { id: string; data: { draft: boolean } }>(
+  all: T[],
+  ids: string[],
+  kind: string
+) =>
+  ids.map((id) => {
+    const entry = all.find((e) => e.id === id);
+    if (!entry) throw new Error(`Lens "${lens.id}" lists unknown ${kind} "${id}"`);
+    return entry;
+  }).filter((e) => !e.data.draft);
+
+const work = pick(await getCollection('work'), lens.work, 'work');
+const perspectives = pick(
+  await getCollection('perspectives'),
+  lens.perspectives,
+  'perspective'
+);
+const others = LENSES.filter((l) => l.id !== lens.id);
+const dateFmt = (d: Date) =>
+  d.toLocaleDateString('en-AU', { month: 'short', year: 'numeric' });
+---
+<BaseLayout
+  title={`${lens.title} — ProdMan·Insights`}
+  description={lens.pitch}
+>
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Reading path · {lens.label}</p>
+      <h1 style="max-width:20ch;">{lens.title}</h1>
+      <p class="lede" style="max-width:60ch;">{lens.pitch}</p>
+      <ul class="lens-strengths">
+        {lens.strengths.map((s) => <li>{s}</li>)}
+      </ul>
+      <div class="hero__cta">
+        <a class="btn btn--accent" href="/about">About me</a>
+        <a class="btn" href="mailto:prodmaninsights@gmail.com">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Start with this work</h2>
+        <a href="/work">All work →</a>
+      </div>
+      <div class="card-grid">
+        {work.map((w) => (
+          <a class="card" href={`/work/${w.id}`}>
+            <span class="tag">{w.data.kind} · {w.data.focus.split('•')[0].trim()}</span>
+            <h3>{w.data.title}</h3>
+            <p>{w.data.summary}</p>
+            <span class="more">View case study →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Then read</h2>
+        <a href="/perspectives">All perspectives →</a>
+      </div>
+      <ul class="post-list">
+        {perspectives.map((p) => (
+          <li>
+            <a href={`/perspectives/${p.id}`}>
+              <span class="post-title">{p.data.title}</span>
+              <span class="post-meta">{dateFmt(p.data.date)}</span>
+              <p class="post-summary">{p.data.summary}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="about-strip">
+    <div class="container">
+      <p class="eyebrow">Other reading paths</p>
+      <div class="chip-row">
+        {others.map((l) => <a class="chip" href={`/for/${l.id}`}>{l.label}</a>)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

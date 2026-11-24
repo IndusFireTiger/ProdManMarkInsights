@@ -4,7 +4,7 @@ summary: "Many enterprises, each with their own definition of 'governed data'. T
 focus: "Enterprise Product • Discovery • C4 estimation"
 role: "Product Owner — Harvesting & Orchestration"
 kind: "Enterprise"
-order: 1
+order: 2
 draft: false
 ---
 
