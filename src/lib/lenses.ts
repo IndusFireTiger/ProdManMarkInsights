@@ -10,11 +10,10 @@
 // with a real page or section (about, work, perspectives, marginalia,
 // learning-map, sitemap.xml).
 //
-// UNLISTED BY DESIGN: nothing on the public site links to these pages, they
-// are left out of the sitemap and carry noindex, and they don't link to each
-// other. They are reachable only by the link you send. The case studies and
-// essays they point to are ordinary entries, listed under Work and
-// Perspectives as usual.
+// WHERE THEY APPEAR: only in the footer's "Explore by role" list. They stay
+// off the home page and the main navigation, carry noindex, are left out of
+// the sitemap, and don't link to each other. The case studies and essays they
+// point to are ordinary entries, listed under Work and Perspectives as usual.
 //
 // TO ADD OR RETUNE A LENS: edit this list. `work` and `perspectives` are entry
 // ids (the Markdown file names without .md), listed in the order to show them.

@@ -1,15 +1,51 @@
 ---
+import { LENSES } from '../lib/lenses';
+
 const year = new Date().getFullYear();
+
+// Footer sitemap. "Explore by role" lists the role routes from
+// src/lib/lenses.ts, so a new route shows up here automatically.
+const site = [
+  { href: '/', label: 'Home' },
+  { href: '/perspectives', label: 'Perspectives' },
+  { href: '/work', label: 'Work' },
+  { href: '/work#live-builds', label: 'Live builds' },
+  { href: '/marginalia', label: 'Marginalia' },
+  { href: '/about', label: 'About' },
+];
 ---
 <footer class="site-footer">
-  <div class="container site-footer__inner">
-    <div style="max-width: 30ch;">
-      <h3>ProdMan·Insights</h3>
-      <small>Product strategy, product marketing & applied AI, from regulated
-      enterprise domains to education. On AI governance, see also
-      <a href="https://governed-ai.netlify.app/" target="_blank" rel="noopener noreferrer">Governed·AI</a>.</small>
+  <div class="container">
+    <div class="site-footer__map">
+      <div class="site-footer__brand">
+        <h3>ProdMan·Insights</h3>
+        <small>Product strategy, product marketing & applied AI, from regulated
+        enterprise domains to education.</small>
+      </div>
+
+      <nav class="site-footer__col" aria-label="Site">
+        <p class="site-footer__head">Site</p>
+        <ul>
+          {site.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+        </ul>
+      </nav>
+
+      <nav class="site-footer__col" aria-label="Explore by role">
+        <p class="site-footer__head">Explore by role</p>
+        <ul>
+          {LENSES.map((l) => <li><a href={`/${l.id}`}>{l.label}</a></li>)}
+        </ul>
+      </nav>
+
+      <div class="site-footer__col">
+        <p class="site-footer__head">Contact</p>
+        <ul>
+          <li><a href="mailto:prodmaninsights@gmail.com">prodmaninsights@gmail.com</a></li>
+        </ul>
+      </div>
     </div>
-    <div style="align-self:flex-end;">
+
+    <div class="site-footer__legal">
       <small>© {year} ProdMan·Insights. Views are my own. Enterprise case
       studies are anonymised; learning-lab projects are independent and not
       affiliated with any employer.</small>
