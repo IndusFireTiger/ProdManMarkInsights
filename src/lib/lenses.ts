@@ -10,7 +10,7 @@
 // with a real page or section (about, work, perspectives, marginalia,
 // learning-map, sitemap.xml).
 //
-// WHERE THEY APPEAR: only in the footer's "Explore by role" list. They stay
+// WHERE THEY APPEAR: only in the footer's "Explore by experience" list. They stay
 // off the home page and the main navigation, carry noindex, are left out of
 // the sitemap, and don't link to each other. The case studies and essays they
 // point to are ordinary entries, listed under Work and Perspectives as usual.

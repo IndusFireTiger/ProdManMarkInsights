@@ -3,7 +3,7 @@ import { LENSES } from '../lib/lenses';
 
 const year = new Date().getFullYear();
 
-// Footer sitemap. "Explore by role" lists the role routes from
+// Footer sitemap. "Explore by experience" lists the role routes from
 // src/lib/lenses.ts, so a new route shows up here automatically.
 const site = [
   { href: '/', label: 'Home' },
@@ -30,8 +30,8 @@ const site = [
         </ul>
       </nav>
 
-      <nav class="site-footer__col" aria-label="Explore by role">
-        <p class="site-footer__head">Explore by role</p>
+      <nav class="site-footer__col" aria-label="Explore by experience">
+        <p class="site-footer__head">Explore by experience</p>
         <ul>
           {LENSES.map((l) => <li><a href={`/${l.id}`}>{l.label}</a></li>)}
         </ul>

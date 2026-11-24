@@ -34,7 +34,7 @@ a short pitch, a career snapshot told for that reader, and a curated list of
 case studies and essays. Send the matching link with an application.
 
 They are kept out of the main navigation and the home page; the only place
-they are listed is the footer's "Explore by role" column. They are not in the
+they are listed is the footer's "Explore by experience" column. They are not in the
 sitemap and carry `noindex`. The work and essays they point to
 are ordinary entries, listed under Work and Perspectives as usual. Edit
 `src/lib/lenses.ts` to retune a route or add a new one.
