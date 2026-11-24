@@ -165,7 +165,7 @@ export const LENSES: Lens[] = [
       { when: 'Jan–Aug 2026', role: "Head of Product Marketing and Principal Product Manager \u00b7 enterprise Data Risk & Compliance", line: "Led product marketing in enterprise software: positioning, segmentation and launch systems that carry over to education markets." },
       { when: 'Earlier', role: "Senior Product Manager, Product Owner, Technical Lead, Senior Software Engineer", line: "Outside work: a Masters in Public Administration, editing a student e-journal, coordinating campus placements and volunteering with Project Manthan." },
     ],
-    work: ['littlegurukul', 'ai-companion', 'smartlaunch'],
+    work: ['ai-companion', 'smartlaunch'],
     perspectives: [
       'one-country-many-markets-australian-edtech',
       'student-management-systems-australian-higher-ed',
