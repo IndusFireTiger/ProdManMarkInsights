@@ -6,8 +6,8 @@ kind: "Coined"
 short: "The progression spine in LittleGurukul — a named journey from novice to master that gives a learner an identity to grow into rather than a score to accumulate."
 example: "Badges and points reward activity. A progression from Seeker to Sage rewards becoming something, which is a far stickier reason to return."
 related: ["protect-the-struggle", "collapsed-complexity"]
-appearsIn: ["/work/littlegurukul"]
-portfolio: true
+appearsIn: []
+portfolio: false
 learning:
   audience: ["Learning Designer", "Product Manager"]
   level: practitioner

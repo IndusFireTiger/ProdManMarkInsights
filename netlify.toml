@@ -5,10 +5,16 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# Case study renamed MyGuru -> LittleGurukul; keep the old URL working.
+# LittleGurukul (formerly MyGuru) case study retired; send old links to Work.
 [[redirects]]
   from = "/work/myguru"
-  to = "/work/littlegurukul"
+  to = "/work"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/work/littlegurukul"
+  to = "/work"
   status = 301
   force = true
 

@@ -14,8 +14,7 @@
     "module": "Product craft",
     "status": "confident",
     "appearsIn": [
-      "/work/smartlaunch",
-      "/work/littlegurukul"
+      "/work/smartlaunch"
     ]
   },
   {
@@ -1349,9 +1348,7 @@
     "level": "foundation",
     "module": "Learning design",
     "status": "taught",
-    "appearsIn": [
-      "/work/littlegurukul"
-    ]
+    "appearsIn": []
   },
   {
     "id": "gamification",
@@ -1364,9 +1361,7 @@
     "level": "foundation",
     "module": "Learning design",
     "status": "taught",
-    "appearsIn": [
-      "/work/littlegurukul"
-    ]
+    "appearsIn": []
   },
   {
     "id": "progression-system",
@@ -1378,9 +1373,7 @@
     "level": "foundation",
     "module": "Learning design",
     "status": "taught",
-    "appearsIn": [
-      "/work/littlegurukul"
-    ]
+    "appearsIn": []
   },
   {
     "id": "knowledge-unlocks",
@@ -1392,9 +1385,7 @@
     "level": "foundation",
     "module": "Learning design",
     "status": "taught",
-    "appearsIn": [
-      "/work/littlegurukul"
-    ]
+    "appearsIn": []
   },
   {
     "id": "flow-design",
@@ -1861,22 +1852,6 @@
     "status": "taught",
     "appearsIn": [
       "/work/data-governance-harmonisation"
-    ]
-  },
-  {
-    "id": "case-littlegurukul",
-    "type": "case-study",
-    "term": "LittleGurukul",
-    "short": "Reusable game engines, a progression spine, and gamification pointed at learning rather than engagement.",
-    "audience": [
-      "Learning Designer",
-      "Product Manager"
-    ],
-    "level": "practitioner",
-    "module": "Learning design",
-    "status": "taught",
-    "appearsIn": [
-      "/work/littlegurukul"
     ]
   },
   {

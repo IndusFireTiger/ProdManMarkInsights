@@ -3,9 +3,9 @@ term: "SRS"
 aka: ["Spaced Repetition System", "Software Requirements Specification"]
 roles: ["Design & Learning", "Product"]
 kind: "Disambiguation"
-short: "Two unrelated things, both abbreviated SRS on this site — a spaced repetition system in the learning work, and a software requirements specification in the enterprise work."
+short: "Two unrelated things, both abbreviated SRS — a spaced repetition system in learning products, and a software requirements specification in the enterprise work on this site."
 related: ["seeker-to-sage", "protect-the-struggle"]
-appearsIn: ["/work/littlegurukul", "/work/data-governance-harmonisation"]
+appearsIn: ["/work/data-governance-harmonisation"]
 portfolio: true
 learning:
   audience: ["Learning Designer", "Product Manager", "Solution Architect"]
@@ -17,7 +17,7 @@ learning:
 
 ## Spaced Repetition System
 
-*Used in the learning work.* A scheduling method that surfaces material for
+*Common in learning products.* A scheduling method that surfaces material for
 review at increasing intervals, timed against the forgetting curve — you see a
 card just as you're about to lose it. It's one of the most robustly evidenced
 findings in learning science, and the engine behind flashcard-style products.
@@ -31,6 +31,6 @@ artifacts, though it survives in regulated and contractual procurement.
 
 ---
 
-The two share no lineage. Which one is meant is always clear from context — the
-learning-app case studies mean the first, the data-governance work means the
-second — but the collision is worth naming for anyone arriving from search.
+The two share no lineage. On this site, SRS means the second, in the
+data-governance work, but readers from a learning background will reach for the
+first, so the collision is worth naming for anyone arriving from search.

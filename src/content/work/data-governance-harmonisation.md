@@ -4,23 +4,24 @@ summary: "Many enterprises, each with their own definition of 'governed data'. T
 focus: "Enterprise Product • Discovery • C4 estimation"
 role: "Product Owner — Harvesting & Orchestration"
 kind: "Enterprise"
-order: 1
+order: 2
 draft: false
 ---
 
 > **New to Data Risk & Compliance?** I built
-> **[DRCDrivers](https://sindhu-prasanna-drc.netlify.app/)** — an interactive, end-to-end
-> explainer that drives you through the DRC concepts this product is built around.
+> **[DRC Academy](/work/drc-academy)**, a live learning app whose six-stop
+> [DRC Road](https://drc-academy.netlify.app/road/) drives you through the DRC
+> concepts this product is built around.
 > For context: Data Governance is
 > inherently subjective — every organisation defines "governed", "sensitive" and
 > "compliant" differently. The job was to serve many such customers from a
 > single product without fragmenting it into bespoke forks.
 
 <figure>
-  <a href="https://sindhu-prasanna-drc.netlify.app/" target="_blank" rel="noopener noreferrer">
-    <img src="/work/drcdrivers-roadmap.png" alt="DRCDrivers — Drive the road of Data Risk & Compliance: a six-stop interactive explainer covering the data lifecycle, types of data risk, compliance as a spec, and the controls that reduce risk." />
+  <a href="https://drc-academy.netlify.app/road/" target="_blank" rel="noopener noreferrer">
+    <img src="/work/drcdrivers-roadmap.png" alt="DRC Academy — Drive the road of Data Risk & Compliance: a six-stop interactive explainer covering the data lifecycle, types of data risk, compliance as a spec, and the controls that reduce risk." />
   </a>
-  <figcaption>DRCDrivers — the interactive DRC explainer I built. <a href="https://sindhu-prasanna-drc.netlify.app/" target="_blank" rel="noopener noreferrer">Click to drive the road →</a></figcaption>
+  <figcaption>The DRC Road in DRC Academy, the interactive DRC explainer I built. <a href="https://drc-academy.netlify.app/road/" target="_blank" rel="noopener noreferrer">Click to drive the road →</a></figcaption>
 </figure>
 
 ## The problem

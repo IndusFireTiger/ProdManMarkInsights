@@ -5,30 +5,51 @@ import { getCollection } from 'astro:content';
 const work = (await getCollection('work'))
   .filter((w) => !w.data.draft)
   .sort((a, b) => a.data.order - b.data.order);
+
+// One section per kind; each has an anchor so it can be linked directly,
+// e.g. /work#live-builds.
+const groups = [
+  { id: 'enterprise', kind: 'Enterprise', title: 'Enterprise work',
+    blurb: 'Product work from my roles, anonymised.' },
+  { id: 'live-builds', kind: 'Live build', title: 'Live builds',
+    blurb: 'Working products I designed and built independently. Open them and try them.' },
+  { id: 'learning-lab', kind: 'Learning Lab', title: 'Learning lab',
+    blurb: 'Independent explorations of a method or an idea.' },
+]
+  .map((g) => ({ ...g, items: work.filter((w) => w.data.kind === g.kind) }))
+  .filter((g) => g.items.length > 0);
 ---
 <BaseLayout
   title="Work — ProdMan·Insights"
-  description="Selected product case studies across enterprise data governance and EdTech."
+  description="Selected product case studies: AI products in financial advice, enterprise data governance, applied AI and EdTech."
 >
   <section class="section">
     <div class="container">
       <p class="eyebrow">Case studies</p>
       <h1 style="max-width:18ch;">Selected work</h1>
       <p class="lede muted" style="max-width:56ch;">
-        A mix of enterprise product work and independent learning-lab projects —
-        chosen to show range across discovery, MVP design, go-to-market and
-        applied AI.
+        Enterprise product work, live products I've built, and independent
+        learning-lab projects, chosen to show range across discovery, building
+        a product function, go-to-market and applied AI.
       </p>
-      <div class="card-grid" style="margin-top:3rem;">
-        {work.map((w) => (
-          <a class="card" href={`/work/${w.id}`}>
-            <span class="tag">{w.data.kind} · {w.data.focus.split('•')[0].trim()}</span>
-            <h3>{w.data.title}</h3>
-            <p>{w.data.summary}</p>
-            <span class="more">View case study →</span>
-          </a>
-        ))}
-      </div>
+      {groups.map((g) => (
+        <div class="work-group" id={g.id}>
+          <div class="section__head">
+            <h2>{g.title}</h2>
+          </div>
+          <p class="muted" style="margin-top:0;">{g.blurb}</p>
+          <div class="card-grid">
+            {g.items.map((w) => (
+              <a class="card" href={`/work/${w.id}`}>
+                <span class="tag">{w.data.kind} · {w.data.focus.split('•')[0].trim()}</span>
+                <h3>{w.data.title}</h3>
+                <p>{w.data.summary}</p>
+                <span class="more">{w.data.liveUrl ? 'See the build →' : 'View case study →'}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   </section>
 </BaseLayout>
