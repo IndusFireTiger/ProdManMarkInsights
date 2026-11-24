@@ -45,7 +45,7 @@ export const LENSES: Lens[] = [
       'Hands-on: RAG, prompt engineering, MCP and agents (Claude, n8n, Zapier)',
     ],
     career: [
-      { when: 'Now', role: "First Product Manager \u00b7 AI products for financial advice and insurance", line: "Own the planning product in a portfolio of three AI products and lead six developers and three QA engineers through an AI-Driven Development Lifecycle: short bolts, each led by a developer working as a forward-deployed engineer and showcased to a customer, with benchmark testing against time to complete a piece of advice." },
+      { when: 'Now', role: "First Product Manager \u00b7 AI products for financial advice and insurance", line: "Own the planning product in a portfolio of three AI products and lead six developers and three QA engineers through an AI-Driven Development Lifecycle of about eight bolts a sprint, each led by a developer or pair working as forward-deployed engineers with one QA engineer, showcased to a customer, and measured on cycle time and defect escape alongside time to complete a piece of advice." },
       { when: 'Jan–Aug 2026', role: "Head of Product Marketing and Principal Product Manager \u00b7 enterprise Data Risk & Compliance", line: "Prototyped an AI Asset Description generator and an AI Code Explainer, and designed AI-driven automation across product and marketing workflows." },
       { when: 'Earlier', role: "Senior Product Manager, Product Owner, Technical Lead, Senior Software Engineer", line: "An engineer first, which is why I can work in the detail of models, workflows and evaluation. Completed a six-month GenAI program at IIT Patna." },
     ],

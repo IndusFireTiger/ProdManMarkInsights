@@ -1,6 +1,6 @@
 ---
 title: "Standing up product management in an AI-first advice company"
-summary: "Brought in as the first product manager for a portfolio of AI products serving financial advice and insurance. I lead a team of six developers and three QA engineers through an AI-Driven Development Lifecycle built on bolts: short build cycles, each led by a developer working as a forward-deployed engineer and shown to a named customer when it lands."
+summary: "Brought in as the first product manager for a portfolio of AI products in financial advice and insurance. I lead six developers and three QA engineers through a bolt-based AI-Driven Development Lifecycle, where every bolt is led by forward-deployed engineers and shown to a named customer."
 focus: "AI Product • Building the product function • Regulated advice"
 role: "First Product Manager — current role"
 kind: "Enterprise"
@@ -64,28 +64,53 @@ three QA engineers**, and set direction with the C-suite.
 
 ## How the AI-DLC runs: bolts, sprint goals and customer showcases
 
-The aim was a fast, AI-assisted loop from requirement to design to build to
-customer feedback, so the product is always built with a customer in view and
-the team gets the highest throughput from AI at every stage of the lifecycle.
+AI-DLC, the AI-Driven Development Life Cycle introduced by AWS, has AI carry
+out the work while people own intent, check the design and validate the
+outcome. Its signature change is the **bolt**: a short, focused build cycle
+that delivers one Unit of Work, in place of the multi-week sprint as the unit
+of delivery. I set the team up to work this way, so the loop from requirement
+to design to build to customer feedback stays fast and always has a customer
+in view, with AI used at every stage of the lifecycle.
 
-- **Bolts are the unit of delivery.** A bolt is a short, focused build cycle
-  with one clear outcome. AI supports every stage inside it: shaping the
-  requirement, designing, building and testing.
+- **About eight bolts a sprint.** A typical sprint holds around eight bolts.
+  Each one is led by a single developer or a pair of developers, with one QA
+  engineer working in it. Across six developers and three QA engineers, that
+  keeps several bolts moving in parallel.
 - **Sprint goals are set with the C-suite, and they are about bolts.** Together
   we decide how many bolts the sprint holds, what each one must deliver, and,
   as the headline of every sprint goal, **which customer each outcome will be
   shown to**. A sprint succeeds when real customers have seen real outcomes.
-- **Developers lead bolts as forward-deployed engineers.** Each bolt has a
-  developer who owns it end to end and works directly with the customer: they
-  hear the problem first-hand, build against it, and present what they built.
-  The people closest to the code are the people closest to the customer.
+- **Developers lead bolts as forward-deployed engineers.** The bolt lead works
+  directly with the customer: they hear the problem first-hand, build against
+  it, and present what they built. The people closest to the code are the
+  people closest to the customer.
 - **Every bolt ends in a showcase.** Outcomes are shown to the customer on a
   regular cadence, and what we hear goes straight into the structured intake
   and shapes the next bolts.
+- **Clear intent first.** AI-DLC speeds up clear requirements and amplifies
+  confused ones, so clarity sets the speed limit. My job is to own intent:
+  agree the outcome before a bolt starts, answer questions within hours
+  rather than at the next ceremony, and make sure every ticket traces back to
+  its PRD.
 
-The result is a regular customer cadence that the whole team owns: product
-direction set with leadership, built in short AI-assisted cycles, and checked
-against a customer's reaction every time.
+The result is a regular customer cadence that the whole team owns: direction
+set with leadership, built in short AI-assisted bolts, and checked against a
+customer's reaction every time.
+
+## Measuring bolt-based delivery
+
+Speed only counts if quality holds, so velocity is never reported on its own.
+These delivery KPIs for a bolt-based AI-DLC sit under the product's headline
+outcome metric, time to complete a Statement or Record of Advice:
+
+| KPI | Why it matters | Signal to act |
+| --- | --- | --- |
+| Bolt cycle time | Shows whether bolts stay short | Rising: Units of Work are too big, or decisions are stalling |
+| Question turnaround | Unanswered questions now block delivery more than building does | Over a day: a decision-maker gap |
+| Plan rejection rate | Tests the quality of specs and the rigour of review | Near zero: reviews may be rubber-stamping |
+| Defect escape rate | Faster delivery with more failures isn't value | Rising with velocity: tighten the gates |
+| Review load against commits | Human review is the scarce resource | Commits outpace review: add an evaluation harness |
+| Bolts showcased to a customer | The sprint goal is customer outcomes, not output | A bolt that ships without a showcase hasn't closed the loop |
 
 ## What I'd carry into any team
 
