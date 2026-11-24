@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { LENSES, type Lens } from '../lib/lenses';
+import { LINKEDIN_URL, LINKEDIN_LABEL } from '../lib/contact';
 
 export async function getStaticPaths() {
   return LENSES.map((lens) => ({ params: { lens: lens.id }, props: { lens } }));
@@ -112,7 +113,7 @@ const dateFmt = (d: Date) =>
     <div class="container">
       <p class="eyebrow">Get in touch</p>
       <p class="lede">Happy to talk through any of this work in more depth.</p>
-      <p style="margin-top:1.5rem;"><a class="btn btn--accent" href="mailto:prodmaninsights@gmail.com">prodmaninsights@gmail.com</a></p>
+      <p style="margin-top:1.5rem;"><a class="btn btn--accent" href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">{LINKEDIN_LABEL} ↗</a></p>
     </div>
   </section>
 </BaseLayout>

@@ -1,5 +1,6 @@
 ---
 import { LENSES } from '../lib/lenses';
+import { LINKEDIN_URL, LINKEDIN_LABEL } from '../lib/contact';
 
 const year = new Date().getFullYear();
 
@@ -40,7 +41,7 @@ const site = [
       <div class="site-footer__col">
         <p class="site-footer__head">Contact</p>
         <ul>
-          <li><a href="mailto:prodmaninsights@gmail.com">prodmaninsights@gmail.com</a></li>
+          <li><a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">{LINKEDIN_LABEL} ↗</a></li>
         </ul>
       </div>
     </div>
