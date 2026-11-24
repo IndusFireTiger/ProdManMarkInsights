@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { LENSES } from '../lib/lenses';
 
 const dateFmt = (d: Date) =>
   d.toLocaleDateString('en-AU', { month: 'short', year: 'numeric' });
@@ -33,22 +32,6 @@ const work = (await getCollection('work'))
       <div class="hero__cta">
         <a class="btn btn--accent" href="/perspectives">Read the perspectives</a>
         <a class="btn" href="/work">See selected work</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- READING PATHS BY ROLE -->
-  <section class="section">
-    <div class="container">
-      <div class="section__head">
-        <h2>Hiring for a particular role?</h2>
-        <a href="/for">All reading paths →</a>
-      </div>
-      <p class="muted" style="max-width:56ch; margin-top:0;">
-        Pick the closest fit for a short pitch and the most relevant work.
-      </p>
-      <div class="chip-row">
-        {LENSES.map((l) => <a class="chip" href={`/for/${l.id}`}>{l.label}</a>)}
       </div>
     </div>
   </section>

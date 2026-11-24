@@ -407,3 +407,15 @@ a.chip:hover { text-decoration: none; }
   color: var(--muted);
 }
 .lens-strengths li { margin-bottom: 0.35rem; }
+.lens-career { list-style: none; margin: 0; padding: 0; }
+.lens-career li {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 1.5rem;
+  padding-block: 1.4rem;
+  border-bottom: 1px solid var(--line);
+}
+.lens-career__when { font-family: var(--sans); font-size: 0.85rem; color: var(--accent); padding-top: 0.3rem; }
+.lens-career h3 { margin: 0 0 0.35rem; font-size: 1.2rem; }
+.lens-career p { margin: 0; color: var(--muted); max-width: 62ch; }
+@media (max-width: 640px) { .lens-career li { grid-template-columns: 1fr; gap: 0.4rem; } }

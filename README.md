@@ -26,13 +26,17 @@ Writing and case studies are Markdown files — add or edit a `.md` file to publ
 
 Frontmatter fields are defined in `src/content.config.ts`.
 
-## Reading paths by role
+## Role routes (unlisted)
 
-`/for/<id>` pages give each kind of role (AI product, product leadership,
-product marketing, regulated domains, EdTech) a short pitch plus a curated
-list of case studies and essays. Send the matching link with an application
-instead of reskinning the site. Edit `src/lib/lenses.ts` to retune a pitch,
-reorder what each path shows, or add a new path.
+`/for/<id>` pages are standalone landing pages for a kind of role: AI product,
+product leadership, product marketing, regulated domains and EdTech. Each has
+a short pitch, a career snapshot told for that reader, and a curated list of
+case studies and essays. Send the matching link with an application.
+
+They are unlisted on purpose: nothing on the site links to them, they are not
+in the sitemap, and they carry `noindex`. The work and essays they point to
+are ordinary entries, listed under Work and Perspectives as usual. Edit
+`src/lib/lenses.ts` to retune a route or add a new one.
 
 ## Deploy
 

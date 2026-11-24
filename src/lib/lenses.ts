@@ -1,9 +1,16 @@
-// Role lenses — curated reading paths through the same body of work.
+// Role routes — curated, standalone landing pages over the same body of work.
 //
 // One site, many applications: instead of reskinning the whole site for each
-// job round, each lens gives a reader (a hiring manager, a recruiter) a short
-// pitch plus the case studies and essays most relevant to that kind of role.
-// Send the lens URL — /for/<id> — with an application.
+// job round, each route gives a reader (a hiring manager, a recruiter) a short
+// pitch, a career snapshot told for that kind of role, and the case studies
+// and essays most relevant to it. Send the URL — /for/<id> — with an
+// application.
+//
+// UNLISTED BY DESIGN: nothing on the public site links to these pages, they
+// are left out of the sitemap and carry noindex, and they don't link to each
+// other. They are reachable only by the link you send. The case studies and
+// essays they point to are ordinary entries, listed under Work and
+// Perspectives as usual.
 //
 // TO ADD OR RETUNE A LENS: edit this list. `work` and `perspectives` are entry
 // ids (the Markdown file names without .md), listed in the order to show them.
@@ -15,6 +22,8 @@ export type Lens = {
   title: string; // page heading
   pitch: string; // one paragraph, first person
   strengths: string[]; // what this lens evidences, scannable
+  // Career snapshot, newest first, each role told for this kind of reader.
+  career: { when: string; role: string; line: string }[];
   work: string[];
   perspectives: string[];
 };
@@ -31,6 +40,11 @@ export const LENSES: Lens[] = [
       'An AI-Driven Development Lifecycle: short cycles, PRD-to-ticket tracing, feature-flagged rollouts',
       'Evaluation and benchmark testing tied to an outcome customers feel',
       'Hands-on: RAG, prompt engineering, MCP and agents (Claude, n8n, Zapier)',
+    ],
+    career: [
+      { when: 'Now', role: "First Product Manager \u00b7 AI products for financial advice and insurance", line: "Own the planning product in a portfolio of three AI products. Run an AI-Driven Development Lifecycle, benchmark testing against time to complete a piece of advice, and AI acceptance testing on de-identified client files." },
+      { when: 'Jan–Aug 2026', role: "Head of Product Marketing and Principal Product Manager \u00b7 enterprise Data Risk & Compliance", line: "Prototyped an AI Asset Description generator and an AI Code Explainer, and designed AI-driven automation across product and marketing workflows." },
+      { when: 'Earlier', role: "Senior Product Manager, Product Owner, Technical Lead, Senior Software Engineer", line: "An engineer first, which is why I can work in the detail of models, workflows and evaluation. Completed a six-month GenAI program at IIT Patna." },
     ],
     work: [
       'founding-product-function-ai-advice',
@@ -57,6 +71,11 @@ export const LENSES: Lens[] = [
       'Outcome metrics and decision-making made legible',
       'Change leadership: moving teams from waterfall habits to iterative delivery',
     ],
+    career: [
+      { when: 'Now', role: "First Product Manager \u00b7 AI products for financial advice and insurance", line: "Brought in to establish the product management function: strategy and roadmap, product OKRs, a structured customer intake and an AI-driven delivery lifecycle." },
+      { when: 'Jan–Aug 2026', role: "Head of Product Marketing and Principal Product Manager \u00b7 enterprise Data Risk & Compliance", line: "Led the product marketing team while holding a principal product manager remit, partnering with regional sales and executives on go-to-market." },
+      { when: 'Earlier', role: "Senior Product Manager, Product Owner, Technical Lead, Senior Software Engineer", line: "Climbed the whole ladder from engineering to product, so I've worked from inside every seat a product leader depends on." },
+    ],
     work: [
       'founding-product-function-ai-advice',
       'data-governance-harmonisation',
@@ -80,6 +99,11 @@ export const LENSES: Lens[] = [
       'Positioning, segmentation and pricing grounded in customer evidence',
       'Requirement harmonisation that makes features estimable and priceable',
       'AEO / SEO / GEO and AI-driven marketing workflows',
+    ],
+    career: [
+      { when: 'Now', role: "First Product Manager \u00b7 AI products for financial advice and insurance", line: "Run recurring customer validation sessions with a rationale-backed intake, and ground a platform overhaul in market research into how advisers work." },
+      { when: 'Jan–Aug 2026', role: "Head of Product Marketing and Principal Product Manager \u00b7 enterprise Data Risk & Compliance", line: "Led the product marketing team. Designed the GTM Factory, a repeatable launch system run by a virtual team embedded in engineering." },
+      { when: 'Earlier', role: "Senior Product Manager, Product Owner, Technical Lead, Senior Software Engineer", line: "Engineering and product ownership before marketing, which is why my go-to-market starts inside the product." },
     ],
     work: [
       'fitpulse-pricing-agent',
@@ -105,6 +129,11 @@ export const LENSES: Lens[] = [
       'Traceability and de-identified testing as product capabilities',
       'Harmonising many enterprises’ subjective requirements into one product',
     ],
+    career: [
+      { when: 'Now', role: "First Product Manager \u00b7 AI products for financial advice and insurance", line: "AI products for financial advice, where a Statement or Record of Advice is a compliance document. Built Claude-based compliance review tools and tested AI workflows on de-identified client files." },
+      { when: 'Jan–Aug 2026', role: "Head of Product Marketing and Principal Product Manager \u00b7 enterprise Data Risk & Compliance", line: "Product and go-to-market for Data Risk & Compliance and Data Governance, harmonising many enterprises' subjective requirements into one product." },
+      { when: 'Earlier', role: "Senior Product Manager, Product Owner, Technical Lead, Senior Software Engineer", line: "As Product Owner for harvesting and orchestration, scoped metadata harvesting, scanning and SQL processing using C4-model estimation." },
+    ],
     work: [
       'founding-product-function-ai-advice',
       'data-governance-harmonisation',
@@ -126,6 +155,11 @@ export const LENSES: Lens[] = [
       'Gamification and progression design for learning products',
       'Responsible AI personalisation with a human in the loop',
       'Product and go-to-market thinking applied to learning products',
+    ],
+    career: [
+      { when: 'Now', role: "First Product Manager \u00b7 AI products for financial advice and insurance", line: "Running product for AI products in a regulated domain: the same craft of trust, evaluation and human oversight that responsible learning products need." },
+      { when: 'Jan–Aug 2026', role: "Head of Product Marketing and Principal Product Manager \u00b7 enterprise Data Risk & Compliance", line: "Led product marketing in enterprise software: positioning, segmentation and launch systems that carry over to education markets." },
+      { when: 'Earlier', role: "Senior Product Manager, Product Owner, Technical Lead, Senior Software Engineer", line: "Outside work: a Masters in Public Administration, editing a student e-journal, coordinating campus placements and volunteering with Project Manthan." },
     ],
     work: ['littlegurukul', 'ai-companion', 'smartlaunch'],
     perspectives: [

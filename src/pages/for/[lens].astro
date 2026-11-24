@@ -26,30 +26,50 @@ const perspectives = pick(
   lens.perspectives,
   'perspective'
 );
-const others = LENSES.filter((l) => l.id !== lens.id);
 const dateFmt = (d: Date) =>
   d.toLocaleDateString('en-AU', { month: 'short', year: 'numeric' });
 ---
 <BaseLayout
   title={`${lens.title} — ProdMan·Insights`}
   description={lens.pitch}
+  noindex
 >
   <section class="hero">
     <div class="container">
-      <p class="eyebrow">Reading path · {lens.label}</p>
+      <p class="eyebrow">{lens.label}</p>
       <h1 style="max-width:20ch;">{lens.title}</h1>
       <p class="lede" style="max-width:60ch;">{lens.pitch}</p>
       <ul class="lens-strengths">
         {lens.strengths.map((s) => <li>{s}</li>)}
       </ul>
       <div class="hero__cta">
-        <a class="btn btn--accent" href="/about">About me</a>
-        <a class="btn" href="mailto:prodmaninsights@gmail.com">Get in touch</a>
+        <a class="btn btn--accent" href="#work">See the work</a>
+        <a class="btn" href="/about">About me</a>
       </div>
     </div>
   </section>
 
   <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Career at a glance</h2>
+        <a href="/about">Full story →</a>
+      </div>
+      <ol class="lens-career">
+        {lens.career.map((c) => (
+          <li>
+            <span class="lens-career__when">{c.when}</span>
+            <div>
+              <h3>{c.role}</h3>
+              <p>{c.line}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="work">
     <div class="container">
       <div class="section__head">
         <h2>Start with this work</h2>
@@ -90,10 +110,9 @@ const dateFmt = (d: Date) =>
 
   <section class="about-strip">
     <div class="container">
-      <p class="eyebrow">Other reading paths</p>
-      <div class="chip-row">
-        {others.map((l) => <a class="chip" href={`/for/${l.id}`}>{l.label}</a>)}
-      </div>
+      <p class="eyebrow">Get in touch</p>
+      <p class="lede">Happy to talk through any of this work in more depth.</p>
+      <p style="margin-top:1.5rem;"><a class="btn btn--accent" href="mailto:prodmaninsights@gmail.com">prodmaninsights@gmail.com</a></p>
     </div>
   </section>
 </BaseLayout>
