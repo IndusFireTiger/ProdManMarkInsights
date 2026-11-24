@@ -397,7 +397,7 @@ hr {
   .post-meta { order: -1; }
 }
 
-/* role reading paths (/for) */
+/* role routes (/ai-product etc.) */
 .chip-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
 a.chip:hover { text-decoration: none; }
 .lens-strengths {

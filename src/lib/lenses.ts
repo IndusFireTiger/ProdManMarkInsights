@@ -3,8 +3,12 @@
 // One site, many applications: instead of reskinning the whole site for each
 // job round, each route gives a reader (a hiring manager, a recruiter) a short
 // pitch, a career snapshot told for that kind of role, and the case studies
-// and essays most relevant to it. Send the URL — /for/<id> — with an
+// and essays most relevant to it. Send the URL — /<id> — with an
 // application.
+//
+// URLs sit at the top level: /<id>, e.g. /ai-product. An id must not clash
+// with a real page or section (about, work, perspectives, marginalia,
+// learning-map, sitemap.xml).
 //
 // UNLISTED BY DESIGN: nothing on the public site links to these pages, they
 // are left out of the sitemap and carry noindex, and they don't link to each
@@ -32,7 +36,7 @@ export const LENSES: Lens[] = [
   {
     id: 'ai-product',
     label: 'AI Product Management',
-    title: 'For AI product roles',
+    title: 'AI product management',
     pitch:
       'I run product for AI products today, and I came up through engineering, so I can work in the detail of how models, workflows and evaluation actually behave. My focus is the part AI does not automate: deciding what to build, measuring whether it worked, and keeping a human accountable where the output matters.',
     strengths: [
@@ -62,7 +66,7 @@ export const LENSES: Lens[] = [
   {
     id: 'product-leadership',
     label: 'Product leadership',
-    title: 'For product leadership roles',
+    title: 'Product leadership',
     pitch:
       'I have built product functions as well as products: most recently as the first product manager brought in to establish the discipline, and before that leading a product marketing team as Head of Product Marketing and Principal Product Manager. I care about the operating model: how decisions get made, measured and revisited.',
     strengths: [
@@ -91,7 +95,7 @@ export const LENSES: Lens[] = [
   {
     id: 'product-marketing',
     label: 'Product marketing & GTM',
-    title: 'For product marketing and go-to-market roles',
+    title: 'Product marketing and go-to-market',
     pitch:
       'I led a product marketing team while also holding a principal product manager remit, so I treat go-to-market as part of the product, not a handoff after it. I designed the GTM Factory, a repeatable launch system run by a virtual team embedded in engineering, and I am now exploring how agents can bring product marketing upstream.',
     strengths: [
@@ -120,7 +124,7 @@ export const LENSES: Lens[] = [
   {
     id: 'regulated-domains',
     label: 'Regulated & data-heavy domains',
-    title: 'For roles in regulated and data-heavy domains',
+    title: 'Regulated and data-heavy domains',
     pitch:
       'My recent work has all been where getting it wrong has consequences: data risk, compliance and governance in enterprise software, and now AI products for financial advice. I am comfortable turning subjective, regulated requirements into something scoped, traceable and shippable.',
     strengths: [
@@ -147,7 +151,7 @@ export const LENSES: Lens[] = [
   {
     id: 'edtech',
     label: 'EdTech & education',
-    title: 'For EdTech and education roles',
+    title: 'EdTech and education',
     pitch:
       'Education is the sector I keep coming back to: a Masters in Public Administration, editing a student e-journal, coordinating campus placements and teaching underprivileged children through Project Manthan. On this site I have studied the Australian education market closely and built learning-lab products to test ideas about engagement and responsible AI.',
     strengths: [

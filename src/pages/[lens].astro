@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { LENSES, type Lens } from '../../lib/lenses';
+import { LENSES, type Lens } from '../lib/lenses';
 
 export async function getStaticPaths() {
   return LENSES.map((lens) => ({ params: { lens: lens.id }, props: { lens } }));
@@ -36,7 +36,7 @@ const dateFmt = (d: Date) =>
 >
   <section class="hero">
     <div class="container">
-      <p class="eyebrow">{lens.label}</p>
+      <p class="eyebrow">Product strategy · Product marketing · Applied AI</p>
       <h1 style="max-width:20ch;">{lens.title}</h1>
       <p class="lede" style="max-width:60ch;">{lens.pitch}</p>
       <ul class="lens-strengths">

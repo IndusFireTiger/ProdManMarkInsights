@@ -28,8 +28,8 @@ Frontmatter fields are defined in `src/content.config.ts`.
 
 ## Role routes (unlisted)
 
-`/for/<id>` pages are standalone landing pages for a kind of role: AI product,
-product leadership, product marketing, regulated domains and EdTech. Each has
+Top-level routes such as `/ai-product`, `/product-leadership`,
+`/product-marketing`, `/regulated-domains` and `/edtech` are standalone landing pages for a kind of role. Each has
 a short pitch, a career snapshot told for that reader, and a curated list of
 case studies and essays. Send the matching link with an application.
 

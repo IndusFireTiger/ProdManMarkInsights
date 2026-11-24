@@ -5,7 +5,7 @@
 //     unlisted; they also carry noindex)
 //   - /learning-map (dev-only route; emits no pages in a production build)
 //   - unpublished marginalia terms (portfolio:false never generates a page)
-//   - role routes under /for (unlisted on purpose; shared by direct link only,
+//   - role routes such as /ai-product (unlisted on purpose; shared by direct link only,
 //     see src/lib/lenses.ts)
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
