@@ -157,6 +157,11 @@ hr {
 }
 .nav a:hover { color: var(--accent); text-decoration: none; }
 .nav a[aria-current="page"] { color: var(--accent); }
+@media (max-width: 600px) {
+  .site-header__inner { flex-wrap: wrap; gap: 0.4rem 1rem; padding-block: 0.75rem; }
+  .nav { gap: 1rem; flex-wrap: wrap; }
+  .nav a { font-size: 0.88rem; }
+}
 
 /* ---------- footer ---------- */
 .site-footer {
@@ -453,3 +458,183 @@ a.chip:hover { text-decoration: none; }
 .work-group .card-grid { margin-top: 1.5rem; }
 .live-cta { margin: 0 0 2rem; }
 .live-cta .btn:hover { text-decoration: none; }
+
+/* ---------- inline visuals in case studies (.viz) ----------
+   Plain HTML + CSS, no script. Each visual is a <figure class="viz ...">
+   written straight into the Markdown. Layouts use grid with auto-fit, so
+   they reflow from a wide article column down to a phone. */
+.viz {
+  margin: 2.25em 0;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper-2);
+  font-family: var(--sans);
+}
+.viz figcaption,
+.article__body .viz figcaption {
+  margin-top: 1rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.viz__title {
+  margin: 0 0 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.viz p, .viz li { margin: 0; }
+
+/* sprint vs bolt comparison */
+.viz-compare {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 0.75rem;
+}
+.viz-compare__col {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1rem;
+}
+.viz-compare__col--new { border-color: var(--accent-soft); background: var(--accent-wash); }
+.viz-compare__head { font-weight: 600; font-size: 0.95rem; color: var(--ink); margin-bottom: 0.6rem !important; }
+.viz-compare dl { margin: 0; display: grid; gap: 0.55rem; }
+.viz-compare dt { font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.viz-compare dd { margin: 0.1rem 0 0; font-size: 0.9rem; color: var(--ink); line-height: 1.4; }
+
+/* anatomy of a sprint */
+.viz-goal {
+  background: var(--accent);
+  color: var(--paper);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+.viz-goal b { display: block; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85; margin-bottom: 0.2rem; }
+.viz-bolts {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0 !important;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 8.5rem), 1fr));
+  gap: 0.6rem;
+}
+.viz-bolt {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent-soft);
+  border-radius: 8px;
+  padding: 0.65rem 0.7rem;
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+.viz-bolt strong { display: block; font-size: 0.85rem; color: var(--ink); margin-bottom: 0.35rem; }
+.viz-bolt span { display: block; color: var(--muted); }
+.viz-bolt .viz-bolt__show { color: var(--accent); font-weight: 500; margin-top: 0.35rem; }
+.viz-team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
+  margin-top: 0.9rem !important;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.viz-dots { display: inline-flex; gap: 4px; vertical-align: middle; margin-left: 0.35rem; }
+.viz-dots i { width: 10px; height: 10px; border-radius: 50%; background: var(--accent-soft); display: inline-block; }
+.viz-dots--qa i { background: transparent; border: 2px solid var(--accent-soft); width: 10px; height: 10px; box-sizing: border-box; }
+
+/* one bolt, end to end */
+.viz-flow {
+  list-style: none;
+  padding: 0;
+  margin: 0 !important;
+  counter-reset: step;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+  gap: 0.6rem;
+}
+.viz-flow li {
+  counter-increment: step;
+  position: relative;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.85rem 0.9rem 0.9rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+.viz-flow li::before {
+  content: counter(step);
+  display: inline-grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--paper);
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+}
+.viz-flow li.viz-flow__customer { background: var(--accent-wash); border-color: var(--accent-soft); }
+.viz-flow strong { display: block; font-size: 0.95rem; color: var(--ink); }
+.viz-flow .viz-who {
+  display: inline-block;
+  margin: 0.25rem 0 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.viz-flow span:last-child { display: block; color: var(--muted); }
+.viz-loopback {
+  margin-top: 0.75rem !important;
+  font-size: 0.82rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* KPI cards */
+.viz-kpis {
+  list-style: none;
+  padding: 0;
+  margin: 0 !important;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  gap: 0.6rem;
+}
+.viz-kpi {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+.viz-kpi strong { font-size: 0.98rem; color: var(--ink); }
+.viz-kpi span { color: var(--muted); }
+.viz-kpi .viz-kpi__act {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--line);
+  color: var(--ink);
+  font-size: 0.8rem;
+}
+.viz-kpi .viz-kpi__act b { color: var(--accent); font-weight: 600; }
+.viz-kpi--headline { background: var(--accent); border-color: var(--accent); }
+.viz-kpi--headline strong, .viz-kpi--headline span, .viz-kpi--headline .viz-kpi__act { color: var(--paper); }
+.viz-kpi--headline .viz-kpi__act { border-top-color: rgba(251, 249, 244, 0.35); }
+.viz-kpi--headline .viz-kpi__act b { color: var(--paper); }
+.article__body .viz ol,
+.article__body .viz ul,
+.viz ol, .viz ul { padding-left: 0; margin-left: 0; }
+.article__body .viz li { margin: 0; }
+.viz-kpi--headline { grid-column: 1 / -1; }
