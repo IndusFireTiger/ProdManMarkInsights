@@ -4,7 +4,7 @@ summary: "A simulated go-to-market for an EdTech MVP: launch strategy, audience 
 focus: "Product Marketing • GTM • Growth experiments"
 role: "Independent learning project"
 kind: "Learning Lab"
-order: 7
+order: 8
 draft: false
 ---
 

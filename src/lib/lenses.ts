@@ -144,6 +144,7 @@ export const LENSES: Lens[] = [
       'data-governance-harmonisation',
       'drc-academy',
       'aigov-academy',
+      'governed-ai',
     ],
     perspectives: [
       'data-catalog-and-data-risk',
@@ -160,8 +161,8 @@ export const LENSES: Lens[] = [
     strengths: [
       'Data Risk & Compliance and Data Governance product depth',
       'AI governance in practice: compliance review tooling, traceability, de-identified testing',
-      'Two live learning products: DRC Academy and AI Governance Academy',
-      'Writing on AI governance as a practice at Governed·AI',
+      'Three live builds: Governed·AI, AI Governance Academy and DRC Academy',
+      'Writing on AI governance as a practice, and initiatives from GRC education to governed AI agents',
     ],
     career: [
       { when: 'Now', role: 'First Product Manager · AI products for financial advice and insurance', line: 'Built Claude-based compliance review tools, PRD-to-ticket traceability and feature-flagged rollouts, and run AI acceptance testing on de-identified client files.' },
@@ -169,8 +170,9 @@ export const LENSES: Lens[] = [
       { when: 'Earlier', role: 'Senior Product Manager, Product Owner, Technical Lead, Senior Software Engineer', line: 'As Product Owner for harvesting and orchestration, scoped metadata harvesting, scanning and SQL processing for governance use cases.' },
     ],
     work: [
-      'drc-academy',
+      'governed-ai',
       'aigov-academy',
+      'drc-academy',
       'data-governance-harmonisation',
       'founding-product-function-ai-advice',
     ],
