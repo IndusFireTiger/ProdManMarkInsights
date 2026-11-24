@@ -45,7 +45,7 @@ export const LENSES: Lens[] = [
       'Hands-on: RAG, prompt engineering, MCP and agents (Claude, n8n, Zapier)',
     ],
     career: [
-      { when: 'Now', role: "First Product Manager \u00b7 AI products for financial advice and insurance", line: "Own the planning product in a portfolio of three AI products and lead six developers and three QA engineers through an AI-Driven Development Lifecycle of about eight bolts a sprint, each led by a developer or pair working as forward-deployed engineers with one QA engineer, showcased to a customer, and measured on cycle time and defect escape alongside time to complete a piece of advice." },
+      { when: 'Now', role: "First Product Manager \u00b7 AI products for financial advice and insurance", line: "Own the planning product in a portfolio of three AI products and lead six developers and three QA engineers through an AI-Driven Development Lifecycle of about eight bolts a sprint, each led by a developer or pair working as forward-deployed engineers with one QA engineer, showcased to a customer, and measured on cycle time and defect escape alongside a customer outcome metric." },
       { when: 'Jan–Aug 2026', role: "Head of Product Marketing and Principal Product Manager \u00b7 enterprise Data Risk & Compliance", line: "Prototyped an AI Asset Description generator and an AI Code Explainer, and designed AI-driven automation across product and marketing workflows." },
       { when: 'Earlier', role: "Senior Product Manager, Product Owner, Technical Lead, Senior Software Engineer", line: "An engineer first, which is why I can work in the detail of models, workflows and evaluation. Completed a six-month GenAI program at IIT Patna." },
     ],
@@ -135,7 +135,7 @@ export const LENSES: Lens[] = [
       'Two live governance learning products: DRC Academy and AI Governance Academy',
     ],
     career: [
-      { when: 'Now', role: "First Product Manager \u00b7 AI products for financial advice and insurance", line: "AI products for financial advice, where a Statement or Record of Advice is a compliance document. Built Claude-based compliance review tools and tested AI workflows on de-identified client files." },
+      { when: 'Now', role: "First Product Manager \u00b7 AI products for financial advice and insurance", line: "AI products for financial advice, a regulated domain where every output must be defensible. Built Claude-based compliance review tools and tested AI workflows on de-identified client files." },
       { when: 'Jan–Aug 2026', role: "Head of Product Marketing and Principal Product Manager \u00b7 enterprise Data Risk & Compliance", line: "Product and go-to-market for Data Risk & Compliance and Data Governance, harmonising many enterprises' subjective requirements into one product." },
       { when: 'Earlier', role: "Senior Product Manager, Product Owner, Technical Lead, Senior Software Engineer", line: "As Product Owner for harvesting and orchestration, scoped metadata harvesting, scanning and SQL processing using C4-model estimation." },
     ],
